@@ -1,0 +1,1330 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\": \"STEPProtocol\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Requester\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Provider\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"requester_to_provider\", \"from_entity\": \"Requester\", \"to_entity\": \"Provider\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"provider_to_requester\", \"from_entity\": \"Provider\", \"to_entity\": \"Requester\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Requester\", \"state_name\": \"Start\", \"initial\": true, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Requester\", \"state_name\": \"IDLE\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Requester\", \"state_name\": \"NEGOTIATION\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Requester\", \"state_name\": \"ACTIVE\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Requester\", \"state_name\": \"RENEWAL\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Requester\", \"state_name\": \"CLOSED\", \"initial\": false, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Provider\", \"state_name\": \"IDLE\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Provider\", \"state_name\": \"NEGOTIATION\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Provider\", \"state_name\": \"ACTIVE\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Provider\", \"state_name\": \"RENEWAL\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Provider\", \"state_name\": \"CLOSED\", \"initial\": false, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Provider\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_100_GREETING\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"condition\": \"\", \"message\": {\"type\": \"100_STEP_Provider_Ready\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_100_GREETING\", \"entity_name\": \"Requester\", \"source\": \"Start\", \"dest\": \"IDLE\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"100_STEP_Provider_Ready\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"SEND_HELLO\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"condition\": \"\", \"message\": {\"type\": \"HELLO\"}, \"channel\": \"requester_to_provider\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_HELLO\", \"entity_name\": \"Provider\", \"source\": \"IDLE\", \"dest\": \"NEGOTIATION\", \"condition\": \"\", \"channel\": \"requester_to_provider\", \"type\": \"HELLO\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_200_HELLO_OK\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"condition\": \"pending_command == \\\"HELLO\\\"\", \"message\": {\"type\": \"200_HELLO_OK\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_200_HELLO_OK\", \"entity_name\": \"Requester\", \"source\": \"IDLE\", \"dest\": \"NEGOTIATION\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"200_HELLO_OK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"RECV_HELLO\", \"source\": \"IDLE\", \"dest\": \"NEGOTIATION\", \"channel\": \"requester_to_provider\", \"new_condition\": \"\", \"new_type\": \"HELLO\", \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_200_HELLO_OK\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"channel\": \"provider_to_requester\", \"new_condition\": \"pending_command == \\\"HELLO\\\"\", \"new_message\": {\"type\": \"200_HELLO_OK\"}, \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"SEND_BYE_FROM_IDLE\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"condition\": \"\", \"message\": {\"type\": \"BYE\"}, \"channel\": \"requester_to_provider\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_BYE_FROM_IDLE\", \"entity_name\": \"Provider\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"condition\": \"\", \"channel\": \"requester_to_provider\", \"type\": \"BYE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_401_IDLE\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"condition\": \"\", \"message\": {\"type\": \"401_Command_Not_Permitted\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_401_IDLE\", \"entity_name\": \"Requester\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"401_Command_Not_Permitted\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"SEND_PARAMS\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"condition\": \"\", \"message\": {\"type\": \"PARAMS\"}, \"channel\": \"requester_to_provider\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_PARAMS\", \"entity_name\": \"Provider\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"condition\": \"\", \"channel\": \"requester_to_provider\", \"type\": \"PARAMS\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"SEND_BYE_FROM_NEGOTIATION\", \"source\": \"NEGOTIATION\", \"dest\": \"CLOSED\", \"condition\": \"\", \"message\": {\"type\": \"BYE\"}, \"channel\": \"requester_to_provider\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_BYE_FROM_NEGOTIATION\", \"entity_name\": \"Provider\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"condition\": \"\", \"channel\": \"requester_to_provider\", \"type\": \"BYE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_200_BYE_OK_NEGOTIATION\", \"source\": \"NEGOTIATION\", \"dest\": \"CLOSED\", \"condition\": \"pending_command == \\\"BYE\\\"\", \"message\": {\"type\": \"200_BYE_OK\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_200_BYE_OK_NEGOTIATION\", \"entity_name\": \"Requester\", \"source\": \"CLOSED\", \"dest\": \"CLOSED\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"200_BYE_OK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_401_NEGOTIATION\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"condition\": \"\", \"message\": {\"type\": \"401_Command_Not_Permitted\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_401_NEGOTIATION\", \"entity_name\": \"Requester\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"401_Command_Not_Permitted\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_100_GREETING\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"channel\": \"provider_to_requester\", \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"RECV_100_GREETING\", \"source\": \"Start\", \"dest\": \"IDLE\", \"channel\": \"provider_to_requester\", \"new_unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"SEND_HELLO\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"channel\": \"requester_to_provider\", \"new_unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"RECV_HELLO\", \"source\": \"IDLE\", \"dest\": \"NEGOTIATION\", \"channel\": \"requester_to_provider\", \"new_condition\": \"\", \"new_type\": \"HELLO\", \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_200_HELLO_OK\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"channel\": \"provider_to_requester\", \"new_condition\": \"pending_command == \\\"HELLO\\\"\", \"new_message\": {\"type\": \"200_HELLO_OK\"}, \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"RECV_200_HELLO_OK\", \"source\": \"IDLE\", \"dest\": \"NEGOTIATION\", \"channel\": \"provider_to_requester\", \"new_unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Requester\", \"name\": \"negotiation_complete\", \"initial_value\": \"False\", \"var_type\": \"BOOLEAN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Provider\", \"name\": \"negotiation_complete\", \"initial_value\": \"False\", \"var_type\": \"BOOLEAN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"RECV_PARAMS\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"channel\": \"requester_to_provider\", \"new_condition\": \"\", \"new_type\": \"PARAMS\", \"new_unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SET_NEGOTIATION_COMPLETE\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"condition\": \"negotiation_complete == False\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"SEND_REQUEST\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"message\": {\"type\": \"REQUEST\"}, \"channel\": \"requester_to_provider\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_REQUEST\", \"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"requester_to_provider\", \"type\": \"REQUEST\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_200_TOKEN\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"pending_command == \\\"REQUEST\\\"\", \"message\": {\"type\": \"200_TOKEN\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_500_TOKEN_FAILED\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"pending_command == \\\"REQUEST\\\"\", \"message\": {\"type\": \"500_Token_Generation_Failed\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_200_TOKEN\", \"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"200_TOKEN\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_500_TOKEN_FAILED\", \"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"500_Token_Generation_Failed\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"SEND_STATUS\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"message\": {\"type\": \"STATUS\"}, \"channel\": \"requester_to_provider\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_STATUS\", \"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"requester_to_provider\", \"type\": \"STATUS\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_200_STATUS_VALID\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"pending_command == \\\"STATUS\\\"\", \"message\": {\"type\": \"200_STATUS_VALID\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_404_TOKEN_NOT_FOUND\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"pending_command == \\\"STATUS\\\"\", \"message\": {\"type\": \"404_Token_Not_Found\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_200_STATUS_VALID\", \"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"200_STATUS_VALID\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_404_TOKEN_NOT_FOUND\", \"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"404_Token_Not_Found\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"SEND_RENEW\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"message\": {\"type\": \"RENEW\"}, \"channel\": \"requester_to_provider\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_RENEW\", \"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"requester_to_provider\", \"type\": \"RENEW\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_200_RENEW_OK\", \"source\": \"ACTIVE\", \"dest\": \"RENEWAL\", \"condition\": \"pending_command == \\\"RENEW\\\"\", \"message\": {\"type\": \"200_RENEW_OK\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_200_RENEW_OK\", \"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"RENEWAL\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"200_RENEW_OK\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_405_TOKEN_EXPIRED\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"pending_command == \\\"RENEW\\\"\", \"message\": {\"type\": \"405_Token_Expired\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_405_TOKEN_EXPIRED\", \"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"405_Token_Expired\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"SEND_REVOKE\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"message\": {\"type\": \"REVOKE\"}, \"channel\": \"requester_to_provider\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_REVOKE\", \"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"requester_to_provider\", \"type\": \"REVOKE\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_200_REVOKE_OK\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"pending_command == \\\"REVOKE\\\"\", \"message\": {\"type\": \"200_REVOKE_OK\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_200_REVOKE_OK\", \"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"200_REVOKE_OK\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"SEND_BYE_FROM_ACTIVE\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"message\": {\"type\": \"BYE\"}, \"channel\": \"requester_to_provider\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_BYE_FROM_ACTIVE\", \"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"requester_to_provider\", \"type\": \"BYE\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_200_BYE_OK_ACTIVE\", \"source\": \"ACTIVE\", \"dest\": \"CLOSED\", \"condition\": \"pending_command == \\\"BYE\\\"\", \"message\": {\"type\": \"200_BYE_OK\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_200_BYE_OK_ACTIVE\", \"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"CLOSED\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"200_BYE_OK\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_201_TOKEN_RENEWED\", \"source\": \"RENEWAL\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"message\": {\"type\": \"201_TOKEN_RENEWED\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_201_TOKEN_RENEWED\", \"entity_name\": \"Requester\", \"source\": \"RENEWAL\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"201_TOKEN_RENEWED\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_501_RENEWAL_FAILED\", \"source\": \"RENEWAL\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"message\": {\"type\": \"501_Renewal_Failed\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_501_RENEWAL_FAILED\", \"entity_name\": \"Requester\", \"source\": \"RENEWAL\", \"dest\": \"ACTIVE\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"501_Renewal_Failed\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"SEND_401_RENEWAL\", \"source\": \"RENEWAL\", \"dest\": \"RENEWAL\", \"condition\": \"\", \"message\": {\"type\": \"401_Command_Not_Permitted\"}, \"channel\": \"provider_to_requester\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_401_RENEWAL\", \"entity_name\": \"Requester\", \"source\": \"RENEWAL\", \"dest\": \"RENEWAL\", \"condition\": \"\", \"channel\": \"provider_to_requester\", \"type\": \"401_Command_Not_Permitted\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"RENEWAL_TIMEOUT_TO_CLOSED\", \"source\": \"RENEWAL\", \"dest\": \"CLOSED\", \"condition\": \"\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"RENEWAL_TIMEOUT_TO_CLOSED\", \"source\": \"RENEWAL\", \"dest\": \"CLOSED\", \"condition\": \"\", \"unchanged_variables\": [\"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Requester\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"trigger\": \"transport_lost_requester\", \"source\": \"IDLE\", \"dest\": \"CLOSED\", \"condition\": \"True\", \"unchanged_variables\": [\"negotiation_complete\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"trigger\": \"transport_lost_provider\", \"source\": \"IDLE\", \"dest\": \"CLOSED\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"Start\", \"dest\": \"IDLE\", \"trigger\": \"RECV_100_GREETING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"trigger\": \"SEND_HELLO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"IDLE\", \"dest\": \"NEGOTIATION\", \"trigger\": \"RECV_200_HELLO_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"trigger\": \"SEND_BYE_FROM_IDLE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"trigger\": \"RECV_401_IDLE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"trigger\": \"SEND_PARAMS\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"NEGOTIATION\", \"dest\": \"CLOSED\", \"trigger\": \"SEND_BYE_FROM_NEGOTIATION\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"CLOSED\", \"dest\": \"CLOSED\", \"trigger\": \"RECV_200_BYE_OK_NEGOTIATION\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"trigger\": \"RECV_401_NEGOTIATION\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_REQUEST\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_200_TOKEN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_500_TOKEN_FAILED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_STATUS\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_200_STATUS_VALID\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_404_TOKEN_NOT_FOUND\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_RENEW\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"RENEWAL\", \"trigger\": \"RECV_200_RENEW_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_405_TOKEN_EXPIRED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_REVOKE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_200_REVOKE_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_BYE_FROM_ACTIVE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"CLOSED\", \"trigger\": \"RECV_200_BYE_OK_ACTIVE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"RENEWAL\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_201_TOKEN_RENEWED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"RENEWAL\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_501_RENEWAL_FAILED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"RENEWAL\", \"dest\": \"RENEWAL\", \"trigger\": \"RECV_401_RENEWAL\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"RENEWAL\", \"dest\": \"CLOSED\", \"trigger\": \"RENEWAL_TIMEOUT_TO_CLOSED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"IDLE\", \"dest\": \"CLOSED\", \"trigger\": \"transport_lost_requester\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"trigger\": \"SEND_100_GREETING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"IDLE\", \"dest\": \"NEGOTIATION\", \"trigger\": \"RECV_HELLO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"trigger\": \"SEND_200_HELLO_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"trigger\": \"RECV_BYE_FROM_IDLE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"IDLE\", \"dest\": \"IDLE\", \"trigger\": \"SEND_401_IDLE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"trigger\": \"RECV_PARAMS\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"trigger\": \"RECV_BYE_FROM_NEGOTIATION\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"NEGOTIATION\", \"dest\": \"CLOSED\", \"trigger\": \"SEND_200_BYE_OK_NEGOTIATION\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"trigger\": \"SEND_401_NEGOTIATION\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"NEGOTIATION\", \"dest\": \"NEGOTIATION\", \"trigger\": \"SET_NEGOTIATION_COMPLETE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_REQUEST\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_200_TOKEN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_500_TOKEN_FAILED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_STATUS\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_200_STATUS_VALID\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_404_TOKEN_NOT_FOUND\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_RENEW\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"RENEWAL\", \"trigger\": \"SEND_200_RENEW_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_405_TOKEN_EXPIRED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_REVOKE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_200_REVOKE_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"ACTIVE\", \"trigger\": \"RECV_BYE_FROM_ACTIVE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"CLOSED\", \"trigger\": \"SEND_200_BYE_OK_ACTIVE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"RENEWAL\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_201_TOKEN_RENEWED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"RENEWAL\", \"dest\": \"ACTIVE\", \"trigger\": \"SEND_501_RENEWAL_FAILED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"RENEWAL\", \"dest\": \"RENEWAL\", \"trigger\": \"SEND_401_RENEWAL\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"RENEWAL\", \"dest\": \"CLOSED\", \"trigger\": \"RENEWAL_TIMEOUT_TO_CLOSED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"IDLE\", \"dest\": \"CLOSED\", \"trigger\": \"transport_lost_provider\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Requester\", \"state_name\": \"Start\", \"initial\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Requester\", \"state_name\": \"CLOSED\", \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Provider\", \"state_name\": \"IDLE\", \"initial\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Provider\", \"state_name\": \"CLOSED\", \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Provider\", \"name\": \"params_received\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Provider\", \"name\": \"suppress_params_reply\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Provider\", \"state_name\": \"AwaitHello\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"IDLE\", \"dest\": \"AwaitHello\", \"trigger\": \"send_100_GREETING_IDLE\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\", \"params_received\", \"suppress_params_reply\"], \"channel\": \"provider_to_requester\", \"message\": {\"type\": \"100_GREETING\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"Start\", \"dest\": \"IDLE\", \"trigger\": \"recv_100_GREETING_Start\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"negotiation_complete\", \"pending_command\"], \"channel\": \"provider_to_requester\", \"type\": \"100_GREETING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Requester\", \"state_name\": \"Wait_200_HELLO_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"IDLE\", \"dest\": \"Wait_200_HELLO_OK\", \"trigger\": \"send_HELLO_IDLE\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"negotiation_complete\", \"pending_command\"], \"channel\": \"requester_to_provider\", \"message\": {\"type\": \"HELLO\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Provider\", \"state_name\": \"Reply_HELLO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"AwaitHello\", \"dest\": \"Reply_HELLO\", \"trigger\": \"recv_HELLO_AwaitHello\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\", \"params_received\", \"suppress_params_reply\"], \"channel\": \"requester_to_provider\", \"type\": \"HELLO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"Reply_HELLO\", \"dest\": \"NEGOTIATION\", \"trigger\": \"send_200_HELLO_OK_Reply_HELLO\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\", \"params_received\", \"suppress_params_reply\"], \"channel\": \"provider_to_requester\", \"message\": {\"type\": \"200_HELLO_OK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"Wait_200_HELLO_OK\", \"dest\": \"NEGOTIATION\", \"trigger\": \"recv_200_HELLO_OK_Wait_200_HELLO_OK\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"negotiation_complete\", \"pending_command\"], \"channel\": \"provider_to_requester\", \"type\": \"200_HELLO_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Requester\", \"state_name\": \"WaitParams\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"NEGOTIATION\", \"dest\": \"WaitParams\", \"trigger\": \"send_PARAMS_NEGOTIATION\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"negotiation_complete\", \"pending_command\"], \"channel\": \"requester_to_provider\", \"message\": {\"type\": \"PARAMS\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Provider\", \"state_name\": \"ParamsProcessed\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"NEGOTIATION\", \"dest\": \"ParamsProcessed\", \"trigger\": \"recv_PARAMS_NEGOTIATION\", \"condition\": \"True\", \"variable_updates\": {\"params_received\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\", \"suppress_params_reply\"], \"channel\": \"requester_to_provider\", \"type\": \"PARAMS\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ParamsProcessed\", \"dest\": \"ACTIVE\", \"trigger\": \"send_200_PARAMS_OK_ParamsProcessed\", \"condition\": \"not suppress_params_reply\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\", \"params_received\", \"suppress_params_reply\"], \"channel\": \"provider_to_requester\", \"message\": {\"type\": \"200_PARAMS_OK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"WaitParams\", \"dest\": \"ACTIVE\", \"trigger\": \"recv_200_PARAMS_OK_WaitParams\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"negotiation_complete\", \"pending_command\"], \"channel\": \"provider_to_requester\", \"type\": \"200_PARAMS_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Requester\", \"state_name\": \"Wait_200_BYE_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"ACTIVE\", \"dest\": \"Wait_200_BYE_OK\", \"trigger\": \"send_BYE_ACTIVE\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"negotiation_complete\", \"pending_command\"], \"channel\": \"requester_to_provider\", \"message\": {\"type\": \"BYE\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Provider\", \"state_name\": \"Reply_BYE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"ACTIVE\", \"dest\": \"Reply_BYE\", \"trigger\": \"recv_BYE_ACTIVE\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\", \"params_received\", \"suppress_params_reply\"], \"channel\": \"requester_to_provider\", \"type\": \"BYE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Provider\", \"source\": \"Reply_BYE\", \"dest\": \"CLOSED\", \"trigger\": \"send_200_BYE_OK_Reply_BYE\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"negotiation_complete\", \"params_received\", \"suppress_params_reply\"], \"channel\": \"provider_to_requester\", \"message\": {\"type\": \"200_BYE_OK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Requester\", \"source\": \"Wait_200_BYE_OK\", \"dest\": \"CLOSED\", \"trigger\": \"recv_200_BYE_OK_Wait_200_BYE_OK\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"negotiation_complete\", \"pending_command\"], \"channel\": \"provider_to_requester\", \"type\": \"200_BYE_OK\"}"
+    }
+  }
+]

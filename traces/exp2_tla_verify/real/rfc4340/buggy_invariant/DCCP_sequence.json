@@ -1,0 +1,1018 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\": \"DCCPProtocol\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Server\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"client_to_server\", \"from_entity\": \"Client\", \"to_entity\": \"Server\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"server_to_client\", \"from_entity\": \"Server\", \"to_entity\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Start\", \"initial\": true, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"REQUEST\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"PARTOPEN\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"OPEN\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"CLOSING\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"TIMEWAIT\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"CLOSED\", \"initial\": false, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"LISTEN\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"REQUEST\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"RESPOND\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"OPEN\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"CLOSEREQ\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"CLOSING\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"TIMEWAIT\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_DCCP_SYNC\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_SYNC\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_SYNC\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_SYNC\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_SYNCACK\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"pending_command == \\\"DCCP_SYNC\\\"\", \"message\": {\"type\": \"DCCP_SYNCACK\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_SYNCACK\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_SYNCACK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_CHANGE_L_SEQUENCE_WINDOW\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"CHANGE_L_SEQUENCE_WINDOW\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_CHANGE_L_SEQUENCE_WINDOW\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"CHANGE_L_SEQUENCE_WINDOW\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_CONFIRM_R_SEQUENCE_WINDOW\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"pending_command == \\\"CHANGE_L_SEQUENCE_WINDOW\\\"\", \"message\": {\"type\": \"CONFIRM_R_SEQUENCE_WINDOW\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_CONFIRM_R_SEQUENCE_WINDOW\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"CONFIRM_R_SEQUENCE_WINDOW\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_DCCP_REQUEST\", \"source\": \"Start\", \"dest\": \"REQUEST\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_REQUEST\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_REQUEST\", \"entity_name\": \"Server\", \"source\": \"LISTEN\", \"dest\": \"REQUEST\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_REQUEST\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_RESPONSE\", \"source\": \"REQUEST\", \"dest\": \"RESPOND\", \"condition\": \"pending_command == \\\"DCCP_REQUEST\\\"\", \"message\": {\"type\": \"DCCP_RESPONSE\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_RESPONSE\", \"entity_name\": \"Client\", \"source\": \"REQUEST\", \"dest\": \"PARTOPEN\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESPONSE\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_DCCP_ACK_INIT\", \"source\": \"PARTOPEN\", \"dest\": \"PARTOPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_ACK\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_ACK_INIT\", \"entity_name\": \"Server\", \"source\": \"RESPOND\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_ACK\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_DCCP_DATA\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_DATA\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_DATA\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_DATA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_DCCP_ACK\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_ACK\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_ACK\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_ACK\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_DCCP_DATAACK\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_DATAACK\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_DATAACK\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_DATAACK\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_DATA\", \"source\": \"RESPOND\", \"dest\": \"RESPOND\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_DATA\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_DATA\", \"entity_name\": \"Client\", \"source\": \"PARTOPEN\", \"dest\": \"PARTOPEN\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_DATA\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_DATA_OPEN\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_DATA\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_DATA_OPEN\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_DATA\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_ACK\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_ACK\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_ACK\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_ACK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_DATAACK\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_DATAACK\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_DATAACK\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_DATAACK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_CLOSEREQ\", \"source\": \"OPEN\", \"dest\": \"CLOSEREQ\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_CLOSEREQ\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_CLOSEREQ\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"CLOSING\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_CLOSEREQ\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_DCCP_CLOSE\", \"source\": \"CLOSING\", \"dest\": \"TIMEWAIT\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_CLOSE\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_CLOSE\", \"entity_name\": \"Server\", \"source\": \"CLOSEREQ\", \"dest\": \"CLOSING\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_CLOSE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_RESET\", \"source\": \"CLOSING\", \"dest\": \"TIMEWAIT\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_RESET\", \"entity_name\": \"Client\", \"source\": \"TIMEWAIT\", \"dest\": \"CLOSED\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESET\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"PARTOPEN_ACK_TIMER\", \"source\": \"PARTOPEN\", \"dest\": \"PARTOPEN\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"PARTOPEN_ABORT_TIMEOUT\", \"source\": \"PARTOPEN\", \"dest\": \"CLOSED\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_SEQ_INVALID_RESET\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_RESET\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_SYNC_TO_INVALID_RESET\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_SYNC\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_SEQ_INVALID_OTHER\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_DATA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_SYNC_TO_INVALID_OTHER\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_SYNC\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_VALID_SYNC_REQUEST_STATE\", \"entity_name\": \"Server\", \"source\": \"REQUEST\", \"dest\": \"REQUEST\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_SYNC\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_RESET_TO_SYNC_IN_REQUEST\", \"source\": \"REQUEST\", \"dest\": \"REQUEST\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_CHANGE_R_CCID\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"CHANGE_R_CCID\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_CHANGE_R_CCID\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"CHANGE_R_CCID\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_CONFIRM_L_CCID\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"pending_command == \\\"CHANGE_R_CCID\\\"\", \"message\": {\"type\": \"CONFIRM_L_CCID\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_CONFIRM_L_CCID\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"CONFIRM_L_CCID\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_CHANGE_L_CCID\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"CHANGE_L_CCID\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_CHANGE_L_CCID\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"CHANGE_L_CCID\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_CONFIRM_R_CCID\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"CONFIRM_R_CCID\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_CONFIRM_R_CCID\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"pending_command == \\\"CHANGE_L_CCID\\\"\", \"channel\": \"client_to_server\", \"type\": \"CONFIRM_R_CCID\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_RESET_CONN_REFUSED\", \"source\": \"LISTEN\", \"dest\": \"LISTEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET_CONN_REFUSED\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_RESET_CONN_REFUSED\", \"entity_name\": \"Client\", \"source\": \"REQUEST\", \"dest\": \"CLOSED\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESET_CONN_REFUSED\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_RESET_BAD_SERVICE_CODE\", \"source\": \"LISTEN\", \"dest\": \"LISTEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET_BAD_SERVICE_CODE\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_RESET_BAD_SERVICE_CODE\", \"entity_name\": \"Client\", \"source\": \"REQUEST\", \"dest\": \"CLOSED\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESET_BAD_SERVICE_CODE\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_RESET_TOO_BUSY\", \"source\": \"LISTEN\", \"dest\": \"LISTEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET_TOO_BUSY\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_RESET_TOO_BUSY\", \"entity_name\": \"Client\", \"source\": \"REQUEST\", \"dest\": \"CLOSED\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESET_TOO_BUSY\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_RESET_MANDATORY_FAILURE\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET_MANDATORY_FAILURE\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_RESET_MANDATORY_FAILURE\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"CLOSED\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESET_MANDATORY_FAILURE\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_RESET_OPTION_ERROR\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET_OPTION_ERROR\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_RESET_OPTION_ERROR\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"CLOSED\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESET_OPTION_ERROR\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"REQUEST_RETRANSMIT_TIMER\", \"source\": \"REQUEST\", \"dest\": \"REQUEST\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_DCCP_RESET_ABORTED_FROM_REQUEST\", \"source\": \"REQUEST\", \"dest\": \"CLOSED\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET_ABORTED\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_RESET_BAD_INIT_COOKIE\", \"source\": \"RESPOND\", \"dest\": \"RESPOND\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET_BAD_INIT_COOKIE\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_RESET_BAD_INIT_COOKIE\", \"entity_name\": \"Client\", \"source\": \"PARTOPEN\", \"dest\": \"CLOSED\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESET_BAD_INIT_COOKIE\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"CLOSEREQ_RETRANSMIT_TIMER\", \"source\": \"CLOSEREQ\", \"dest\": \"CLOSEREQ\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"CLOSING_RETRANSMIT_TIMER\", \"source\": \"CLOSING\", \"dest\": \"CLOSING\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_SYNC_ON_CLOSEREQ\", \"source\": \"CLOSEREQ\", \"dest\": \"CLOSEREQ\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_SYNC\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_CLOSEREQ_SERVER\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"CLOSEREQ\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_CLOSEREQ\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_DCCP_CLOSE_CLIENT_INIT\", \"source\": \"OPEN\", \"dest\": \"CLOSING\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_CLOSE\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_CLOSE_CLIENT_INIT\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"CLOSING\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"DCCP_CLOSE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_RESET_CLOSED_AFTER_CLOSE\", \"source\": \"CLOSING\", \"dest\": \"TIMEWAIT\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET_CLOSED\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_RESET_CLOSED_AFTER_CLOSE\", \"entity_name\": \"Client\", \"source\": \"CLOSING\", \"dest\": \"TIMEWAIT\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESET_CLOSED\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_RESET_NO_CONNECTION\", \"source\": \"LISTEN\", \"dest\": \"TIMEWAIT\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET_NO_CONNECTION\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_RESET_NO_CONNECTION\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"TIMEWAIT\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESET_NO_CONNECTION\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_CHANGE_L_ECN_INCAPABLE\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"CHANGE_L_ECN_INCAPABLE\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_CHANGE_L_ECN_INCAPABLE\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"CHANGE_L_ECN_INCAPABLE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_CONFIRM_R_ECN_INCAPABLE\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"pending_command == \\\"CHANGE_L_ECN_INCAPABLE\\\"\", \"message\": {\"type\": \"CONFIRM_R_ECN_INCAPABLE\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_CONFIRM_R_ECN_INCAPABLE\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"CONFIRM_R_ECN_INCAPABLE\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_TIMESTAMP\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"TIMESTAMP\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_TIMESTAMP\", \"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"TIMESTAMP\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_TIMESTAMP_ECHO\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"TIMESTAMP_ECHO\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_TIMESTAMP_ECHO\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"TIMESTAMP_ECHO\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_DCCP_RESET_AGGRESSION_PENALTY\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"condition\": \"\", \"message\": {\"type\": \"DCCP_RESET_AGGRESSION_PENALTY\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RECV_DCCP_RESET_AGGRESSION_PENALTY\", \"entity_name\": \"Client\", \"source\": \"OPEN\", \"dest\": \"CLOSED\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESET_AGGRESSION_PENALTY\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DCCP_Request\", \"source\": \"Start\", \"dest\": \"REQUEST\", \"condition\": \"True\", \"message\": {\"type\": \"DCCP_REQUEST\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DCCP_Request\", \"entity_name\": \"Server\", \"source\": \"LISTEN\", \"dest\": \"REQUEST\", \"condition\": \"client_to_server_msg.type == 'DCCP_REQUEST'\", \"channel\": \"client_to_server\", \"type\": \"DCCP_REQUEST\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_DCCP_Response\", \"source\": \"REQUEST\", \"dest\": \"RESPOND\", \"condition\": \"True\", \"message\": {\"type\": \"DCCP_RESPONSE\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DCCP_Response\", \"entity_name\": \"Client\", \"source\": \"REQUEST\", \"dest\": \"PARTOPEN\", \"condition\": \"server_to_client_msg.type == 'DCCP_RESPONSE'\", \"channel\": \"server_to_client\", \"type\": \"DCCP_RESPONSE\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"handshake_completed\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"response_sent\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"data_sent_before_handshake\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"no_data_sent_before_handshake\", \"condition\": \"not data_sent_before_handshake\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"LISTEN\", \"dest\": \"REQUEST\", \"trigger\": \"RECV_DCCP_REQUEST\", \"new_condition\": \"\", \"new_variable_updates\": {\"pending_command\": \"\\\"DCCP_REQUEST\\\"\"}, \"new_unchanged_variables\": [\"handshake_completed\", \"response_sent\", \"data_sent_before_handshake\"], \"channel\": \"client_to_server\", \"new_type\": \"DCCP_REQUEST\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"LISTEN\", \"dest\": \"REQUEST\", \"trigger\": \"recv_DCCP_Request\", \"new_condition\": \"\", \"new_variable_updates\": {\"pending_command\": \"\\\"DCCP_REQUEST\\\"\"}, \"new_unchanged_variables\": [\"handshake_completed\", \"response_sent\", \"data_sent_before_handshake\"], \"channel\": \"client_to_server\", \"new_type\": \"DCCP_REQUEST\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"RESPOND\", \"dest\": \"OPEN\", \"trigger\": \"RECV_DCCP_ACK_INIT\", \"new_condition\": \"\", \"new_variable_updates\": {\"handshake_completed\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"response_sent\", \"data_sent_before_handshake\"], \"channel\": \"client_to_server\", \"new_type\": \"DCCP_ACK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"OPEN\", \"dest\": \"OPEN\", \"trigger\": \"RECV_DCCP_ACK\", \"new_condition\": \"\", \"new_variable_updates\": {\"handshake_completed\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"response_sent\", \"data_sent_before_handshake\"], \"channel\": \"client_to_server\", \"new_type\": \"DCCP_ACK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"REQUEST\", \"dest\": \"RESPOND\", \"trigger\": \"SEND_DCCP_RESPONSE\", \"new_condition\": \"((Server__pending_command == \\\"DCCP_REQUEST\\\"))\", \"new_variable_updates\": {\"response_sent\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"handshake_completed\", \"data_sent_before_handshake\"], \"channel\": \"server_to_client\", \"new_message\": {\"type\": \"DCCP_RESPONSE\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"REQUEST\", \"dest\": \"RESPOND\", \"trigger\": \"send_DCCP_Response\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"response_sent\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"handshake_completed\", \"data_sent_before_handshake\"], \"channel\": \"server_to_client\", \"new_message\": {\"type\": \"DCCP_RESPONSE\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"RESPOND\", \"dest\": \"RESPOND\", \"trigger\": \"SEND_DCCP_DATA\", \"new_condition\": \"response_sent\", \"new_variable_updates\": {\"data_sent_before_handshake\": \"not handshake_completed\"}, \"new_unchanged_variables\": [\"pending_command\", \"handshake_completed\", \"response_sent\"], \"channel\": \"server_to_client\", \"new_message\": {\"type\": \"DCCP_DATA\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"LISTEN\", \"dest\": \"LISTEN\", \"trigger\": \"SEND_DCCP_RESET_CONN_REFUSED\", \"new_condition\": \"pending_command == \\\"DCCP_REQUEST\\\"\", \"new_variable_updates\": {}, \"new_unchanged_variables\": [\"pending_command\", \"handshake_completed\", \"response_sent\", \"data_sent_before_handshake\"], \"channel\": \"server_to_client\", \"new_message\": {\"type\": \"DCCP_RESET_CONN_REFUSED\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"LISTEN\", \"dest\": \"LISTEN\", \"trigger\": \"SEND_DCCP_RESET_BAD_SERVICE_CODE\", \"new_condition\": \"pending_command == \\\"DCCP_REQUEST\\\"\", \"new_variable_updates\": {}, \"new_unchanged_variables\": [\"pending_command\", \"handshake_completed\", \"response_sent\", \"data_sent_before_handshake\"], \"channel\": \"server_to_client\", \"new_message\": {\"type\": \"DCCP_RESET_BAD_SERVICE_CODE\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"LISTEN\", \"dest\": \"LISTEN\", \"trigger\": \"SEND_DCCP_RESET_TOO_BUSY\", \"new_condition\": \"pending_command == \\\"DCCP_REQUEST\\\"\", \"new_variable_updates\": {}, \"new_unchanged_variables\": [\"pending_command\", \"handshake_completed\", \"response_sent\", \"data_sent_before_handshake\"], \"channel\": \"server_to_client\", \"new_message\": {\"type\": \"DCCP_RESET_TOO_BUSY\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"LISTEN\", \"dest\": \"TIMEWAIT\", \"trigger\": \"SEND_DCCP_RESET_NO_CONNECTION\", \"new_condition\": \"pending_command == \\\"DCCP_REQUEST\\\"\", \"new_variable_updates\": {}, \"new_unchanged_variables\": [\"pending_command\", \"handshake_completed\", \"response_sent\", \"data_sent_before_handshake\"], \"channel\": \"server_to_client\", \"new_message\": {\"type\": \"DCCP_RESET_NO_CONNECTION\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"CLOSED\", \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"TIMEWAIT\", \"dest\": \"CLOSED\", \"trigger\": \"timewait_expires\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"CLOSED\", \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"TIMEWAIT\", \"dest\": \"CLOSED\", \"trigger\": \"timewait_expires\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"handshake_completed\", \"response_sent\", \"data_sent_before_handshake\"]}"
+    }
+  }
+]

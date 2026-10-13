@@ -1,0 +1,1970 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\": \"SMTPProtocol\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Server\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"client_to_server\", \"from_entity\": \"Client\", \"to_entity\": \"Server\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"server_to_client\", \"from_entity\": \"Server\", \"to_entity\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Connection_Established\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Greeting_Sent\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Session_Initialized\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Legacy_Mail_Transaction_Active\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Mail_Transaction_Started\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Recipients_Specified\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Data_Entry\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Mail_Transaction_Completed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Session_Terminated\", \"initial\": false, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Start\", \"initial\": true, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Connection_Opened\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Greeting_Received\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Session_Initialized\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Legacy_Mail_Transaction_Active\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Mail_Transaction_Started\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Recipients_Specified\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Data_Entry\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Mail_Transaction_Completed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Done\", \"initial\": false, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"timeout_initial_220\", \"source\": \"Connection_Opened\", \"dest\": \"Done\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"timeout_MAIL\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Done\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"timeout_RCPT\", \"source\": \"Recipients_Specified\", \"dest\": \"Done\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"timeout_DATA_initiation\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Done\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"timeout_DATA_block\", \"source\": \"Data_Entry\", \"dest\": \"Done\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"timeout_DATA_termination\", \"source\": \"Data_Entry\", \"dest\": \"Done\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"server_timeout_waiting_command\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Terminated\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_greeting_220\", \"source\": \"Connection_Established\", \"dest\": \"Greeting_Sent\", \"condition\": \"True\", \"message\": {\"type\": \"GREETING_220\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_greeting_220\", \"entity_name\": \"Client\", \"source\": \"Connection_Opened\", \"dest\": \"Greeting_Received\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"GREETING_220\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_greeting_554\", \"source\": \"Connection_Established\", \"dest\": \"Greeting_Sent\", \"condition\": \"True\", \"message\": {\"type\": \"GREETING_554\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_greeting_554\", \"entity_name\": \"Client\", \"source\": \"Connection_Opened\", \"dest\": \"Greeting_Received\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"GREETING_554\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_QUIT_after_554\", \"source\": \"Greeting_Received\", \"dest\": \"Done\", \"condition\": \"True\", \"message\": {\"type\": \"QUIT\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_QUIT_after_554\", \"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Session_Terminated\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"QUIT\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_EHLO\", \"source\": \"Greeting_Received\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"message\": {\"type\": \"EHLO\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_EHLO\", \"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"EHLO\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_HELO\", \"source\": \"Greeting_Received\", \"dest\": \"Legacy_Mail_Transaction_Active\", \"condition\": \"True\", \"message\": {\"type\": \"HELO\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_HELO\", \"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Legacy_Mail_Transaction_Active\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"HELO\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_MAIL_without_EHLO\", \"source\": \"Greeting_Received\", \"dest\": \"Mail_Transaction_Started\", \"condition\": \"True\", \"message\": {\"type\": \"MAIL\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_MAIL_without_EHLO\", \"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Mail_Transaction_Started\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"MAIL\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_MAIL_without_EHLO\", \"source\": \"Greeting_Received\", \"dest\": \"Mail_Transaction_Started\", \"channel\": \"client_to_server\", \"new_condition\": \"True\", \"new_message\": {\"type\": \"MAIL\"}, \"new_unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_MAIL_without_EHLO\", \"source\": \"Greeting_Sent\", \"dest\": \"Mail_Transaction_Started\", \"channel\": \"client_to_server\", \"new_condition\": \"True\", \"new_type\": \"MAIL\", \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_MAIL_250\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"condition\": \"pending_command == \\\"MAIL\\\"\", \"message\": {\"type\": \"MAIL_250\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_MAIL_250\", \"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"MAIL_250\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_RCPT\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Recipients_Specified\", \"condition\": \"True\", \"message\": {\"type\": \"RCPT\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_RCPT\", \"entity_name\": \"Server\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Recipients_Specified\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"RCPT\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DATA\", \"source\": \"Recipients_Specified\", \"dest\": \"Data_Entry\", \"condition\": \"True\", \"message\": {\"type\": \"DATA\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_DATA\", \"entity_name\": \"Server\", \"source\": \"Recipients_Specified\", \"dest\": \"Data_Entry\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"DATA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_MAIL_without_EHLO\", \"source\": \"Greeting_Sent\", \"dest\": \"Mail_Transaction_Started\", \"channel\": \"client_to_server\", \"new_condition\": \"True\", \"new_type\": \"MAIL\", \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_MAIL_250\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"channel\": \"server_to_client\", \"new_condition\": \"pending_command == \\\"MAIL\\\"\", \"new_message\": {\"type\": \"MAIL_250\"}, \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_RCPT_250\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"condition\": \"pending_command == \\\"RCPT\\\"\", \"message\": {\"type\": \"RCPT_250\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_RCPT_250\", \"entity_name\": \"Client\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"RCPT_250\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_RCPT_251\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"condition\": \"pending_command == \\\"RCPT\\\"\", \"message\": {\"type\": \"RCPT_251\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_RCPT_251\", \"entity_name\": \"Client\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"RCPT_251\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_RCPT_550\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"condition\": \"pending_command == \\\"RCPT\\\"\", \"message\": {\"type\": \"RCPT_550\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_RCPT_550\", \"entity_name\": \"Client\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"RCPT_550\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_RCPT_551\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"condition\": \"pending_command == \\\"RCPT\\\"\", \"message\": {\"type\": \"RCPT_551\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_RCPT_551\", \"entity_name\": \"Client\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"RCPT_551\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_VRFY\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"message\": {\"type\": \"VRFY\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_VRFY\", \"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"VRFY\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_VRFY\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"channel\": \"client_to_server\", \"new_condition\": \"True\", \"new_type\": \"VRFY\", \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_VRFY_250\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"VRFY\\\"\", \"message\": {\"type\": \"VRFY_250\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_VRFY_250\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"VRFY_250\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_VRFY_553\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"VRFY\\\"\", \"message\": {\"type\": \"VRFY_553\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_VRFY_553\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"VRFY_553\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_VRFY_500\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"VRFY\\\"\", \"message\": {\"type\": \"VRFY_500\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_VRFY_500\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"VRFY_500\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_VRFY_502\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"VRFY\\\"\", \"message\": {\"type\": \"VRFY_502\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_VRFY_502\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"VRFY_502\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_QUIT\", \"source\": \"Session_Initialized\", \"dest\": \"Done\", \"condition\": \"True\", \"message\": {\"type\": \"QUIT\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_QUIT\", \"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Terminated\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"QUIT\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_QUIT_221\", \"source\": \"Session_Terminated\", \"dest\": \"Session_Terminated\", \"condition\": \"pending_command == \\\"QUIT\\\"\", \"message\": {\"type\": \"QUIT_221\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_QUIT_221\", \"entity_name\": \"Client\", \"source\": \"Done\", \"dest\": \"Done\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"QUIT_221\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_EXPN\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"message\": {\"type\": \"EXPN\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_EXPN\", \"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"EXPN\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_HELP\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"message\": {\"type\": \"HELP\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_HELP\", \"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"HELP\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_NOOP\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"message\": {\"type\": \"NOOP\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_NOOP\", \"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"NOOP\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_EXPN\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"EXPN\\\"\", \"message\": {\"type\": \"EXPN_250\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_EXPN\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"EXPN_250\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_HELP\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"HELP\\\"\", \"message\": {\"type\": \"HELP_214\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_HELP\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"HELP_214\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_NOOP_250\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"NOOP\\\"\", \"message\": {\"type\": \"NOOP_250\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_NOOP_250\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"NOOP_250\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DATA_body\", \"source\": \"Data_Entry\", \"dest\": \"Data_Entry\", \"condition\": \"True\", \"message\": {\"type\": \"DATA_BODY\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_DATA_body\", \"entity_name\": \"Server\", \"source\": \"Data_Entry\", \"dest\": \"Data_Entry\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"DATA_BODY\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DATA_end\", \"source\": \"Data_Entry\", \"dest\": \"Mail_Transaction_Completed\", \"condition\": \"True\", \"message\": {\"type\": \"DATA_END\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_DATA_end\", \"entity_name\": \"Server\", \"source\": \"Data_Entry\", \"dest\": \"Mail_Transaction_Completed\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"DATA_END\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_DATA_354\", \"source\": \"Data_Entry\", \"dest\": \"Data_Entry\", \"condition\": \"pending_command == \\\"DATA\\\"\", \"message\": {\"type\": \"DATA_354\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_DATA_354\", \"entity_name\": \"Client\", \"source\": \"Data_Entry\", \"dest\": \"Data_Entry\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"DATA_354\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_DATA_250\", \"source\": \"Mail_Transaction_Completed\", \"dest\": \"Mail_Transaction_Completed\", \"condition\": \"pending_command == \\\"DATA_END\\\"\", \"message\": {\"type\": \"DATA_250\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_DATA_250\", \"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Completed\", \"dest\": \"Mail_Transaction_Completed\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"DATA_250\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_RSET\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"message\": {\"type\": \"RSET\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_RSET\", \"entity_name\": \"Server\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"RSET\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_RSET_250\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"RSET\\\"\", \"message\": {\"type\": \"RSET_250\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_RSET_250\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"RSET_250\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_VRFY_252\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"VRFY\\\"\", \"message\": {\"type\": \"VRFY_252\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_VRFY_252\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"VRFY_252\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_EXPN_251\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"EXPN\\\"\", \"message\": {\"type\": \"EXPN_251\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_EXPN_251\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"EXPN_251\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_EXPN_551\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"EXPN\\\"\", \"message\": {\"type\": \"EXPN_551\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_EXPN_551\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"EXPN_551\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_EXPN_550\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"pending_command == \\\"EXPN\\\"\", \"message\": {\"type\": \"EXPN_550\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_EXPN_550\", \"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"EXPN_550\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_EHLO_500\", \"source\": \"Greeting_Sent\", \"dest\": \"Greeting_Sent\", \"condition\": \"pending_command == \\\"EHLO\\\"\", \"message\": {\"type\": \"EHLO_500\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_EHLO_500\", \"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Greeting_Received\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"EHLO_500\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_EHLO_501\", \"source\": \"Greeting_Sent\", \"dest\": \"Greeting_Sent\", \"condition\": \"pending_command == \\\"EHLO\\\"\", \"message\": {\"type\": \"EHLO_501\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_EHLO_501\", \"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Greeting_Received\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"EHLO_501\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_EHLO_502\", \"source\": \"Greeting_Sent\", \"dest\": \"Greeting_Sent\", \"condition\": \"pending_command == \\\"EHLO\\\"\", \"message\": {\"type\": \"EHLO_502\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_EHLO_502\", \"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Greeting_Received\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"EHLO_502\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_EHLO_550\", \"source\": \"Greeting_Sent\", \"dest\": \"Greeting_Sent\", \"condition\": \"pending_command == \\\"EHLO\\\"\", \"message\": {\"type\": \"EHLO_550\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_EHLO_550\", \"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Greeting_Received\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"EHLO_550\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_MAIL_501\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"condition\": \"pending_command == \\\"MAIL\\\"\", \"message\": {\"type\": \"MAIL_501\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_MAIL_501\", \"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"MAIL_501\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"resp_503_any\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"condition\": \"True\", \"message\": {\"type\": \"GENERIC_503\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"resp_503_any\", \"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"GENERIC_503\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\":\"Client\",\"trigger\":\"tcp_connect\",\"source\":\"Start\",\"dest\":\"Connection_Opened\",\"condition\":\"True\",\"unchanged_variables\":[]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_QUIT_greeting\", \"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Session_Terminated\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"QUIT\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_QUIT_221\", \"source\": \"Session_Terminated\", \"dest\": \"Session_Terminated\", \"condition\": \"Server__pending_command == \\\"QUIT\\\"\", \"message\": {\"type\": \"QUIT_221\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Connection_Opened\", \"dest\": \"Done\", \"trigger\": \"timeout_initial_220\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Done\", \"trigger\": \"timeout_MAIL\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Recipients_Specified\", \"dest\": \"Done\", \"trigger\": \"timeout_RCPT\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Done\", \"trigger\": \"timeout_DATA_initiation\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Data_Entry\", \"dest\": \"Done\", \"trigger\": \"timeout_DATA_block\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Data_Entry\", \"dest\": \"Done\", \"trigger\": \"timeout_DATA_termination\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Connection_Opened\", \"dest\": \"Greeting_Received\", \"trigger\": \"send_greeting_220\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Connection_Opened\", \"dest\": \"Greeting_Received\", \"trigger\": \"send_greeting_554\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Done\", \"trigger\": \"send_QUIT_after_554\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_EHLO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Legacy_Mail_Transaction_Active\", \"trigger\": \"send_HELO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Mail_Transaction_Started\", \"trigger\": \"send_MAIL_without_EHLO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"trigger\": \"resp_MAIL_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Recipients_Specified\", \"trigger\": \"send_RCPT\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Recipients_Specified\", \"dest\": \"Data_Entry\", \"trigger\": \"send_DATA\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"trigger\": \"resp_RCPT_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"trigger\": \"resp_RCPT_251\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"trigger\": \"resp_RCPT_550\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"trigger\": \"resp_RCPT_551\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_VRFY\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_VRFY_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_VRFY_553\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_VRFY_500\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_VRFY_502\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Done\", \"trigger\": \"send_QUIT\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Done\", \"dest\": \"Done\", \"trigger\": \"resp_QUIT_221\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_EXPN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_HELP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_NOOP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_EXPN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_HELP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_NOOP_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Data_Entry\", \"dest\": \"Data_Entry\", \"trigger\": \"send_DATA_body\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Data_Entry\", \"dest\": \"Mail_Transaction_Completed\", \"trigger\": \"send_DATA_end\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Data_Entry\", \"dest\": \"Data_Entry\", \"trigger\": \"resp_DATA_354\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Completed\", \"dest\": \"Mail_Transaction_Completed\", \"trigger\": \"resp_DATA_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_RSET\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_RSET_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_VRFY_252\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_EXPN_251\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_EXPN_551\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_EXPN_550\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Greeting_Received\", \"trigger\": \"resp_EHLO_500\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Greeting_Received\", \"trigger\": \"resp_EHLO_501\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Greeting_Received\", \"trigger\": \"resp_EHLO_502\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Greeting_Received\", \"trigger\": \"resp_EHLO_550\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"trigger\": \"resp_MAIL_501\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"trigger\": \"resp_503_any\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Start\", \"dest\": \"Connection_Opened\", \"trigger\": \"tcp_connect\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Terminated\", \"trigger\": \"server_timeout_waiting_command\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Connection_Established\", \"dest\": \"Greeting_Sent\", \"trigger\": \"send_greeting_220\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Connection_Established\", \"dest\": \"Greeting_Sent\", \"trigger\": \"send_greeting_554\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Session_Terminated\", \"trigger\": \"send_QUIT_after_554\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_EHLO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Legacy_Mail_Transaction_Active\", \"trigger\": \"send_HELO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Mail_Transaction_Started\", \"trigger\": \"send_MAIL_without_EHLO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"trigger\": \"resp_MAIL_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Recipients_Specified\", \"trigger\": \"send_RCPT\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Recipients_Specified\", \"dest\": \"Data_Entry\", \"trigger\": \"send_DATA\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"trigger\": \"resp_RCPT_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"trigger\": \"resp_RCPT_251\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"trigger\": \"resp_RCPT_550\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Recipients_Specified\", \"dest\": \"Recipients_Specified\", \"trigger\": \"resp_RCPT_551\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_VRFY\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_VRFY_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_VRFY_553\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_VRFY_500\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_VRFY_502\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Terminated\", \"trigger\": \"send_QUIT\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Terminated\", \"dest\": \"Session_Terminated\", \"trigger\": \"resp_QUIT_221\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_EXPN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_HELP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_NOOP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_EXPN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_HELP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_NOOP_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Data_Entry\", \"dest\": \"Data_Entry\", \"trigger\": \"send_DATA_body\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Data_Entry\", \"dest\": \"Mail_Transaction_Completed\", \"trigger\": \"send_DATA_end\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Data_Entry\", \"dest\": \"Data_Entry\", \"trigger\": \"resp_DATA_354\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Mail_Transaction_Completed\", \"dest\": \"Mail_Transaction_Completed\", \"trigger\": \"resp_DATA_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_RSET\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_RSET_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_VRFY_252\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_EXPN_251\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_EXPN_551\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Session_Initialized\", \"trigger\": \"resp_EXPN_550\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Greeting_Sent\", \"trigger\": \"resp_EHLO_500\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Greeting_Sent\", \"trigger\": \"resp_EHLO_501\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Greeting_Sent\", \"trigger\": \"resp_EHLO_502\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Greeting_Sent\", \"trigger\": \"resp_EHLO_550\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"trigger\": \"resp_MAIL_501\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Mail_Transaction_Started\", \"dest\": \"Mail_Transaction_Started\", \"trigger\": \"resp_503_any\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Session_Terminated\", \"trigger\": \"recv_QUIT_greeting\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Terminated\", \"dest\": \"Session_Terminated\", \"trigger\": \"send_QUIT_221\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Start\", \"initial\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Done\", \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Connection_Established\", \"initial\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Session_Terminated\", \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"ehlo_response_received\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Connection_Established\", \"dest\": \"Greeting_Sent\", \"trigger\": \"send_GREETING_220_Connection_Established\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"server_to_client\", \"message\": {\"type\": \"GREETING_220\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Start\", \"dest\": \"Greeting_Received\", \"trigger\": \"recv_GREETING_220_Start\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"ehlo_response_received\"], \"channel\": \"server_to_client\", \"type\": \"GREETING_220\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"AwaitEHLO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"AwaitEHLO\", \"trigger\": \"send_EHLO_Greeting_Received\", \"condition\": \"ehlo_response_received\", \"variable_updates\": {}, \"unchanged_variables\": [\"ehlo_response_received\"], \"channel\": \"client_to_server\", \"message\": {\"type\": \"EHLO\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"ReplyEHLO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"ReplyEHLO\", \"trigger\": \"recv_EHLO_Greeting_Sent\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"client_to_server\", \"type\": \"EHLO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"ReplyEHLO\", \"dest\": \"Session_Initialized\", \"trigger\": \"send_EHLO_250_ReplyEHLO\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"server_to_client\", \"message\": {\"type\": \"EHLO_250\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Greeting_Received\", \"trigger\": \"recv_EHLO_250_Greeting_Received\", \"condition\": \"True\", \"variable_updates\": {\"ehlo_response_received\": \"True\"}, \"unchanged_variables\": [], \"channel\": \"server_to_client\", \"type\": \"EHLO_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AwaitEHLO\", \"dest\": \"Session_Initialized\", \"trigger\": \"recv_EHLO_250_AwaitEHLO\", \"condition\": \"True\", \"variable_updates\": {\"ehlo_response_received\": \"True\"}, \"unchanged_variables\": [], \"channel\": \"server_to_client\", \"type\": \"EHLO_250\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Wait_QUIT_221\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"Wait_QUIT_221\", \"trigger\": \"send_QUIT_Greeting_Received\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"ehlo_response_received\"], \"channel\": \"client_to_server\", \"message\": {\"type\": \"QUIT\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Reply_QUIT\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Greeting_Sent\", \"dest\": \"Reply_QUIT\", \"trigger\": \"recv_QUIT_Greeting_Sent\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"client_to_server\", \"type\": \"QUIT\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Reply_QUIT\", \"dest\": \"Session_Terminated\", \"trigger\": \"send_QUIT_221_Reply_QUIT\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"server_to_client\", \"message\": {\"type\": \"QUIT_221\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Wait_QUIT_221\", \"dest\": \"Done\", \"trigger\": \"recv_QUIT_221_Wait_QUIT_221\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"ehlo_response_received\"], \"channel\": \"server_to_client\", \"type\": \"QUIT_221\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Session_Initialized\", \"dest\": \"Wait_QUIT_221\", \"trigger\": \"send_QUIT_Session_Initialized\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"ehlo_response_received\"], \"channel\": \"client_to_server\", \"message\": {\"type\": \"QUIT\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Session_Initialized\", \"dest\": \"Reply_QUIT\", \"trigger\": \"recv_QUIT_Session_Initialized\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"client_to_server\", \"type\": \"QUIT\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Reply_QUIT\", \"dest\": \"Session_Terminated\", \"trigger\": \"send_QUIT_221_Reply_QUIT\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"server_to_client\", \"message\": {\"type\": \"QUIT_221\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Wait_QUIT_221\", \"dest\": \"Done\", \"trigger\": \"recv_QUIT_221_Wait_QUIT_221\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"ehlo_response_received\"], \"channel\": \"server_to_client\", \"type\": \"QUIT_221\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"AwaitEHLOPermission\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Greeting_Received\", \"dest\": \"AwaitEHLOPermission\", \"trigger\": \"choose_EHLO\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"ehlo_response_received\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AwaitEHLOPermission\", \"dest\": \"AwaitEHLO\", \"trigger\": \"send_EHLO_AwaitEHLOPermission\", \"condition\": \"ehlo_response_received\", \"variable_updates\": {}, \"unchanged_variables\": [\"ehlo_response_received\"], \"channel\": \"client_to_server\", \"message\": {\"type\": \"EHLO\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AwaitEHLOPermission\", \"dest\": \"AwaitEHLOPermission\", \"trigger\": \"recv_EHLO_250_AwaitEHLOPermission\", \"condition\": \"True\", \"variable_updates\": {\"ehlo_response_received\": \"True\"}, \"unchanged_variables\": [], \"channel\": \"server_to_client\", \"type\": \"EHLO_250\"}"
+    }
+  }
+]

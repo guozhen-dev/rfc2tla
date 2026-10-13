@@ -1,0 +1,850 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\": \"PPTPProtocol\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"PAC\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"PNS\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"pac_to_pns_control\", \"from_entity\": \"PAC\", \"to_entity\": \"PNS\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"pns_to_pac_control\", \"from_entity\": \"PNS\", \"to_entity\": \"PAC\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"pac_to_pns_tunnel\", \"from_entity\": \"PAC\", \"to_entity\": \"PNS\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"pns_to_pac_tunnel\", \"from_entity\": \"PNS\", \"to_entity\": \"PAC\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PAC\", \"state_name\": \"idle\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PAC\", \"state_name\": \"wait_ctl_reply\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PAC\", \"state_name\": \"established\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PAC\", \"state_name\": \"wait_stop_reply\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PAC\", \"state_name\": \"wait_reply\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PAC\", \"state_name\": \"wait_connect\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PAC\", \"state_name\": \"wait_cs_ans\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PNS\", \"state_name\": \"idle\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PNS\", \"state_name\": \"wait_ctl_reply\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PNS\", \"state_name\": \"established\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PNS\", \"state_name\": \"wait_stop_reply\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PNS\", \"state_name\": \"wait_reply\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PNS\", \"state_name\": \"wait_connect\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PNS\", \"state_name\": \"wait_disconnect\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PNS\", \"state_name\": \"wait_cs_ans\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PAC\", \"name\": \"last_service_send_allowed\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PNS\", \"name\": \"last_service_send_allowed\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_SCCRQ_from_PAC\", \"source\": \"idle\", \"dest\": \"wait_ctl_reply\", \"condition\": \"\", \"message\": {\"type\": \"Start-Control-Connection-Request\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_SCCRQ_from_PAC\", \"entity_name\": \"PNS\", \"source\": \"idle\", \"dest\": \"wait_ctl_reply\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Start-Control-Connection-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_SCCRP_from_PNS\", \"source\": \"wait_ctl_reply\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Start-Control-Connection-Reply\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_SCCRP_from_PNS\", \"entity_name\": \"PAC\", \"source\": \"wait_ctl_reply\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Start-Control-Connection-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_SCCRQ_from_PNS\", \"source\": \"idle\", \"dest\": \"wait_ctl_reply\", \"condition\": \"\", \"message\": {\"type\": \"Start-Control-Connection-Request\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_SCCRQ_from_PNS\", \"entity_name\": \"PAC\", \"source\": \"idle\", \"dest\": \"wait_ctl_reply\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Start-Control-Connection-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_SCCRP_from_PAC\", \"source\": \"wait_ctl_reply\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Start-Control-Connection-Reply\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_SCCRP_from_PAC\", \"entity_name\": \"PNS\", \"source\": \"wait_ctl_reply\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Start-Control-Connection-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_StopCCRQ_from_PAC\", \"source\": \"established\", \"dest\": \"wait_stop_reply\", \"condition\": \"\", \"message\": {\"type\": \"Stop-Control-Connection-Request\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_StopCCRQ_from_PAC\", \"entity_name\": \"PNS\", \"source\": \"established\", \"dest\": \"wait_stop_reply\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Stop-Control-Connection-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_StopCCRP_from_PNS\", \"source\": \"wait_stop_reply\", \"dest\": \"idle\", \"condition\": \"\", \"message\": {\"type\": \"Stop-Control-Connection-Reply\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_StopCCRP_from_PNS\", \"entity_name\": \"PAC\", \"source\": \"wait_stop_reply\", \"dest\": \"idle\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Stop-Control-Connection-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_StopCCRQ_from_PNS\", \"source\": \"established\", \"dest\": \"wait_stop_reply\", \"condition\": \"\", \"message\": {\"type\": \"Stop-Control-Connection-Request\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_StopCCRQ_from_PNS\", \"entity_name\": \"PAC\", \"source\": \"established\", \"dest\": \"wait_stop_reply\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Stop-Control-Connection-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_StopCCRP_from_PAC\", \"source\": \"wait_stop_reply\", \"dest\": \"idle\", \"condition\": \"\", \"message\": {\"type\": \"Stop-Control-Connection-Reply\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_StopCCRP_from_PAC\", \"entity_name\": \"PNS\", \"source\": \"wait_stop_reply\", \"dest\": \"idle\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Stop-Control-Connection-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_EchoReq_from_PAC\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Echo-Request\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"timer_expired\"], \"variable_updates\": {\"last_service_send_allowed\": \"state_PAC == \\\"established\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_EchoReq_from_PAC\", \"entity_name\": \"PNS\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Echo-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_EchoRep_from_PNS\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Echo-Reply\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_EchoRep_from_PNS\", \"entity_name\": \"PAC\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Echo-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_EchoReq_from_PNS\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Echo-Request\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"timer_expired\"], \"variable_updates\": {\"last_service_send_allowed\": \"state_PNS == \\\"established\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_EchoReq_from_PNS\", \"entity_name\": \"PAC\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Echo-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_EchoRep_from_PAC\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Echo-Reply\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_EchoRep_from_PAC\", \"entity_name\": \"PNS\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Echo-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_OCRQ_from_PNS\", \"source\": \"established\", \"dest\": \"wait_connect\", \"condition\": \"\", \"message\": {\"type\": \"Outgoing-Call-Request\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_OCRQ_from_PNS\", \"entity_name\": \"PAC\", \"source\": \"established\", \"dest\": \"wait_connect\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Outgoing-Call-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_OCRP_from_PAC\", \"source\": \"wait_connect\", \"dest\": \"wait_reply\", \"condition\": \"\", \"message\": {\"type\": \"Outgoing-Call-Reply\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_OCRP_from_PAC\", \"entity_name\": \"PNS\", \"source\": \"wait_connect\", \"dest\": \"wait_reply\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Outgoing-Call-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_ICRQ_from_PAC\", \"source\": \"idle\", \"dest\": \"wait_reply\", \"condition\": \"\", \"message\": {\"type\": \"Incoming-Call-Request\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_ICRQ_from_PAC\", \"entity_name\": \"PNS\", \"source\": \"idle\", \"dest\": \"wait_reply\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Incoming-Call-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_ICRP_from_PNS\", \"source\": \"wait_reply\", \"dest\": \"wait_connect\", \"condition\": \"\", \"message\": {\"type\": \"Incoming-Call-Reply\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_ICRP_from_PNS\", \"entity_name\": \"PAC\", \"source\": \"wait_reply\", \"dest\": \"wait_connect\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Incoming-Call-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_ICCN_from_PAC\", \"source\": \"wait_connect\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Incoming-Call-Connected\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_ICCN_from_PAC\", \"entity_name\": \"PNS\", \"source\": \"wait_connect\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Incoming-Call-Connected\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_CCRQ_from_PNS\", \"source\": \"established\", \"dest\": \"wait_disconnect\", \"condition\": \"\", \"message\": {\"type\": \"Call-Clear-Request\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_CCRQ_from_PNS\", \"entity_name\": \"PAC\", \"source\": \"established\", \"dest\": \"idle\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Call-Clear-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_CDN_from_PAC\", \"source\": \"established\", \"dest\": \"idle\", \"condition\": \"\", \"message\": {\"type\": \"Call-Disconnect-Notify\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_CDN_from_PAC\", \"entity_name\": \"PNS\", \"source\": \"wait_disconnect\", \"dest\": \"idle\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Call-Disconnect-Notify\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_WEN_from_PAC\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"WAN-Error-Notify\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_WEN_from_PAC\", \"entity_name\": \"PNS\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"WAN-Error-Notify\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PAC\", \"name\": \"timer_expired\", \"initial_value\": \"False\", \"var_type\": \"BOOLEAN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PNS\", \"name\": \"timer_expired\", \"initial_value\": \"False\", \"var_type\": \"BOOLEAN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"PAC\", \"name\": \"collision_handling\", \"condition\": \"not (state_PAC == \\\"Wait_Ctl_Reply\\\" and state_PNS == \\\"Wait_Ctl_Reply\\\" and PAC__ip_address < PNS__ip_address) or state_PAC == \\\"Wait_Stop_Reply\\\"\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"out_of_sequence_packet\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"pns_to_pac_msg.type = \\\"DataPacket\\\" and pns_to_pac_msg.variables.sequence_number <= last_received_seq\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"version\", \"identifier\", \"call_id\", \"peer_call_id\", \"result_code\", \"error_code\", \"cause_code\", \"crc_errors\", \"framing_errors\", \"hardware_overruns\", \"buffer_overruns\", \"send_accm\", \"receive_accm\", \"bearer_type\", \"dialed_number\", \"dialing_number\", \"subaddress\", \"max_window_size\", \"window_size\", \"packets_awaiting_ack\", \"last_sent_ack\", \"last_received_seq\", \"sequence_number\", \"ack_number\", \"ppd_value\", \"timer_expired\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_sccrp_fail_pac\", \"entity_name\": \"PAC\", \"source\": \"wait_ctl_reply\", \"dest\": \"idle\", \"condition\": \"pns_to_pac_msg.type = \\\"Start_Control_Connection_Reply\\\"\", \"channel\": \"pns_to_pac\", \"type\": \"Start_Control_Connection_Reply\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"trigger\": \"send_CDN_wait_reply_CCRQ\", \"entity_name\": \"PAC\", \"source\": \"wait_reply\", \"dest\": \"established\", \"channel\": \"pac_to_pns\", \"message\": {\"type\": \"Call-Disconnect-Notify\", \"variables\": {}}, \"condition\": \"PAC__pending_command = \\\"Call-Clear-Request\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_invariant",
+      "arguments": "{\"entity_name\": \"PNS\", \"invariant_name\": \"1\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_entity_invariant",
+      "arguments": "{\"entity_name\": \"PNS\", \"invariant_name\": \"1\", \"new_condition\": \"(((state[\\\"PNS\\\"] \\\\notin {\\\"wait_connect\\\", \\\"wait_reply\\\", \\\"call_established\\\", \\\"wait_disconnect\\\"})) \\\\/ ((state[\\\"PAC\\\"] \\\\notin {\\\"idle\\\", \\\"wait_stop_reply\\\"})))\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"PNS\", \"name\": \"collision_handling\", \"condition\": \"not (state_PNS == \\\"Wait_Ctl_Reply\\\" and state_PAC == \\\"Wait_Ctl_Reply\\\" and PNS__ip_address < PAC__ip_address) or state_PNS == \\\"Wait_Stop_Reply\\\"\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"pac_rcv_stopccrq_csans\", \"entity_name\": \"PAC\", \"source\": \"wait_cs_ans\", \"dest\": \"established\", \"condition\": \"pns_to_pac_control_msg.type = \\\"StopCCRQ\\\"\", \"channel\": \"pns_to_pac_control\", \"type\": \"StopCCRQ\", \"variable_updates\": {\"pending_command\": \"\\\"StopCCRQ\\\"\"}, \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"timeout_wait_ctl_or_reply_PAC\", \"source\": \"wait_ctl_reply\", \"dest\": \"idle\", \"condition\": \"timer_expired == True\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"timeout_wait_reply_PAC\", \"source\": \"wait_reply\", \"dest\": \"idle\", \"condition\": \"timer_expired == True\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"timeout_wait_ctl_or_reply_PNS\", \"source\": \"wait_ctl_reply\", \"dest\": \"idle\", \"condition\": \"timer_expired == True\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"timeout_wait_reply_PNS\", \"source\": \"wait_reply\", \"dest\": \"idle\", \"condition\": \"timer_expired == True\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"timeout_call_states_PAC\", \"source\": \"wait_connect\", \"dest\": \"idle\", \"condition\": \"timer_expired == True\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"timeout_call_states_PAC\", \"source\": \"wait_cs_ans\", \"dest\": \"idle\", \"condition\": \"timer_expired == True\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"timeout_call_states_PNS\", \"source\": \"wait_connect\", \"dest\": \"idle\", \"condition\": \"timer_expired == True\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"timeout_call_states_PNS\", \"source\": \"wait_reply\", \"dest\": \"idle\", \"condition\": \"timer_expired == True\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"ICRP_not_accept_PAC\", \"entity_name\": \"PAC\", \"source\": \"wait_reply\", \"dest\": \"idle\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Incoming-Call-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"ICRP_accept_PAC\", \"entity_name\": \"PAC\", \"source\": \"wait_reply\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Incoming-Call-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"ICRP_accept_PAC\", \"source\": \"wait_reply\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Incoming-Call-Connected\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"CDN_from_PAC_incoming\", \"entity_name\": \"PNS\", \"source\": \"established\", \"dest\": \"idle\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Call-Disconnect-Notify\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"CDN_from_PAC_incoming\", \"source\": \"established\", \"dest\": \"idle\", \"condition\": \"\", \"message\": {\"type\": \"Call-Clear-Request\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"OCRQ_error_PAC\", \"entity_name\": \"PAC\", \"source\": \"idle\", \"dest\": \"idle\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Outgoing-Call-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"OCRQ_ok_PAC\", \"entity_name\": \"PAC\", \"source\": \"idle\", \"dest\": \"wait_cs_ans\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Outgoing-Call-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"OCRP_error_PAC\", \"source\": \"wait_cs_ans\", \"dest\": \"idle\", \"condition\": \"\", \"message\": {\"type\": \"Outgoing-Call-Reply\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"OCRP_success_PAC\", \"source\": \"wait_cs_ans\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Outgoing-Call-Reply\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"OCRP_error_PAC\", \"entity_name\": \"PNS\", \"source\": \"wait_connect\", \"dest\": \"idle\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Outgoing-Call-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"OCRP_success_PAC\", \"entity_name\": \"PNS\", \"source\": \"wait_connect\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Outgoing-Call-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_SetLinkInfo_from_PNS\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Set-Link-Info\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_SetLinkInfo_from_PNS\", \"entity_name\": \"PAC\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Set-Link-Info\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"OCRP_success_PAC_to_wait_cs_ans\", \"entity_name\": \"PNS\", \"source\": \"wait_connect\", \"dest\": \"wait_cs_ans\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Outgoing-Call-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_Echo_Request_from_PAC\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Echo-Request\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"timer_expired\"], \"variable_updates\": {\"last_service_send_allowed\": \"state_PAC == \\\"established\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_Echo_Request_at_PAC\", \"entity_name\": \"PAC\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Echo-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PAC\", \"trigger\": \"send_Echo_Reply_from_PAC\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Echo-Reply\"}, \"channel\": \"pac_to_pns_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_Echo_Reply_at_PAC\", \"entity_name\": \"PAC\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pns_to_pac_control\", \"type\": \"Echo-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_Echo_Request_from_PNS\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Echo-Request\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"timer_expired\"], \"variable_updates\": {\"last_service_send_allowed\": \"state_PNS == \\\"established\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_Echo_Request_at_PNS\", \"entity_name\": \"PNS\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Echo-Request\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PNS\", \"trigger\": \"send_Echo_Reply_from_PNS\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"message\": {\"type\": \"Echo-Reply\"}, \"channel\": \"pns_to_pac_control\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_Echo_Reply_at_PNS\", \"entity_name\": \"PNS\", \"source\": \"established\", \"dest\": \"established\", \"condition\": \"\", \"channel\": \"pac_to_pns_control\", \"type\": \"Echo-Reply\", \"unchanged_variables\": [\"last_service_send_allowed\", \"timer_expired\"], \"variable_updates\": {}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"PAC\", \"name\": \"echo_requires_control_connection\", \"condition\": \"last_service_send_allowed\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"PNS\", \"name\": \"echo_requires_control_connection\", \"condition\": \"last_service_send_allowed\"}"
+    }
+  }
+]

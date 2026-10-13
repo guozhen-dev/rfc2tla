@@ -1,0 +1,890 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\": \"PPPProtocol\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"EndpointA\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"EndpointB\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"endpointA_to_endpointB\", \"from_entity\": \"EndpointA\", \"to_entity\": \"EndpointB\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"endpointB_to_endpointA\", \"from_entity\": \"EndpointB\", \"to_entity\": \"EndpointA\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Dead\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Establish\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Authenticate\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Network\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Terminate\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Initial\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Starting\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Closed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Stopped\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Closing\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Stopping\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Req-Sent\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Ack-Rcvd\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Ack-Sent\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"state_name\": \"Opened\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Dead\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Establish\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Authenticate\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Network\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Terminate\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Initial\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Starting\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Closed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Stopped\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Closing\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Stopping\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Req-Sent\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Ack-Rcvd\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Ack-Sent\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"state_name\": \"Opened\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Up_event_from_lower_layer\", \"source\": \"Dead\", \"dest\": \"Establish\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Up_event_from_lower_layer\", \"source\": \"Dead\", \"dest\": \"Establish\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Down_event_from_lower_layer\", \"source\": \"Establish\", \"dest\": \"Dead\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Down_event_from_lower_layer\", \"source\": \"Establish\", \"dest\": \"Dead\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Auth_success\", \"source\": \"Authenticate\", \"dest\": \"Network\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Auth_success\", \"source\": \"Authenticate\", \"dest\": \"Network\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Auth_failure_max_retries\", \"source\": \"Authenticate\", \"dest\": \"Terminate\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Auth_failure_max_retries\", \"source\": \"Authenticate\", \"dest\": \"Terminate\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Terminate_complete_to_Dead\", \"source\": \"Terminate\", \"dest\": \"Dead\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Terminate_complete_to_Dead\", \"source\": \"Terminate\", \"dest\": \"Dead\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Up_event\", \"source\": \"Initial\", \"dest\": \"Closed\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Up_event_from_Starting\", \"source\": \"Starting\", \"dest\": \"Req-Sent\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Up_event\", \"source\": \"Initial\", \"dest\": \"Closed\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Up_event_from_Starting\", \"source\": \"Starting\", \"dest\": \"Req-Sent\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Send_Configure_Request\", \"source\": \"Req-Sent\", \"dest\": \"Req-Sent\", \"condition\": \"True\", \"message\": {\"type\": \"Configure-Request\"}, \"channel\": \"endpointA_to_endpointB\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Configure_Request\", \"entity_name\": \"EndpointB\", \"source\": \"Closed\", \"dest\": \"Closed\", \"condition\": \"True\", \"channel\": \"endpointA_to_endpointB\", \"type\": \"Configure-Request\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Send_Terminate_Ack_for_Configure\", \"source\": \"Closed\", \"dest\": \"Closed\", \"condition\": \"pending_command == \\\"Configure-Request\\\"\", \"message\": {\"type\": \"Terminate-Ack\"}, \"channel\": \"endpointB_to_endpointA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Terminate_Ack_for_Configure\", \"entity_name\": \"EndpointA\", \"source\": \"Req-Sent\", \"dest\": \"Req-Sent\", \"condition\": \"True\", \"channel\": \"endpointB_to_endpointA\", \"type\": \"Terminate-Ack\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Send_Terminate_Request\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"message\": {\"type\": \"Terminate-Request\"}, \"channel\": \"endpointA_to_endpointB\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Terminate_Request\", \"entity_name\": \"EndpointB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"channel\": \"endpointA_to_endpointB\", \"type\": \"Terminate-Request\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Send_Terminate_Ack\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"pending_command == \\\"Terminate-Request\\\"\", \"message\": {\"type\": \"Terminate-Ack\"}, \"channel\": \"endpointB_to_endpointA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Terminate_Ack\", \"entity_name\": \"EndpointA\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"channel\": \"endpointB_to_endpointA\", \"type\": \"Terminate-Ack\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Send_Code_Reject\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"message\": {\"type\": \"Code-Reject\"}, \"channel\": \"endpointA_to_endpointB\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Code_Reject\", \"entity_name\": \"EndpointB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"channel\": \"endpointA_to_endpointB\", \"type\": \"Code-Reject\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Send_Configure_Request\", \"source\": \"Req-Sent\", \"dest\": \"Req-Sent\", \"condition\": \"True\", \"message\": {\"type\": \"Configure-Request\"}, \"channel\": \"endpointA_to_endpointB\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Configure_Request\", \"entity_name\": \"EndpointB\", \"source\": \"Closed\", \"dest\": \"Closed\", \"condition\": \"True\", \"channel\": \"endpointA_to_endpointB\", \"type\": \"Configure-Request\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Send_Configure_Ack\", \"source\": \"Closed\", \"dest\": \"Closed\", \"condition\": \"pending_command == \\\"Configure-Request\\\"\", \"message\": {\"type\": \"Configure-Ack\"}, \"channel\": \"endpointB_to_endpointA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Configure_Ack\", \"entity_name\": \"EndpointA\", \"source\": \"Req-Sent\", \"dest\": \"Ack-Rcvd\", \"condition\": \"True\", \"channel\": \"endpointB_to_endpointA\", \"type\": \"Configure-Ack\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Send_Configure_Nak\", \"source\": \"Closed\", \"dest\": \"Closed\", \"condition\": \"pending_command == \\\"Configure-Request\\\"\", \"message\": {\"type\": \"Configure-Nak\"}, \"channel\": \"endpointB_to_endpointA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Configure_Nak\", \"entity_name\": \"EndpointA\", \"source\": \"Req-Sent\", \"dest\": \"Req-Sent\", \"condition\": \"True\", \"channel\": \"endpointB_to_endpointA\", \"type\": \"Configure-Nak\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Send_Configure_Reject\", \"source\": \"Closed\", \"dest\": \"Closed\", \"condition\": \"pending_command == \\\"Configure-Request\\\"\", \"message\": {\"type\": \"Configure-Reject\"}, \"channel\": \"endpointB_to_endpointA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Configure_Reject\", \"entity_name\": \"EndpointA\", \"source\": \"Req-Sent\", \"dest\": \"Req-Sent\", \"condition\": \"True\", \"channel\": \"endpointB_to_endpointA\", \"type\": \"Configure-Reject\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Send_Echo_Request\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"message\": {\"type\": \"Echo-Request\"}, \"channel\": \"endpointA_to_endpointB\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Echo_Request\", \"entity_name\": \"EndpointB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"channel\": \"endpointA_to_endpointB\", \"type\": \"Echo-Request\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Send_Echo_Reply\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"pending_command == \\\"Echo-Request\\\"\", \"message\": {\"type\": \"Echo-Reply\"}, \"channel\": \"endpointB_to_endpointA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Echo_Reply\", \"entity_name\": \"EndpointA\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"channel\": \"endpointB_to_endpointA\", \"type\": \"Echo-Reply\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Send_Discard_Request\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"message\": {\"type\": \"Discard-Request\"}, \"channel\": \"endpointA_to_endpointB\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"Recv_Discard_Request\", \"entity_name\": \"EndpointB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"channel\": \"endpointA_to_endpointB\", \"type\": \"Discard-Request\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Down_to_Initial\", \"source\": \"Dead\", \"dest\": \"Initial\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Down_to_Initial\", \"source\": \"Dead\", \"dest\": \"Initial\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Open_event\", \"source\": \"Closed\", \"dest\": \"Starting\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Open_event\", \"source\": \"Closed\", \"dest\": \"Starting\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"trigger\": \"Auth_required\", \"source\": \"Establish\", \"dest\": \"Authenticate\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"trigger\": \"Auth_required\", \"source\": \"Establish\", \"dest\": \"Authenticate\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"name\": \"restart_counter\", \"initial_value\": \"0\", \"var_type\": \"NATURAL\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"name\": \"restart_timer_running\", \"initial_value\": \"False\", \"var_type\": \"BOOLEAN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"name\": \"restart_counter\", \"initial_value\": \"0\", \"var_type\": \"NATURAL\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"name\": \"restart_timer_running\", \"initial_value\": \"False\", \"var_type\": \"BOOLEAN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"name\": \"lcp_opened\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"name\": \"authenticated\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"name\": \"ipcp_processed_before_ready\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"name\": \"no_ipcp_processed_before_ready\", \"condition\": \"not ipcp_processed_before_ready\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"source\": \"Authenticate\", \"dest\": \"Network\", \"trigger\": \"Auth_success\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"authenticated\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"lcp_opened\", \"ipcp_processed_before_ready\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Send_Terminate_Request\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointA_to_endpointB\", \"new_message\": {\"type\": \"Terminate-Request\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Recv_Terminate_Ack\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointB_to_endpointA\", \"new_type\": \"Terminate-Ack\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Send_Code_Reject\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointA_to_endpointB\", \"new_message\": {\"type\": \"Code-Reject\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Send_Echo_Request\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointA_to_endpointB\", \"new_message\": {\"type\": \"Echo-Request\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Recv_Echo_Reply\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointB_to_endpointA\", \"new_type\": \"Echo-Reply\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Send_Discard_Request\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointA_to_endpointB\", \"new_message\": {\"type\": \"Discard-Request\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"source\": \"Authenticate\", \"dest\": \"Authenticate\", \"trigger\": \"send_pipelined_IPCP\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"lcp_opened\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointA_to_endpointB\", \"message\": {\"type\": \"IPCP_Configure_Request\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"name\": \"lcp_opened\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"name\": \"authenticated\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"name\": \"ipcp_processed_before_ready\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"name\": \"no_ipcp_processed_before_ready\", \"condition\": \"not ipcp_processed_before_ready\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_internal_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"source\": \"Authenticate\", \"dest\": \"Network\", \"trigger\": \"Auth_success\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"authenticated\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"lcp_opened\", \"ipcp_processed_before_ready\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Recv_Terminate_Request\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointA_to_endpointB\", \"new_type\": \"Terminate-Request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Send_Terminate_Ack\", \"new_condition\": \"((EndpointB__pending_command == \\\"Terminate-Request\\\"))\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointB_to_endpointA\", \"new_message\": {\"type\": \"Terminate-Ack\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Recv_Code_Reject\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointA_to_endpointB\", \"new_type\": \"Code-Reject\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Recv_Echo_Request\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointA_to_endpointB\", \"new_type\": \"Echo-Request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Send_Echo_Reply\", \"new_condition\": \"((EndpointB__pending_command == \\\"Echo-Request\\\"))\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointB_to_endpointA\", \"new_message\": {\"type\": \"Echo-Reply\", \"variables\": {}, \"constants\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"Recv_Discard_Request\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"lcp_opened\": \"True\"}, \"new_unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointA_to_endpointB\", \"new_type\": \"Discard-Request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"source\": \"Authenticate\", \"dest\": \"Authenticate\", \"trigger\": \"send_pipelined_IPCP\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"lcp_opened\", \"authenticated\", \"ipcp_processed_before_ready\"], \"channel\": \"endpointB_to_endpointA\", \"message\": {\"type\": \"IPCP_Configure_Request\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"EndpointA\", \"source\": \"Establish\", \"dest\": \"Establish\", \"trigger\": \"process_early_IPCP\", \"condition\": \"True\", \"variable_updates\": {\"ipcp_processed_before_ready\": \"not (lcp_opened and authenticated)\"}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"lcp_opened\", \"authenticated\"], \"channel\": \"endpointB_to_endpointA\", \"type\": \"IPCP_Configure_Request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"EndpointB\", \"source\": \"Establish\", \"dest\": \"Establish\", \"trigger\": \"process_early_IPCP\", \"condition\": \"True\", \"variable_updates\": {\"ipcp_processed_before_ready\": \"not (lcp_opened and authenticated)\"}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"restart_timer_running\", \"lcp_opened\", \"authenticated\"], \"channel\": \"endpointA_to_endpointB\", \"type\": \"IPCP_Configure_Request\"}"
+    }
+  }
+]

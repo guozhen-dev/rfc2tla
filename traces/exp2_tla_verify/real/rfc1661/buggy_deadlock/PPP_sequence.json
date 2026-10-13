@@ -1,0 +1,1266 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\": \"PPPProtocol\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"PeerA\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"PeerB\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"peerA_to_peerB\", \"from_entity\": \"PeerA\", \"to_entity\": \"PeerB\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"peerB_to_peerA\", \"from_entity\": \"PeerB\", \"to_entity\": \"PeerA\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Link_Dead\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Establish\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Authenticate\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Network\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Terminate\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Initial\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Starting\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Closed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Stopped\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Closing\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Stopping\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Req-Sent\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Ack-Rcvd\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Ack-Sent\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Opened\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Link_Dead\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Establish\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Authenticate\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Network\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Terminate\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Initial\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Starting\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Closed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Stopped\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Closing\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Stopping\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Req-Sent\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Ack-Rcvd\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Ack-Sent\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Opened\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerB\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerA\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"lower_layer_up\", \"source\": \"Link_Dead\", \"dest\": \"Establish\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"lower_layer_up\", \"source\": \"Link_Dead\", \"dest\": \"Establish\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"lower_layer_down\", \"source\": \"Establish\", \"dest\": \"Link_Dead\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"lower_layer_down\", \"source\": \"Establish\", \"dest\": \"Link_Dead\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"enter_auth_phase\", \"source\": \"Establish\", \"dest\": \"Authenticate\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"enter_auth_phase\", \"source\": \"Establish\", \"dest\": \"Authenticate\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"auth_success\", \"source\": \"Authenticate\", \"dest\": \"Network\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"auth_success\", \"source\": \"Authenticate\", \"dest\": \"Network\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"auth_fail\", \"source\": \"Authenticate\", \"dest\": \"Terminate\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"auth_fail\", \"source\": \"Authenticate\", \"dest\": \"Terminate\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"lcp_up_to_ncp\", \"source\": \"Network\", \"dest\": \"Network\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"lcp_up_to_ncp\", \"source\": \"Network\", \"dest\": \"Network\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"lcp_down_to_ncp\", \"source\": \"Network\", \"dest\": \"Link_Dead\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"lcp_down_to_ncp\", \"source\": \"Network\", \"dest\": \"Link_Dead\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"auth_fail_commence_termination\", \"source\": \"Authenticate\", \"dest\": \"Terminate\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"auth_fail_commence_termination\", \"source\": \"Authenticate\", \"dest\": \"Terminate\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"timeout_TO_plus\", \"source\": \"Closing\", \"dest\": \"Closing\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"timeout_TO_plus\", \"source\": \"Stopping\", \"dest\": \"Stopping\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"timeout_TO_minus\", \"source\": \"Closing\", \"dest\": \"Closed\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"timeout_TO_minus\", \"source\": \"Stopping\", \"dest\": \"Stopped\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"timeout_TO_plus\", \"source\": \"Closing\", \"dest\": \"Closing\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"timeout_TO_plus\", \"source\": \"Stopping\", \"dest\": \"Stopping\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"timeout_TO_minus\", \"source\": \"Closing\", \"dest\": \"Closed\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"timeout_TO_minus\", \"source\": \"Stopping\", \"dest\": \"Stopped\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"send_configure_request\", \"source\": \"Starting\", \"dest\": \"Req-Sent\", \"condition\": \"True\", \"message\": {\"type\": \"Configure-Request\"}, \"channel\": \"peerA_to_peerB\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_configure_request\", \"entity_name\": \"PeerB\", \"source\": \"Closed\", \"dest\": \"Closed\", \"condition\": \"True\", \"channel\": \"peerA_to_peerB\", \"type\": \"Configure-Request\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"send_terminate_ack_on_other\", \"source\": \"Closed\", \"dest\": \"Closed\", \"condition\": \"pending_command == \\\"Terminate-Request\\\"\", \"message\": {\"type\": \"Terminate-Ack\"}, \"channel\": \"peerB_to_peerA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_terminate_ack_on_other\", \"entity_name\": \"PeerA\", \"source\": \"Closing\", \"dest\": \"Closed\", \"condition\": \"True\", \"channel\": \"peerB_to_peerA\", \"type\": \"Terminate-Ack\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"PeerB_recv_configure_request_closed\", \"entity_name\": \"PeerB\", \"source\": \"Closed\", \"dest\": \"Closed\", \"condition\": \"True\", \"channel\": \"peerA_to_peerB\", \"type\": \"Configure-Request\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"PeerB_send_terminate_ack_closed\", \"source\": \"Closed\", \"dest\": \"Closed\", \"condition\": \"True\", \"message\": {\"type\": \"Terminate-Ack\"}, \"channel\": \"peerB_to_peerA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"PeerA_recv_terminate_ack_closed\", \"entity_name\": \"PeerA\", \"source\": \"Req-Sent\", \"dest\": \"Req-Sent\", \"condition\": \"True\", \"channel\": \"peerB_to_peerA\", \"type\": \"Terminate-Ack\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"PeerA_send_echo_request\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"message\": {\"type\": \"Echo-Request\"}, \"channel\": \"peerA_to_peerB\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"PeerB_recv_echo_request\", \"entity_name\": \"PeerB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"channel\": \"peerA_to_peerB\", \"type\": \"Echo-Request\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"PeerB_send_echo_reply\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"message\": {\"type\": \"Echo-Reply\"}, \"channel\": \"peerB_to_peerA\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"PeerA_recv_echo_reply\", \"entity_name\": \"PeerA\", \"source\": \"Opened\", \"dest\": \"Opened\", \"condition\": \"True\", \"channel\": \"peerB_to_peerA\", \"type\": \"Echo-Reply\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"PeerA_recv_code_reject\", \"entity_name\": \"PeerA\", \"source\": \"Opened\", \"dest\": \"Terminate\", \"condition\": \"True\", \"channel\": \"peerB_to_peerA\", \"type\": \"Code-Reject\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"PeerA_recv_protocol_reject\", \"entity_name\": \"PeerA\", \"source\": \"Opened\", \"dest\": \"Terminate\", \"condition\": \"True\", \"channel\": \"peerB_to_peerA\", \"type\": \"Protocol-Reject\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"admin_open\", \"source\": \"Link_Dead\", \"dest\": \"Starting\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"admin_open\", \"source\": \"Link_Dead\", \"dest\": \"Starting\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"lower_layer_up_from_starting\", \"source\": \"Starting\", \"dest\": \"Req-Sent\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"lower_layer_up_from_starting\", \"source\": \"Starting\", \"dest\": \"Req-Sent\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"enter_initial_on_close\", \"source\": \"Link_Dead\", \"dest\": \"Initial\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"enter_initial_on_close\", \"source\": \"Link_Dead\", \"dest\": \"Initial\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "get_protocol_status_summary",
+      "arguments": "{}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerA\", \"name\": \"restart_counter\", \"initial_value\": \"0\", \"var_type\": \"NATURAL\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerA\", \"name\": \"timer_running\", \"initial_value\": \"False\", \"var_type\": \"BOOLEAN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerB\", \"name\": \"restart_counter\", \"initial_value\": \"0\", \"var_type\": \"NATURAL\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerB\", \"name\": \"timer_running\", \"initial_value\": \"False\", \"var_type\": \"BOOLEAN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"trigger\": \"open_from_initial\", \"source\": \"Initial\", \"dest\": \"Starting\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"trigger\": \"open_from_initial\", \"source\": \"Initial\", \"dest\": \"Starting\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Link_Dead\", \"dest\": \"Establish\", \"trigger\": \"lower_layer_up\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Establish\", \"dest\": \"Link_Dead\", \"trigger\": \"lower_layer_down\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Establish\", \"dest\": \"Authenticate\", \"trigger\": \"enter_auth_phase\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Authenticate\", \"dest\": \"Network\", \"trigger\": \"auth_success\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Authenticate\", \"dest\": \"Terminate\", \"trigger\": \"auth_fail\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Network\", \"dest\": \"Network\", \"trigger\": \"lcp_up_to_ncp\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Network\", \"dest\": \"Link_Dead\", \"trigger\": \"lcp_down_to_ncp\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Authenticate\", \"dest\": \"Terminate\", \"trigger\": \"auth_fail_commence_termination\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Closing\", \"dest\": \"Closing\", \"trigger\": \"timeout_TO_plus\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Stopping\", \"dest\": \"Stopping\", \"trigger\": \"timeout_TO_plus\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Closing\", \"dest\": \"Closed\", \"trigger\": \"timeout_TO_minus\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Stopping\", \"dest\": \"Stopped\", \"trigger\": \"timeout_TO_minus\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Starting\", \"dest\": \"Req-Sent\", \"trigger\": \"send_configure_request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Closing\", \"dest\": \"Closed\", \"trigger\": \"recv_terminate_ack_on_other\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Req-Sent\", \"dest\": \"Req-Sent\", \"trigger\": \"PeerA_recv_terminate_ack_closed\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"PeerA_send_echo_request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"PeerA_recv_echo_reply\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Opened\", \"dest\": \"Terminate\", \"trigger\": \"PeerA_recv_code_reject\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Opened\", \"dest\": \"Terminate\", \"trigger\": \"PeerA_recv_protocol_reject\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Link_Dead\", \"dest\": \"Starting\", \"trigger\": \"admin_open\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Starting\", \"dest\": \"Req-Sent\", \"trigger\": \"lower_layer_up_from_starting\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Link_Dead\", \"dest\": \"Initial\", \"trigger\": \"enter_initial_on_close\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Initial\", \"dest\": \"Starting\", \"trigger\": \"open_from_initial\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Link_Dead\", \"dest\": \"Establish\", \"trigger\": \"lower_layer_up\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Establish\", \"dest\": \"Link_Dead\", \"trigger\": \"lower_layer_down\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Establish\", \"dest\": \"Authenticate\", \"trigger\": \"enter_auth_phase\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Authenticate\", \"dest\": \"Network\", \"trigger\": \"auth_success\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Authenticate\", \"dest\": \"Terminate\", \"trigger\": \"auth_fail\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Network\", \"dest\": \"Network\", \"trigger\": \"lcp_up_to_ncp\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Network\", \"dest\": \"Link_Dead\", \"trigger\": \"lcp_down_to_ncp\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Authenticate\", \"dest\": \"Terminate\", \"trigger\": \"auth_fail_commence_termination\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Closing\", \"dest\": \"Closing\", \"trigger\": \"timeout_TO_plus\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Stopping\", \"dest\": \"Stopping\", \"trigger\": \"timeout_TO_plus\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Closing\", \"dest\": \"Closed\", \"trigger\": \"timeout_TO_minus\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Stopping\", \"dest\": \"Stopped\", \"trigger\": \"timeout_TO_minus\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Closed\", \"dest\": \"Closed\", \"trigger\": \"recv_configure_request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Closed\", \"dest\": \"Closed\", \"trigger\": \"send_terminate_ack_on_other\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Closed\", \"dest\": \"Closed\", \"trigger\": \"PeerB_recv_configure_request_closed\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Closed\", \"dest\": \"Closed\", \"trigger\": \"PeerB_send_terminate_ack_closed\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"PeerB_recv_echo_request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Opened\", \"dest\": \"Opened\", \"trigger\": \"PeerB_send_echo_reply\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Link_Dead\", \"dest\": \"Starting\", \"trigger\": \"admin_open\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Starting\", \"dest\": \"Req-Sent\", \"trigger\": \"lower_layer_up_from_starting\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Link_Dead\", \"dest\": \"Initial\", \"trigger\": \"enter_initial_on_close\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Initial\", \"dest\": \"Starting\", \"trigger\": \"open_from_initial\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Link_Dead\", \"initial\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerA\", \"state_name\": \"Opened\", \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Link_Dead\", \"initial\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"PeerB\", \"state_name\": \"Opened\", \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerA\", \"name\": \"configure_request_received\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerA\", \"name\": \"configure_ack_sent\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerA\", \"name\": \"suppress_configure_ack\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Link_Dead\", \"dest\": \"Starting\", \"trigger\": \"lower_layer_up\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"configure_ack_sent\", \"suppress_configure_ack\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Starting\", \"dest\": \"Req-Sent\", \"trigger\": \"send_Configure-Request_Starting\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"configure_ack_sent\", \"suppress_configure_ack\"], \"channel\": \"peerA_to_peerB\", \"message\": {\"type\": \"Configure-Request\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Req-Sent\", \"dest\": \"Req-Sent\", \"trigger\": \"recv_Configure-Request_Req-Sent\", \"condition\": \"True\", \"variable_updates\": {\"configure_request_received\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_ack_sent\", \"suppress_configure_ack\"], \"channel\": \"peerB_to_peerA\", \"type\": \"Configure-Request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Req-Sent\", \"dest\": \"Req-Sent\", \"trigger\": \"send_Configure-Ack_Req-Sent\", \"condition\": \"configure_request_received and not suppress_configure_ack and not configure_ack_sent\", \"variable_updates\": {\"configure_ack_sent\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"suppress_configure_ack\"], \"channel\": \"peerA_to_peerB\", \"message\": {\"type\": \"Configure-Ack\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Req-Sent\", \"dest\": \"Ack-Rcvd\", \"trigger\": \"recv_Configure-Ack_Req-Sent\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"configure_ack_sent\", \"suppress_configure_ack\"], \"channel\": \"peerB_to_peerA\", \"type\": \"Configure-Ack\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Ack-Rcvd\", \"dest\": \"Ack-Rcvd\", \"trigger\": \"recv_Configure-Request_Ack-Rcvd\", \"condition\": \"True\", \"variable_updates\": {\"configure_request_received\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_ack_sent\", \"suppress_configure_ack\"], \"channel\": \"peerB_to_peerA\", \"type\": \"Configure-Request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Ack-Rcvd\", \"dest\": \"Ack-Rcvd\", \"trigger\": \"send_Configure-Ack_Ack-Rcvd\", \"condition\": \"configure_request_received and not suppress_configure_ack and not configure_ack_sent\", \"variable_updates\": {\"configure_ack_sent\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"suppress_configure_ack\"], \"channel\": \"peerA_to_peerB\", \"message\": {\"type\": \"Configure-Ack\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerA\", \"source\": \"Ack-Rcvd\", \"dest\": \"Opened\", \"trigger\": \"negotiation_complete\", \"condition\": \"configure_ack_sent\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"configure_ack_sent\", \"suppress_configure_ack\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerB\", \"name\": \"configure_request_received\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerB\", \"name\": \"configure_ack_sent\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"PeerB\", \"name\": \"suppress_configure_ack\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Link_Dead\", \"dest\": \"Starting\", \"trigger\": \"lower_layer_up\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"configure_ack_sent\", \"suppress_configure_ack\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Starting\", \"dest\": \"Req-Sent\", \"trigger\": \"send_Configure-Request_Starting\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"configure_ack_sent\", \"suppress_configure_ack\"], \"channel\": \"peerB_to_peerA\", \"message\": {\"type\": \"Configure-Request\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Req-Sent\", \"dest\": \"Req-Sent\", \"trigger\": \"recv_Configure-Request_Req-Sent\", \"condition\": \"True\", \"variable_updates\": {\"configure_request_received\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_ack_sent\", \"suppress_configure_ack\"], \"channel\": \"peerA_to_peerB\", \"type\": \"Configure-Request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Req-Sent\", \"dest\": \"Req-Sent\", \"trigger\": \"send_Configure-Ack_Req-Sent\", \"condition\": \"configure_request_received and not suppress_configure_ack and not configure_ack_sent\", \"variable_updates\": {\"configure_ack_sent\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"suppress_configure_ack\"], \"channel\": \"peerB_to_peerA\", \"message\": {\"type\": \"Configure-Ack\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Req-Sent\", \"dest\": \"Ack-Rcvd\", \"trigger\": \"recv_Configure-Ack_Req-Sent\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"configure_ack_sent\", \"suppress_configure_ack\"], \"channel\": \"peerA_to_peerB\", \"type\": \"Configure-Ack\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Ack-Rcvd\", \"dest\": \"Ack-Rcvd\", \"trigger\": \"recv_Configure-Request_Ack-Rcvd\", \"condition\": \"True\", \"variable_updates\": {\"configure_request_received\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_ack_sent\", \"suppress_configure_ack\"], \"channel\": \"peerA_to_peerB\", \"type\": \"Configure-Request\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Ack-Rcvd\", \"dest\": \"Ack-Rcvd\", \"trigger\": \"send_Configure-Ack_Ack-Rcvd\", \"condition\": \"configure_request_received and not suppress_configure_ack and not configure_ack_sent\", \"variable_updates\": {\"configure_ack_sent\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"suppress_configure_ack\"], \"channel\": \"peerB_to_peerA\", \"message\": {\"type\": \"Configure-Ack\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"PeerB\", \"source\": \"Ack-Rcvd\", \"dest\": \"Opened\", \"trigger\": \"negotiation_complete\", \"condition\": \"configure_ack_sent\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"restart_counter\", \"timer_running\", \"configure_request_received\", \"configure_ack_sent\", \"suppress_configure_ack\"]}"
+    }
+  }
+]

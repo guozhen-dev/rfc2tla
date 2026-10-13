@@ -1,0 +1,778 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\": \"SIP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"ClientTransaction\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"ServerTransaction\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"client_to_server\", \"from_entity\": \"ClientTransaction\", \"to_entity\": \"ServerTransaction\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"server_to_client\", \"from_entity\": \"ServerTransaction\", \"to_entity\": \"ClientTransaction\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"state_name\": \"Calling\", \"initial\": true, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"state_name\": \"Trying\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"state_name\": \"Proceeding\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"state_name\": \"Completed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"state_name\": \"Terminated\", \"initial\": false, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"state_name\": \"Proceeding\", \"initial\": true, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"state_name\": \"Trying\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"state_name\": \"Completed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"state_name\": \"Confirmed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"state_name\": \"Terminated\", \"initial\": false, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "get_protocol_status_summary",
+      "arguments": "{}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"name\": \"is_invite\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"name\": \"pending_command\", \"var_type\": \"STRING\", \"initial_value\": \"\\\"NONE\\\"\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"name\": \"is_invite\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"INVITE_SEND\", \"source\": \"Calling\", \"dest\": \"Calling\", \"condition\": \"is_invite == True\", \"channel\": \"client_to_server\", \"message\": {\"type\": \"INVITE\", \"variables\": {}}, \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"INVITE_SEND\", \"source\": \"Proceeding\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == True\", \"channel\": \"client_to_server\", \"type\": \"INVITE\", \"variable_updates\": {\"pending_command\": \"\\\"INVITE\\\"\"}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"INVITE_1XX\", \"source\": \"Proceeding\", \"dest\": \"Proceeding\", \"condition\": \"(is_invite == True) and (pending_command == \\\"INVITE\\\")\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"1xx\", \"variables\": {}}, \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"INVITE_1XX\", \"source\": \"Calling\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == True\", \"channel\": \"server_to_client\", \"type\": \"1xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"INVITE_2XX\", \"source\": \"Proceeding\", \"dest\": \"Terminated\", \"condition\": \"(is_invite == True) and (pending_command == \\\"INVITE\\\")\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"2xx\", \"variables\": {}}, \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"INVITE_2XX\", \"source\": \"Calling\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"channel\": \"server_to_client\", \"type\": \"2xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"INVITE_FINAL\", \"source\": \"Proceeding\", \"dest\": \"Completed\", \"condition\": \"(is_invite == True) and (pending_command == \\\"INVITE\\\")\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"3xx_6xx\", \"variables\": {}}, \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"INVITE_FINAL\", \"source\": \"Calling\", \"dest\": \"Completed\", \"condition\": \"is_invite == True\", \"channel\": \"server_to_client\", \"type\": \"3xx_6xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"INVITE_2XX_PROC\", \"source\": \"Proceeding\", \"dest\": \"Terminated\", \"condition\": \"(is_invite == True) and (pending_command == \\\"INVITE\\\")\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"2xx\", \"variables\": {}}, \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"INVITE_2XX_PROC\", \"source\": \"Proceeding\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"channel\": \"server_to_client\", \"type\": \"2xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"INVITE_FINAL_PROC\", \"source\": \"Proceeding\", \"dest\": \"Completed\", \"condition\": \"(is_invite == True) and (pending_command == \\\"INVITE\\\")\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"3xx_6xx\", \"variables\": {}}, \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"INVITE_FINAL_PROC\", \"source\": \"Proceeding\", \"dest\": \"Completed\", \"condition\": \"is_invite == True\", \"channel\": \"server_to_client\", \"type\": \"3xx_6xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"INVITE_1XX_PROC\", \"source\": \"Proceeding\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == True\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"1xx\", \"variables\": {}}, \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"INVITE_1XX_PROC\", \"source\": \"Proceeding\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == True\", \"channel\": \"server_to_client\", \"type\": \"1xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TIMER_A\", \"source\": \"Calling\", \"dest\": \"Calling\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TIMER_B\", \"source\": \"Calling\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TIMER_D\", \"source\": \"Completed\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TIMER_H\", \"source\": \"Proceeding\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TIMER_H\", \"source\": \"Completed\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TIMER_I\", \"source\": \"Confirmed\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TIMER_G_FINAL\", \"source\": \"Completed\", \"dest\": \"Completed\", \"condition\": \"is_invite == True\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"3xx_6xx\", \"variables\": {}}, \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TIMER_G_FINAL\", \"source\": \"Completed\", \"dest\": \"Completed\", \"condition\": \"is_invite == True\", \"channel\": \"server_to_client\", \"type\": \"3xx_6xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"INVITE_ACK\", \"source\": \"Completed\", \"dest\": \"Completed\", \"condition\": \"is_invite == True\", \"channel\": \"client_to_server\", \"message\": {\"type\": \"ACK\", \"variables\": {}}, \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"INVITE_ACK\", \"source\": \"Completed\", \"dest\": \"Confirmed\", \"condition\": \"is_invite == True\", \"channel\": \"client_to_server\", \"type\": \"ACK\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"NON_INVITE_SEND\", \"source\": \"Trying\", \"dest\": \"Trying\", \"condition\": \"is_invite == False\", \"channel\": \"client_to_server\", \"message\": {\"type\": \"REQUEST\", \"variables\": {}}, \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"NON_INVITE_SEND\", \"source\": \"Trying\", \"dest\": \"Trying\", \"condition\": \"is_invite == False\", \"channel\": \"client_to_server\", \"type\": \"REQUEST\", \"variable_updates\": {\"pending_command\": \"\\\"REQUEST\\\"\"}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"NON_INVITE_1XX\", \"source\": \"Trying\", \"dest\": \"Proceeding\", \"condition\": \"(is_invite == False) and (pending_command == \\\"REQUEST\\\")\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"1xx\", \"variables\": {}}, \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"NON_INVITE_1XX\", \"source\": \"Trying\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == False\", \"channel\": \"server_to_client\", \"type\": \"1xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"NON_INVITE_FINAL\", \"source\": \"Trying\", \"dest\": \"Completed\", \"condition\": \"(is_invite == False) and (pending_command == \\\"REQUEST\\\")\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"2xx_6xx\", \"variables\": {}}, \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"NON_INVITE_FINAL\", \"source\": \"Trying\", \"dest\": \"Completed\", \"condition\": \"is_invite == False\", \"channel\": \"server_to_client\", \"type\": \"2xx_6xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"NON_INVITE_1XX_PROC\", \"source\": \"Proceeding\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == False\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"1xx\", \"variables\": {}}, \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"NON_INVITE_1XX_PROC\", \"source\": \"Proceeding\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == False\", \"channel\": \"server_to_client\", \"type\": \"1xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"NON_INVITE_FINAL_PROC\", \"source\": \"Proceeding\", \"dest\": \"Completed\", \"condition\": \"is_invite == False\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"2xx_6xx\", \"variables\": {}}, \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"NON_INVITE_FINAL_PROC\", \"source\": \"Proceeding\", \"dest\": \"Completed\", \"condition\": \"is_invite == False\", \"channel\": \"server_to_client\", \"type\": \"2xx_6xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TIMER_E\", \"source\": \"Trying\", \"dest\": \"Trying\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TIMER_F\", \"source\": \"Trying\", \"dest\": \"Terminated\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TIMER_K\", \"source\": \"Completed\", \"dest\": \"Terminated\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TIMER_J\", \"source\": \"Completed\", \"dest\": \"Terminated\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "get_protocol_status_summary",
+      "arguments": "{}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Calling\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Trying\", \"dest\": \"Terminated\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Proceeding\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Trying\", \"dest\": \"Terminated\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Completed\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Completed\", \"dest\": \"Terminated\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Confirmed\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Completed\", \"dest\": \"Terminated\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Proceeding\", \"dest\": \"Terminated\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Proceeding\", \"dest\": \"Terminated\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Completed\", \"dest\": \"Terminated\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "get_protocol_status_summary",
+      "arguments": "{}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TIMER_E\", \"source\": \"Proceeding\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TIMER_F\", \"source\": \"Proceeding\", \"dest\": \"Terminated\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"INVITE_RETRANSMIT\", \"source\": \"Calling\", \"dest\": \"Calling\", \"condition\": \"is_invite == True\", \"channel\": \"client_to_server\", \"message\": {\"type\": \"INVITE\", \"variables\": {}}, \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"INVITE_RETRANSMIT\", \"source\": \"Proceeding\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == True\", \"channel\": \"client_to_server\", \"type\": \"INVITE\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"TRANSPORT_ERROR\", \"source\": \"Proceeding\", \"dest\": \"Terminated\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"INVITE_RETRANSMIT\", \"source\": \"Completed\", \"dest\": \"Completed\", \"condition\": \"is_invite == True\", \"channel\": \"client_to_server\", \"type\": \"INVITE\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"NON_INVITE_RETRANSMIT\", \"source\": \"Proceeding\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == False\", \"channel\": \"client_to_server\", \"message\": {\"type\": \"REQUEST\", \"variables\": {}}, \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"NON_INVITE_RETRANSMIT\", \"source\": \"Proceeding\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == False\", \"channel\": \"client_to_server\", \"type\": \"REQUEST\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"NON_INVITE_RETRANSMIT\", \"source\": \"Completed\", \"dest\": \"Completed\", \"condition\": \"is_invite == False\", \"channel\": \"client_to_server\", \"type\": \"REQUEST\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"NON_INVITE_FINAL_RETRANSMIT\", \"source\": \"Completed\", \"dest\": \"Completed\", \"condition\": \"is_invite == False\", \"channel\": \"server_to_client\", \"message\": {\"type\": \"2xx_6xx\", \"variables\": {}}, \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"NON_INVITE_FINAL_RETRANSMIT\", \"source\": \"Completed\", \"dest\": \"Completed\", \"condition\": \"is_invite == False\", \"channel\": \"server_to_client\", \"type\": \"2xx_6xx\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"transport_error\", \"source\": \"Proceeding\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"transport_error\", \"source\": \"Completed\", \"dest\": \"Terminated\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"trigger\": \"transport_error\", \"source\": \"Completed\", \"dest\": \"Terminated\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"transport_error\", \"source\": \"Completed\", \"dest\": \"Completed\", \"condition\": \"is_invite == True\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"transport_error\", \"source\": \"Proceeding\", \"dest\": \"Proceeding\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"transport_error\", \"source\": \"Completed\", \"dest\": \"Completed\", \"condition\": \"is_invite == False\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"ack_in_confirmed\", \"entity_name\": \"ServerTransaction\", \"source\": \"Confirmed\", \"dest\": \"Confirmed\", \"condition\": \"(is_invite == True) and (client_to_server_msg.type == \\\"ACK\\\")\", \"channel\": \"client_to_server\", \"type\": \"ACK\", \"variable_updates\": {}, \"unchanged_variables\": [\"is_invite\", \"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"internal\", \"source\": \"Proceeding\", \"dest\": \"Terminated\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "get_protocol_status_summary",
+      "arguments": "{}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"trigger\": \"timeout\", \"source\": \"Proceeding\", \"dest\": \"Terminated\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"trigger\": \"timeout\", \"entity_name\": \"ServerTransaction\", \"source\": \"Completed\", \"dest\": \"Terminated\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "get_protocol_status_summary",
+      "arguments": "{}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"name\": \"calling_implies_invite\", \"condition\": \"state_ClientTransaction != \\\"Calling\\\" or ClientTransaction__is_invite == True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"ClientTransaction\", \"name\": \"trying_implies_non_invite\", \"condition\": \"state_ClientTransaction != \\\"Trying\\\" or ClientTransaction__is_invite == False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"name\": \"confirmed_implies_invite\", \"condition\": \"state_ServerTransaction != \\\"Confirmed\\\" or ServerTransaction__is_invite == True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"ServerTransaction\", \"name\": \"trying_implies_non_invite\", \"condition\": \"state_ServerTransaction != \\\"Trying\\\" or ServerTransaction__is_invite == False\"}"
+    }
+  }
+]

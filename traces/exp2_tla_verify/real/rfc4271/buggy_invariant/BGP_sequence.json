@@ -1,0 +1,554 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\": \"BGP4Protocol\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"speakerA_to_speakerB\", \"from_entity\": \"BGPSpeakerA\", \"to_entity\": \"BGPSpeakerB\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"speakerB_to_speakerA\", \"from_entity\": \"BGPSpeakerB\", \"to_entity\": \"BGPSpeakerA\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"state_name\": \"Idle\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"state_name\": \"Connect\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"state_name\": \"Active\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"state_name\": \"OpenSent\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"state_name\": \"OpenConfirm\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"state_name\": \"Established\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"state_name\": \"Idle\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"state_name\": \"Connect\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"state_name\": \"Active\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"state_name\": \"OpenSent\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"state_name\": \"OpenConfirm\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"state_name\": \"Established\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"name\": \"open_sent\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"name\": \"keepalive_sent\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"name\": \"advertised_before_established\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"name\": \"open_sent\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"name\": \"keepalive_sent\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"name\": \"advertised_before_established\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"send_OPEN_from_A\", \"source\": \"OpenSent\", \"dest\": \"OpenSent\", \"condition\": \"not open_sent\", \"message\": {\"type\": \"OPEN\"}, \"channel\": \"speakerA_to_speakerB\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"open_sent\": \"True\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_OPEN_from_A\", \"entity_name\": \"BGPSpeakerB\", \"source\": \"OpenSent\", \"dest\": \"OpenConfirm\", \"condition\": \"open_sent\", \"channel\": \"speakerA_to_speakerB\", \"type\": \"OPEN\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"send_OPEN_from_B\", \"source\": \"OpenSent\", \"dest\": \"OpenSent\", \"condition\": \"not open_sent\", \"message\": {\"type\": \"OPEN\"}, \"channel\": \"speakerB_to_speakerA\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"open_sent\": \"True\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_OPEN_from_B\", \"entity_name\": \"BGPSpeakerA\", \"source\": \"OpenSent\", \"dest\": \"OpenConfirm\", \"condition\": \"open_sent\", \"channel\": \"speakerB_to_speakerA\", \"type\": \"OPEN\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"hold_timer_expiry_A\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"hold_timer_expiry_B\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"send_UPDATE_from_A\", \"source\": \"Established\", \"dest\": \"Established\", \"condition\": \"\", \"message\": {\"type\": \"UPDATE\"}, \"channel\": \"speakerA_to_speakerB\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"advertised_before_established\": \"advertised_before_established or state_BGPSpeakerA != \\\"Established\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_UPDATE_from_A\", \"entity_name\": \"BGPSpeakerB\", \"source\": \"Established\", \"dest\": \"Established\", \"condition\": \"\", \"channel\": \"speakerA_to_speakerB\", \"type\": \"UPDATE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"send_UPDATE_from_B\", \"source\": \"Established\", \"dest\": \"Established\", \"condition\": \"\", \"message\": {\"type\": \"UPDATE\"}, \"channel\": \"speakerB_to_speakerA\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"advertised_before_established\": \"advertised_before_established or state_BGPSpeakerB != \\\"Established\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_UPDATE_from_B\", \"entity_name\": \"BGPSpeakerA\", \"source\": \"Established\", \"dest\": \"Established\", \"condition\": \"\", \"channel\": \"speakerB_to_speakerA\", \"type\": \"UPDATE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"send_KEEPALIVE_from_A\", \"source\": \"OpenConfirm\", \"dest\": \"OpenConfirm\", \"condition\": \"\", \"message\": {\"type\": \"KEEPALIVE\"}, \"channel\": \"speakerA_to_speakerB\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"True\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_KEEPALIVE_from_A\", \"entity_name\": \"BGPSpeakerB\", \"source\": \"OpenConfirm\", \"dest\": \"Established\", \"condition\": \"\", \"channel\": \"speakerA_to_speakerB\", \"type\": \"KEEPALIVE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"send_KEEPALIVE_from_B\", \"source\": \"OpenConfirm\", \"dest\": \"OpenConfirm\", \"condition\": \"\", \"message\": {\"type\": \"KEEPALIVE\"}, \"channel\": \"speakerB_to_speakerA\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"True\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_KEEPALIVE_from_B\", \"entity_name\": \"BGPSpeakerA\", \"source\": \"OpenConfirm\", \"dest\": \"Established\", \"condition\": \"\", \"channel\": \"speakerB_to_speakerA\", \"type\": \"KEEPALIVE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"A_sends_OPEN_error_NOTIFICATION\", \"source\": \"OpenConfirm\", \"dest\": \"Idle\", \"condition\": \"pending_command == \\\"OPEN\\\"\", \"message\": {\"type\": \"NOTIFICATION_OPEN_ERROR\"}, \"channel\": \"speakerA_to_speakerB\", \"unchanged_variables\": [], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"A_sends_OPEN_error_NOTIFICATION\", \"entity_name\": \"BGPSpeakerB\", \"source\": \"OpenConfirm\", \"dest\": \"Idle\", \"condition\": \"\", \"channel\": \"speakerA_to_speakerB\", \"type\": \"NOTIFICATION_OPEN_ERROR\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"B_sends_OPEN_error_NOTIFICATION\", \"source\": \"OpenConfirm\", \"dest\": \"Idle\", \"condition\": \"pending_command == \\\"OPEN\\\"\", \"message\": {\"type\": \"NOTIFICATION_OPEN_ERROR\"}, \"channel\": \"speakerB_to_speakerA\", \"unchanged_variables\": [], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"B_sends_OPEN_error_NOTIFICATION\", \"entity_name\": \"BGPSpeakerA\", \"source\": \"OpenConfirm\", \"dest\": \"Idle\", \"condition\": \"\", \"channel\": \"speakerB_to_speakerA\", \"type\": \"NOTIFICATION_OPEN_ERROR\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"A_sends_UPDATE_error_NOTIFICATION\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"pending_command == \\\"UPDATE\\\"\", \"message\": {\"type\": \"NOTIFICATION_UPDATE_ERROR\"}, \"channel\": \"speakerA_to_speakerB\", \"unchanged_variables\": [], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"A_sends_UPDATE_error_NOTIFICATION\", \"entity_name\": \"BGPSpeakerB\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"channel\": \"speakerA_to_speakerB\", \"type\": \"NOTIFICATION_UPDATE_ERROR\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"B_sends_UPDATE_error_NOTIFICATION\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"pending_command == \\\"UPDATE\\\"\", \"message\": {\"type\": \"NOTIFICATION_UPDATE_ERROR\"}, \"channel\": \"speakerB_to_speakerA\", \"unchanged_variables\": [], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"B_sends_UPDATE_error_NOTIFICATION\", \"entity_name\": \"BGPSpeakerA\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"channel\": \"speakerB_to_speakerA\", \"type\": \"NOTIFICATION_UPDATE_ERROR\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"A_sends_FSM_ERROR_NOTIFICATION\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"message\": {\"type\": \"NOTIFICATION_FSM_ERROR\"}, \"channel\": \"speakerA_to_speakerB\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"A_sends_FSM_ERROR_NOTIFICATION\", \"entity_name\": \"BGPSpeakerB\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"channel\": \"speakerA_to_speakerB\", \"type\": \"NOTIFICATION_FSM_ERROR\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"B_sends_FSM_ERROR_NOTIFICATION\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"message\": {\"type\": \"NOTIFICATION_FSM_ERROR\"}, \"channel\": \"speakerB_to_speakerA\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"B_sends_FSM_ERROR_NOTIFICATION\", \"entity_name\": \"BGPSpeakerA\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"channel\": \"speakerB_to_speakerA\", \"type\": \"NOTIFICATION_FSM_ERROR\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"A_sends_CEASE_NOTIFICATION\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"message\": {\"type\": \"NOTIFICATION_CEASE\"}, \"channel\": \"speakerA_to_speakerB\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"A_sends_CEASE_NOTIFICATION\", \"entity_name\": \"BGPSpeakerB\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"channel\": \"speakerA_to_speakerB\", \"type\": \"NOTIFICATION_CEASE\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"B_sends_CEASE_NOTIFICATION\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"message\": {\"type\": \"NOTIFICATION_CEASE\"}, \"channel\": \"speakerB_to_speakerA\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"B_sends_CEASE_NOTIFICATION\", \"entity_name\": \"BGPSpeakerA\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"\", \"channel\": \"speakerB_to_speakerA\", \"type\": \"NOTIFICATION_CEASE\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"start_connection_A\", \"source\": \"Idle\", \"dest\": \"Connect\", \"condition\": \"\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"tcp_connection_success_A\", \"source\": \"Connect\", \"dest\": \"OpenSent\", \"condition\": \"\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"start_connection_B\", \"source\": \"Idle\", \"dest\": \"Connect\", \"condition\": \"\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"tcp_connection_success_B\", \"source\": \"Connect\", \"dest\": \"OpenSent\", \"condition\": \"\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"HoldTimerExpired\", \"source\": \"OpenConfirm\", \"dest\": \"Idle\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"HoldTimerExpired\", \"source\": \"OpenConfirm\", \"dest\": \"Idle\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"HoldTimerExpired\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"HoldTimerExpired\", \"source\": \"Established\", \"dest\": \"Idle\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"], \"variable_updates\": {\"keepalive_sent\": \"False\", \"open_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"hold_timer_expiry_in_OpenSent\", \"source\": \"OpenSent\", \"dest\": \"Idle\", \"variable_updates\": {\"open_sent\": \"False\", \"keepalive_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"trigger\": \"send_UPDATE_in_OpenConfirm\", \"source\": \"OpenConfirm\", \"dest\": \"OpenConfirm\", \"channel\": \"speakerA_to_speakerB\", \"message\": {\"type\": \"UPDATE\", \"variables\": {}}, \"condition\": \"keepalive_sent\", \"variable_updates\": {\"advertised_before_established\": \"True\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"BGPSpeakerA\", \"name\": \"no_route_advertisement_before_established\", \"condition\": \"not advertised_before_established\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"hold_timer_expiry_in_OpenSent\", \"source\": \"OpenSent\", \"dest\": \"Idle\", \"variable_updates\": {\"open_sent\": \"False\", \"keepalive_sent\": \"False\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"trigger\": \"send_UPDATE_in_OpenConfirm\", \"source\": \"OpenConfirm\", \"dest\": \"OpenConfirm\", \"channel\": \"speakerB_to_speakerA\", \"message\": {\"type\": \"UPDATE\", \"variables\": {}}, \"condition\": \"keepalive_sent\", \"variable_updates\": {\"advertised_before_established\": \"True\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"BGPSpeakerB\", \"name\": \"no_route_advertisement_before_established\", \"condition\": \"not advertised_before_established\"}"
+    }
+  }
+]

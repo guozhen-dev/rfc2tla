@@ -1,0 +1,2274 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\": \"SIPProtocol\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Server\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"client_to_server\", \"from_entity\": \"Client\", \"to_entity\": \"Server\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"server_to_client\", \"from_entity\": \"Server\", \"to_entity\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Start\", \"initial\": true, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Dialog_Early\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Dialog_Confirmed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Done\", \"initial\": false, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Start\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Dialog_Early\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Dialog_Confirmed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"InviteClient_Calling\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"InviteClient_Proceeding\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"InviteClient_Completed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"InviteClient_Terminated\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"NonInviteClient_Trying\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"NonInviteClient_Proceeding\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"NonInviteClient_Completed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"NonInviteClient_Terminated\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"InviteServer_Proceeding\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"InviteServer_Completed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"InviteServer_Confirmed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"InviteServer_Terminated\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"NonInviteServer_Trying\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"NonInviteServer_Proceeding\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"NonInviteServer_Completed\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"NonInviteServer_Terminated\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_INVITE\", \"source\": \"Start\", \"dest\": \"InviteClient_Calling\", \"condition\": \"\", \"message\": {\"type\": \"INVITE\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"SEND_INVITE\", \"entity_name\": \"Server\", \"source\": \"Start\", \"dest\": \"InviteServer_Proceeding\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"INVITE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_INVITE_100_TRYING\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Proceeding\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"TRYING_100\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_INVITE_100_TRYING\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Calling\", \"dest\": \"InviteClient_Proceeding\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"TRYING_100\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_BYE\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteServer_Completed\", \"condition\": \"\", \"message\": {\"type\": \"BYE\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"SEND_BYE\", \"entity_name\": \"Client\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"BYE\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"RESP_BYE_200_OK\", \"source\": \"InviteClient_Completed\", \"dest\": \"Done\", \"condition\": \"\", \"message\": {\"type\": \"BYE_200_OK\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_BYE_200_OK\", \"entity_name\": \"Server\", \"source\": \"InviteServer_Completed\", \"dest\": \"InviteServer_Terminated\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"BYE_200_OK\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_REGISTER\", \"source\": \"Start\", \"dest\": \"NonInviteClient_Trying\", \"condition\": \"\", \"message\": {\"type\": \"REGISTER\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"SEND_REGISTER\", \"entity_name\": \"Server\", \"source\": \"Start\", \"dest\": \"NonInviteServer_Trying\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"REGISTER\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_INVITE\", \"source\": \"Start\", \"dest\": \"InviteServer_Proceeding\", \"channel\": \"client_to_server\", \"new_condition\": \"\", \"new_type\": \"INVITE\", \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_INVITE_100_TRYING\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Proceeding\", \"channel\": \"server_to_client\", \"new_condition\": \"pending_command == \\\"INVITE\\\"\", \"new_message\": {\"type\": \"TRYING_100\"}, \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_BYE\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteServer_Completed\", \"channel\": \"server_to_client\", \"new_condition\": \"\", \"new_message\": {\"type\": \"BYE\"}, \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_BYE_200_OK\", \"source\": \"InviteServer_Completed\", \"dest\": \"InviteServer_Terminated\", \"channel\": \"client_to_server\", \"new_condition\": \"\", \"new_type\": \"BYE_200_OK\", \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_REGISTER\", \"source\": \"Start\", \"dest\": \"NonInviteServer_Trying\", \"channel\": \"client_to_server\", \"new_condition\": \"\", \"new_type\": \"REGISTER\", \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_INVITE_100_TRYING\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Proceeding\", \"channel\": \"server_to_client\", \"new_condition\": \"pending_command == \\\"INVITE\\\"\", \"new_message\": {\"type\": \"TRYING_100\"}, \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_INVITE_180_RINGING\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Proceeding\", \"condition\": \"pending_command == \\\"INVITE\\\"\", \"message\": {\"type\": \"RINGING_180\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_INVITE_180_RINGING\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Proceeding\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"RINGING_180\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_INVITE_200_OK\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Confirmed\", \"condition\": \"pending_command == \\\"INVITE\\\"\", \"message\": {\"type\": \"INVITE_200_OK\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_INVITE_200_OK\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"Dialog_Confirmed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"INVITE_200_OK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_ACK_INVITE\", \"source\": \"Dialog_Confirmed\", \"dest\": \"Dialog_Confirmed\", \"condition\": \"\", \"message\": {\"type\": \"ACK_INVITE\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"SEND_ACK_INVITE\", \"entity_name\": \"Server\", \"source\": \"InviteServer_Confirmed\", \"dest\": \"Dialog_Confirmed\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"ACK_INVITE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_REINVITE\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteClient_Calling\", \"condition\": \"\", \"message\": {\"type\": \"REINVITE\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"SEND_REINVITE\", \"entity_name\": \"Server\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteServer_Proceeding\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"REINVITE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_REINVITE_200_OK\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Confirmed\", \"condition\": \"pending_command == \\\"REINVITE\\\" or True\", \"message\": {\"type\": \"REINVITE_200_OK\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_REINVITE_200_OK\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Calling\", \"dest\": \"Dialog_Confirmed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"REINVITE_200_OK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_REINVITE_488\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"REINVITE\\\" or True\", \"message\": {\"type\": \"REINVITE_488\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_REINVITE_488\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Calling\", \"dest\": \"Dialog_Confirmed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"REINVITE_488\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"SEND_BYE\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteServer_Completed\", \"condition\": \"\", \"message\": {\"type\": \"BYE\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"SEND_BYE\", \"entity_name\": \"Client\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"BYE\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"RESP_BYE_200_OK\", \"source\": \"InviteClient_Completed\", \"dest\": \"Done\", \"condition\": \"\", \"message\": {\"type\": \"BYE_200_OK\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_BYE_200_OK\", \"entity_name\": \"Server\", \"source\": \"InviteServer_Completed\", \"dest\": \"InviteServer_Terminated\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"BYE_200_OK\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_CANCEL\", \"source\": \"InviteClient_Calling\", \"dest\": \"NonInviteClient_Trying\", \"condition\": \"\", \"message\": {\"type\": \"CANCEL\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"SEND_CANCEL\", \"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"NonInviteServer_Trying\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"CANCEL\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_CANCEL_487\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"condition\": \"pending_command == \\\"CANCEL\\\" or True\", \"message\": {\"type\": \"CANCEL_487\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_CANCEL_487\", \"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"CANCEL_487\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_CANCEL_2XX\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"condition\": \"pending_command == \\\"CANCEL\\\" or True\", \"message\": {\"type\": \"CANCEL_2XX\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_CANCEL_2XX\", \"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"CANCEL_2XX\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_REGISTER_403\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"condition\": \"pending_command == \\\"REGISTER\\\" or True\", \"message\": {\"type\": \"REGISTER_403\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_REGISTER_403\", \"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"REGISTER_403\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_REGISTER_404\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"condition\": \"pending_command == \\\"REGISTER\\\" or True\", \"message\": {\"type\": \"REGISTER_404\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_REGISTER_404\", \"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"REGISTER_404\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_REGISTER_400\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"condition\": \"pending_command == \\\"REGISTER\\\" or True\", \"message\": {\"type\": \"REGISTER_400\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_REGISTER_400\", \"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"REGISTER_400\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_REGISTER_423\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"condition\": \"pending_command == \\\"REGISTER\\\" or True\", \"message\": {\"type\": \"REGISTER_423\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_REGISTER_423\", \"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"REGISTER_423\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_OPTIONS\", \"source\": \"Start\", \"dest\": \"NonInviteClient_Trying\", \"condition\": \"\", \"message\": {\"type\": \"OPTIONS\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"SEND_OPTIONS\", \"entity_name\": \"Server\", \"source\": \"Start\", \"dest\": \"NonInviteServer_Trying\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"OPTIONS\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_OPTIONS_200_OK\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"condition\": \"pending_command == \\\"OPTIONS\\\" or True\", \"message\": {\"type\": \"OPTIONS_200_OK\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_OPTIONS_200_OK\", \"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"OPTIONS_200_OK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_MIDDLG_481\", \"source\": \"Dialog_Confirmed\", \"dest\": \"Dialog_Confirmed\", \"condition\": \"pending_command == \\\"MID_DIALOG_REQ\\\" or True\", \"message\": {\"type\": \"MIDDLG_481\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_MIDDLG_481\", \"entity_name\": \"Client\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteClient_Terminated\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"MIDDLG_481\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_INVITE_487\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"INVITE_487\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_INVITE_487\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"INVITE_487\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_INVITE_486\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"INVITE_486\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_INVITE_486\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"INVITE_486\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_INVITE_600\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"INVITE_600\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_INVITE_600\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"INVITE_600\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_INVITE_488\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"INVITE_488\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_INVITE_488\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"INVITE_488\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_REINVITE_500\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"REINVITE\\\" or True\", \"message\": {\"type\": \"REINVITE_500\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_REINVITE_500\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Calling\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"REINVITE_500\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_REINVITE_491\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"REINVITE\\\" or True\", \"message\": {\"type\": \"REINVITE_491\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_REINVITE_491\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Calling\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"REINVITE_491\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_BYE_IN_DIALOG\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"message\": {\"type\": \"BYE\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"SEND_BYE_IN_DIALOG\", \"entity_name\": \"Server\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteServer_Completed\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"BYE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_BYE_2XX\", \"source\": \"InviteServer_Completed\", \"dest\": \"InviteServer_Terminated\", \"condition\": \"pending_command == \\\"BYE\\\" or True\", \"message\": {\"type\": \"BYE_2XX\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_BYE_2XX\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Completed\", \"dest\": \"Done\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"BYE_2XX\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_BYE_NO_DIALOG\", \"source\": \"Start\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"message\": {\"type\": \"BYE_NODLG\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"SEND_BYE_NO_DIALOG\", \"entity_name\": \"Server\", \"source\": \"Start\", \"dest\": \"InviteServer_Completed\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"BYE_NODLG\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_BYE_NODLG_200\", \"source\": \"InviteServer_Completed\", \"dest\": \"InviteServer_Terminated\", \"condition\": \"pending_command == \\\"BYE_NODLG\\\" or True\", \"message\": {\"type\": \"BYE_NODLG_200\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_BYE_NODLG_200\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Completed\", \"dest\": \"Done\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"BYE_NODLG_200\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_INVITE_182\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Proceeding\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"INVITE_182\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_INVITE_182\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Proceeding\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"INVITE_182\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_INVITE_183\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Proceeding\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"INVITE_183\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_INVITE_183\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Proceeding\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"INVITE_183\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_GENERIC_300\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"GENERIC_300\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_GENERIC_300\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"GENERIC_300\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_GENERIC_301\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"GENERIC_301\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_GENERIC_301\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"GENERIC_301\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_GENERIC_302\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"GENERIC_302\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_GENERIC_302\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"GENERIC_302\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_GENERIC_305\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"GENERIC_305\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_GENERIC_305\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"GENERIC_305\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_GENERIC_380\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"GENERIC_380\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_GENERIC_380\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"GENERIC_380\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_GENERIC_410\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"GENERIC_410\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_GENERIC_410\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"GENERIC_410\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_GENERIC_413\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"GENERIC_413\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_GENERIC_413\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"GENERIC_413\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_GENERIC_414\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"GENERIC_414\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_GENERIC_414\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"GENERIC_414\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_GENERIC_415\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"GENERIC_415\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_GENERIC_415\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"GENERIC_415\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_AUTH_401\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"AUTH_401\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_AUTH_401\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"AUTH_401\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_AUTH_407\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"condition\": \"pending_command == \\\"INVITE\\\" or True\", \"message\": {\"type\": \"AUTH_407\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_AUTH_407\", \"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"AUTH_407\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"SEND_REGISTER_EXAMPLE\", \"source\": \"Start\", \"dest\": \"NonInviteClient_Trying\", \"condition\": \"\", \"message\": {\"type\": \"REGISTER_EX\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"SEND_REGISTER_EXAMPLE\", \"entity_name\": \"Server\", \"source\": \"Start\", \"dest\": \"NonInviteServer_Trying\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"REGISTER_EX\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"RESP_REGISTER_EX_200\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"condition\": \"pending_command == \\\"REGISTER_EX\\\" or True\", \"message\": {\"type\": \"REGISTER_EX_200\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"RESP_REGISTER_EX_200\", \"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"condition\": \"\", \"channel\": \"server_to_client\", \"type\": \"REGISTER_EX_200\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"NONINVITE_CLIENT_COMPLETE_TO_TERMINATED\", \"source\": \"NonInviteClient_Completed\", \"dest\": \"NonInviteClient_Terminated\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"NONINVITE_SERVER_COMPLETE_TO_TERMINATED\", \"source\": \"NonInviteServer_Completed\", \"dest\": \"NonInviteServer_Terminated\", \"condition\": \"True\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_cancel_in_confirmed\", \"entity_name\": \"Server\", \"source\": \"InviteServer_Confirmed\", \"dest\": \"NonInviteServer_Trying\", \"condition\": \"client_to_server_msg.type == \\\"CANCEL\\\"\", \"channel\": \"client_to_server\", \"type\": \"CANCEL\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_reinvite_200_in_dialog\", \"entity_name\": \"Client\", \"source\": \"Dialog_Confirmed\", \"dest\": \"Dialog_Confirmed\", \"condition\": \"server_to_client_msg.type == \\\"REINVITE_200_OK\\\"\", \"channel\": \"server_to_client\", \"type\": \"REINVITE_200_OK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_ack_reinvite\", \"source\": \"Dialog_Confirmed\", \"dest\": \"Dialog_Confirmed\", \"condition\": \"True\", \"message\": {\"type\": \"ACK_REINVITE\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Start\", \"dest\": \"InviteClient_Calling\", \"trigger\": \"SEND_INVITE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Calling\", \"dest\": \"InviteClient_Proceeding\", \"trigger\": \"RESP_INVITE_100_TRYING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"SEND_BYE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Completed\", \"dest\": \"Done\", \"trigger\": \"RESP_BYE_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Start\", \"dest\": \"NonInviteClient_Trying\", \"trigger\": \"SEND_REGISTER\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Proceeding\", \"trigger\": \"RESP_INVITE_180_RINGING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"Dialog_Confirmed\", \"trigger\": \"RESP_INVITE_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Dialog_Confirmed\", \"dest\": \"Dialog_Confirmed\", \"trigger\": \"SEND_ACK_INVITE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteClient_Calling\", \"trigger\": \"SEND_REINVITE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Calling\", \"dest\": \"Dialog_Confirmed\", \"trigger\": \"RESP_REINVITE_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Calling\", \"dest\": \"Dialog_Confirmed\", \"trigger\": \"RESP_REINVITE_488\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Calling\", \"dest\": \"NonInviteClient_Trying\", \"trigger\": \"SEND_CANCEL\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"trigger\": \"RESP_CANCEL_487\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"trigger\": \"RESP_CANCEL_2XX\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"trigger\": \"RESP_REGISTER_403\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"trigger\": \"RESP_REGISTER_404\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"trigger\": \"RESP_REGISTER_400\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"trigger\": \"RESP_REGISTER_423\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Start\", \"dest\": \"NonInviteClient_Trying\", \"trigger\": \"SEND_OPTIONS\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"trigger\": \"RESP_OPTIONS_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteClient_Terminated\", \"trigger\": \"RESP_MIDDLG_481\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_INVITE_487\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_INVITE_486\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_INVITE_600\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_INVITE_488\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Calling\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_REINVITE_500\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Calling\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_REINVITE_491\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"SEND_BYE_IN_DIALOG\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Completed\", \"dest\": \"Done\", \"trigger\": \"RESP_BYE_2XX\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Start\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"SEND_BYE_NO_DIALOG\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Completed\", \"dest\": \"Done\", \"trigger\": \"RESP_BYE_NODLG_200\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Proceeding\", \"trigger\": \"RESP_INVITE_182\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Proceeding\", \"trigger\": \"RESP_INVITE_183\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_GENERIC_300\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_GENERIC_301\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_GENERIC_302\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_GENERIC_305\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_GENERIC_380\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_GENERIC_410\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_GENERIC_413\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_GENERIC_414\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_GENERIC_415\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_AUTH_401\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"InviteClient_Proceeding\", \"dest\": \"InviteClient_Completed\", \"trigger\": \"RESP_AUTH_407\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Start\", \"dest\": \"NonInviteClient_Trying\", \"trigger\": \"SEND_REGISTER_EXAMPLE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"NonInviteClient_Trying\", \"dest\": \"NonInviteClient_Completed\", \"trigger\": \"RESP_REGISTER_EX_200\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"NonInviteClient_Completed\", \"dest\": \"NonInviteClient_Terminated\", \"trigger\": \"NONINVITE_CLIENT_COMPLETE_TO_TERMINATED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Dialog_Confirmed\", \"dest\": \"Dialog_Confirmed\", \"trigger\": \"recv_reinvite_200_in_dialog\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Dialog_Confirmed\", \"dest\": \"Dialog_Confirmed\", \"trigger\": \"send_ack_reinvite\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Start\", \"dest\": \"InviteServer_Proceeding\", \"trigger\": \"SEND_INVITE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Proceeding\", \"trigger\": \"RESP_INVITE_100_TRYING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"SEND_BYE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Completed\", \"dest\": \"InviteServer_Terminated\", \"trigger\": \"RESP_BYE_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Start\", \"dest\": \"NonInviteServer_Trying\", \"trigger\": \"SEND_REGISTER\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Proceeding\", \"trigger\": \"RESP_INVITE_180_RINGING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Confirmed\", \"trigger\": \"RESP_INVITE_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Confirmed\", \"dest\": \"Dialog_Confirmed\", \"trigger\": \"SEND_ACK_INVITE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteServer_Proceeding\", \"trigger\": \"SEND_REINVITE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Confirmed\", \"trigger\": \"RESP_REINVITE_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_REINVITE_488\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"NonInviteServer_Trying\", \"trigger\": \"SEND_CANCEL\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"trigger\": \"RESP_CANCEL_487\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"trigger\": \"RESP_CANCEL_2XX\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"trigger\": \"RESP_REGISTER_403\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"trigger\": \"RESP_REGISTER_404\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"trigger\": \"RESP_REGISTER_400\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"trigger\": \"RESP_REGISTER_423\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Start\", \"dest\": \"NonInviteServer_Trying\", \"trigger\": \"SEND_OPTIONS\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"trigger\": \"RESP_OPTIONS_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Dialog_Confirmed\", \"dest\": \"Dialog_Confirmed\", \"trigger\": \"RESP_MIDDLG_481\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_INVITE_487\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_INVITE_486\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_INVITE_600\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_INVITE_488\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_REINVITE_500\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_REINVITE_491\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Dialog_Confirmed\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"SEND_BYE_IN_DIALOG\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Completed\", \"dest\": \"InviteServer_Terminated\", \"trigger\": \"RESP_BYE_2XX\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Start\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"SEND_BYE_NO_DIALOG\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Completed\", \"dest\": \"InviteServer_Terminated\", \"trigger\": \"RESP_BYE_NODLG_200\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Proceeding\", \"trigger\": \"RESP_INVITE_182\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Proceeding\", \"trigger\": \"RESP_INVITE_183\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_GENERIC_300\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_GENERIC_301\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_GENERIC_302\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_GENERIC_305\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_GENERIC_380\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_GENERIC_410\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_GENERIC_413\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_GENERIC_414\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_GENERIC_415\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_AUTH_401\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Proceeding\", \"dest\": \"InviteServer_Completed\", \"trigger\": \"RESP_AUTH_407\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Start\", \"dest\": \"NonInviteServer_Trying\", \"trigger\": \"SEND_REGISTER_EXAMPLE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"NonInviteServer_Trying\", \"dest\": \"NonInviteServer_Completed\", \"trigger\": \"RESP_REGISTER_EX_200\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"NonInviteServer_Completed\", \"dest\": \"NonInviteServer_Terminated\", \"trigger\": \"NONINVITE_SERVER_COMPLETE_TO_TERMINATED\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"InviteServer_Confirmed\", \"dest\": \"NonInviteServer_Trying\", \"trigger\": \"recv_cancel_in_confirmed\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Start\", \"initial\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Done\", \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Start\", \"initial\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Done\", \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Wait_INVITE_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Start\", \"dest\": \"Wait_INVITE_200_OK\", \"trigger\": \"send_INVITE_Start\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [], \"channel\": \"client_to_server\", \"message\": {\"type\": \"INVITE\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Reply_INVITE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Start\", \"dest\": \"Reply_INVITE\", \"trigger\": \"recv_INVITE_Start\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"client_to_server\", \"type\": \"INVITE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"ConfirmDialog\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Reply_INVITE\", \"dest\": \"ConfirmDialog\", \"trigger\": \"send_INVITE_200_OK_Reply_INVITE\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"server_to_client\", \"message\": {\"type\": \"INVITE_200_OK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"ConfirmDialog\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Wait_INVITE_200_OK\", \"dest\": \"ConfirmDialog\", \"trigger\": \"recv_INVITE_200_OK_Wait_INVITE_200_OK\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [], \"channel\": \"server_to_client\", \"type\": \"INVITE_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"ConfirmDialog_Sent\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"ConfirmDialog\", \"dest\": \"ConfirmDialog_Sent\", \"trigger\": \"send_ACK_ConfirmDialog\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [], \"channel\": \"client_to_server\", \"message\": {\"type\": \"ACK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"ConfirmDialog_Sent\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"ConfirmDialog\", \"dest\": \"ConfirmDialog_Sent\", \"trigger\": \"send_DIALOG_ACK_ConfirmDialog\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"server_to_client\", \"message\": {\"type\": \"DIALOG_ACK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Confirmed\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"ConfirmDialog_Sent\", \"dest\": \"Confirmed\", \"trigger\": \"recv_DIALOG_ACK_ConfirmDialog_Sent\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [], \"channel\": \"server_to_client\", \"type\": \"DIALOG_ACK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Confirmed\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"ConfirmDialog_Sent\", \"dest\": \"Confirmed\", \"trigger\": \"recv_ACK_ConfirmDialog_Sent\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"client_to_server\", \"type\": \"ACK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Wait_BYE_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Confirmed\", \"dest\": \"Wait_BYE_200_OK\", \"trigger\": \"send_BYE_Confirmed\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [], \"channel\": \"client_to_server\", \"message\": {\"type\": \"BYE\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"Reply_BYE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Confirmed\", \"dest\": \"Reply_BYE\", \"trigger\": \"recv_BYE_Confirmed\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"client_to_server\", \"type\": \"BYE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Reply_BYE\", \"dest\": \"Done\", \"trigger\": \"send_BYE_200_OK_Reply_BYE\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"server_to_client\", \"message\": {\"type\": \"BYE_200_OK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Wait_BYE_200_OK\", \"dest\": \"Done\", \"trigger\": \"recv_BYE_200_OK_Wait_BYE_200_OK\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [], \"channel\": \"server_to_client\", \"type\": \"BYE_200_OK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"ConfirmDialog\", \"dest\": \"ConfirmDialog_Sent\", \"trigger\": \"send_ACK_ConfirmDialog\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"ConfirmDialog_Sent\", \"dest\": \"Confirmed\", \"trigger\": \"recv_DIALOG_ACK_ConfirmDialog_Sent\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"receive_before_send\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"peer_confirmation_received\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"local_confirmation_sent\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"ConfirmDialog\", \"dest\": \"ConfirmDialog\", \"trigger\": \"receive_peer_confirmation_before_sending\", \"condition\": \"not peer_confirmation_received\", \"variable_updates\": {\"peer_confirmation_received\": \"True\"}, \"unchanged_variables\": [\"receive_before_send\", \"local_confirmation_sent\"], \"channel\": \"server_to_client\", \"type\": \"DIALOG_ACK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"ConfirmDialog\", \"dest\": \"ConfirmDialog\", \"trigger\": \"send_confirmation_after_peer\", \"condition\": \"(not receive_before_send or peer_confirmation_received) and not local_confirmation_sent\", \"variable_updates\": {\"local_confirmation_sent\": \"True\"}, \"unchanged_variables\": [\"receive_before_send\", \"peer_confirmation_received\"], \"channel\": \"client_to_server\", \"message\": {\"type\": \"ACK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"ConfirmDialog\", \"dest\": \"Confirmed\", \"trigger\": \"mutual_confirmation_complete\", \"condition\": \"peer_confirmation_received and local_confirmation_sent\", \"variable_updates\": {}, \"unchanged_variables\": [\"receive_before_send\", \"peer_confirmation_received\", \"local_confirmation_sent\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"ConfirmDialog\", \"dest\": \"ConfirmDialog_Sent\", \"trigger\": \"send_DIALOG_ACK_ConfirmDialog\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"ConfirmDialog_Sent\", \"dest\": \"Confirmed\", \"trigger\": \"recv_ACK_ConfirmDialog_Sent\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"receive_before_send\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"peer_confirmation_received\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"local_confirmation_sent\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"condition\":\"\",\"dest\":\"Completed\",\"entity_name\":\"Client\",\"source\":\"Confirmed\",\"trigger\":\"delay_automatic_reinvite_or_bye_after_media_failure\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"pending_command\", \"var_type\": \"STRING\", \"initial_value\": \"\\\"NONE\\\"\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_invariant",
+      "arguments": "{\"entity_name\":\"Client\",\"invariant_name\":\"(((state[\\\"Client\\\"] /= \\\"Confirmed\\\")) \\\\/ ((state[\\\"Server\\\"] /= \\\"Trying\\\")))\",\"state_name\":\"Confirmed\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_entity_invariant",
+      "arguments": "{\"entity_name\": \"Client\", \"invariant_name\": \"1\", \"new_condition\": \"(((state[\\\"Client\\\"] /= \\\"Proceeding\\\")) \\\\/ ((state[\\\"Server\\\"] /= \\\"Confirmed\\\")))\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"receive_INVITE\", \"source\": \"Idle\", \"dest\": \"WaitingForACK\", \"channel\": \"client_to_server\", \"type\": \"INVITE\", \"condition\": \"True\", \"variable_updates\": {\"pending_command\": \"\\\"INVITE\\\"\"}, \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_BYE\", \"source\": \"DialogConfirmed\", \"dest\": \"DialogTerminated\", \"condition\": \"\", \"message\": {\"type\": \"BYE\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_BYE\", \"source\": \"DialogConfirmed\", \"dest\": \"DialogTerminated\", \"condition\": \"\", \"message\": {\"type\": \"BYE\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_200_OK_BYE\", \"entity_name\": \"Server\", \"source\": \"DialogTerminated\", \"dest\": \"Final\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"200_OK_BYE\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"send_200_OK_BYE\", \"entity_name\": \"Server\", \"source\": \"DialogTerminated\", \"dest\": \"Final\", \"condition\": \"\", \"channel\": \"client_to_server\", \"type\": \"200_OK_BYE\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"ConfirmDialog\", \"dest\": \"ConfirmDialog\", \"trigger\": \"receive_peer_confirmation_before_sending\", \"condition\": \"not peer_confirmation_received\", \"variable_updates\": {\"peer_confirmation_received\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"receive_before_send\", \"local_confirmation_sent\"], \"channel\": \"client_to_server\", \"type\": \"ACK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"ConfirmDialog\", \"dest\": \"ConfirmDialog\", \"trigger\": \"send_confirmation_after_peer\", \"condition\": \"(not receive_before_send or peer_confirmation_received) and not local_confirmation_sent\", \"variable_updates\": {\"local_confirmation_sent\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"receive_before_send\", \"peer_confirmation_received\"], \"channel\": \"server_to_client\", \"message\": {\"type\": \"DIALOG_ACK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"ConfirmDialog\", \"dest\": \"Confirmed\", \"trigger\": \"mutual_confirmation_complete\", \"condition\": \"peer_confirmation_received and local_confirmation_sent\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\", \"receive_before_send\", \"peer_confirmation_received\", \"local_confirmation_sent\"]}"
+    }
+  }
+]

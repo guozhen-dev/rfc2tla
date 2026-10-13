@@ -1,0 +1,658 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\": \"DHCPProtocol\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Server\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"client_to_server\", \"from_entity\": \"Client\", \"to_entity\": \"Server\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"server_to_client\", \"from_entity\": \"Server\", \"to_entity\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"INIT\", \"initial\": true, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"SELECTING\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"REQUESTING\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"BOUND\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"RENEWING\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"REBINDING\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"INIT-REBOOT\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"REBOOTING\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Done\", \"initial\": false, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Server\", \"state_name\": \"INIT\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"RENEWING_timeout_no_DHCPACK\", \"source\": \"RENEWING\", \"dest\": \"RENEWING\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"REBINDING_timeout_no_DHCPACK\", \"source\": \"REBINDING\", \"dest\": \"REBINDING\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"lease_expired_no_DHCPACK\", \"source\": \"RENEWING\", \"dest\": \"INIT\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"lease_expired_no_DHCPACK_from_REBINDING\", \"source\": \"REBINDING\", \"dest\": \"INIT\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPDISCOVER\", \"source\": \"INIT\", \"dest\": \"SELECTING\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPDISCOVER\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPDISCOVER\", \"entity_name\": \"Server\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"DHCPDISCOVER\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_DHCPOFFER\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"pending_command == \\\"DHCPDISCOVER\\\"\", \"message\": {\"type\": \"DHCPOFFER\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPOFFER\", \"entity_name\": \"Client\", \"source\": \"SELECTING\", \"dest\": \"SELECTING\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"DHCPOFFER\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"recv_DHCPDISCOVER\", \"source\": \"INIT\", \"dest\": \"INIT\", \"channel\": \"client_to_server\", \"new_condition\": \"True\", \"new_type\": \"DHCPDISCOVER\", \"new_unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_DHCPOFFER\", \"source\": \"INIT\", \"dest\": \"INIT\", \"channel\": \"server_to_client\", \"new_condition\": \"pending_command == \\\"DHCPDISCOVER\\\"\", \"new_message\": {\"type\": \"DHCPOFFER\"}, \"new_unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPREQUEST_reuse\", \"source\": \"INIT-REBOOT\", \"dest\": \"REQUESTING\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPREQUEST\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPREQUEST_reuse\", \"entity_name\": \"Server\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"DHCPREQUEST\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_DHCPACK_reuse\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"pending_command == \\\"DHCPREQUEST\\\"\", \"message\": {\"type\": \"DHCPACK\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPACK_reuse\", \"entity_name\": \"Client\", \"source\": \"REQUESTING\", \"dest\": \"BOUND\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"DHCPACK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPDECLINE\", \"source\": \"BOUND\", \"dest\": \"INIT\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPDECLINE\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPDECLINE\", \"entity_name\": \"Server\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"DHCPDECLINE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPNAK_reuse\", \"entity_name\": \"Client\", \"source\": \"REQUESTING\", \"dest\": \"INIT\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"DHCPNAK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"DHCPREQUEST_timeout_reuse\", \"source\": \"REQUESTING\", \"dest\": \"REQUESTING\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"DHCPREQUEST_timeout_giveup_to_INIT\", \"source\": \"REQUESTING\", \"dest\": \"INIT\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"DHCPREQUEST_timeout_use_previous_to_BOUND\", \"source\": \"REQUESTING\", \"dest\": \"BOUND\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPRELEASE\", \"source\": \"BOUND\", \"dest\": \"INIT\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPRELEASE\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPRELEASE\", \"entity_name\": \"Server\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"DHCPRELEASE\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPINFORM\", \"source\": \"BOUND\", \"dest\": \"BOUND\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPINFORM\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPINFORM\", \"entity_name\": \"Server\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"DHCPINFORM\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_DHCPACK_inform\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"pending_command == \\\"DHCPINFORM\\\"\", \"message\": {\"type\": \"DHCPACK\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPACK_inform\", \"entity_name\": \"Client\", \"source\": \"BOUND\", \"dest\": \"BOUND\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"DHCPACK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPINFORM_init_extaddr\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPINFORM\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"DHCPINFORM_timeout_use_defaults\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPDISCOVER_unicast_known_server\", \"source\": \"INIT\", \"dest\": \"SELECTING\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPDISCOVER\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPREQUEST_unicast_known_server\", \"source\": \"REBOOTING\", \"dest\": \"REQUESTING\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPREQUEST\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPINFORM_unicast_known_server\", \"source\": \"BOUND\", \"dest\": \"BOUND\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPINFORM\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"no_response_to_unicast_revert_to_broadcast\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"no_response_to_unicast_revert_to_broadcast_REBOOTING\", \"source\": \"REBOOTING\", \"dest\": \"REBOOTING\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"enter_RENEWING_at_T1\", \"source\": \"BOUND\", \"dest\": \"RENEWING\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPREQUEST_RENEWING\", \"source\": \"RENEWING\", \"dest\": \"RENEWING\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPREQUEST\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPDISCOVER\", \"source\": \"INIT\", \"dest\": \"SELECTING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPDISCOVER_unicast_known_server\", \"source\": \"INIT\", \"dest\": \"SELECTING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPDISCOVER_broadcast\", \"source\": \"INIT\", \"dest\": \"SELECTING\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPDISCOVER\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"recv_DHCPDISCOVER\", \"source\": \"INIT\", \"dest\": \"INIT\", \"channel\": \"client_to_server\", \"new_condition\": \"True\", \"new_type\": \"DHCPDISCOVER\", \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_DHCPOFFER\", \"source\": \"INIT\", \"dest\": \"INIT\", \"channel\": \"server_to_client\", \"new_condition\": \"pending_command == \\\"DHCPDISCOVER\\\"\", \"new_message\": {\"type\": \"DHCPOFFER\"}, \"new_unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPREQUEST_SELECTING\", \"source\": \"SELECTING\", \"dest\": \"REQUESTING\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPREQUEST\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPREQUEST_SELECTING\", \"entity_name\": \"Server\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"DHCPREQUEST\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_DHCPACK_SELECTING\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"pending_command == \\\"DHCPREQUEST\\\"\", \"message\": {\"type\": \"DHCPACK\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPACK_SELECTING\", \"entity_name\": \"Client\", \"source\": \"REQUESTING\", \"dest\": \"BOUND\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"DHCPACK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_DHCPNAK_SELECTING\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"pending_command == \\\"DHCPREQUEST\\\"\", \"message\": {\"type\": \"DHCPNAK\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPNAK_SELECTING\", \"entity_name\": \"Client\", \"source\": \"REQUESTING\", \"dest\": \"INIT\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"DHCPNAK\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"no_DHCPOFFER_timeout_retransmit_DHCPDISCOVER\", \"source\": \"SELECTING\", \"dest\": \"INIT\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"DHCPREQUEST_timeout_no_ACK_NAK\", \"source\": \"REQUESTING\", \"dest\": \"REQUESTING\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"DHCPREQUEST_timeout_exhausted_revert_INIT\", \"source\": \"REQUESTING\", \"dest\": \"INIT\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"enter_INIT_REBOOT_on_startup_with_cached_lease\", \"source\": \"INIT\", \"dest\": \"INIT-REBOOT\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"graceful_shutdown_to_Done\", \"source\": \"BOUND\", \"dest\": \"Done\", \"condition\": \"True\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPDISCOVER_from_INIT\", \"source\": \"INIT\", \"dest\": \"SELECTING\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPDISCOVER\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"trigger\": \"send_DHCPREQUEST_from_SELECTING\", \"source\": \"SELECTING\", \"dest\": \"REQUESTING\", \"condition\": \"True\", \"message\": {\"type\": \"DHCPREQUEST\"}, \"channel\": \"client_to_server\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_DHCPOFFER\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"pending_command == \\\"DHCPDISCOVER\\\"\", \"message\": {\"type\": \"DHCPOFFER\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPOFFER_in_SELECTING\", \"entity_name\": \"Client\", \"source\": \"SELECTING\", \"dest\": \"SELECTING\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"DHCPOFFER\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPDISCOVER\", \"entity_name\": \"Server\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"True\", \"channel\": \"client_to_server\", \"type\": \"DHCPDISCOVER\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"trigger\": \"send_DHCPOFFER_response\", \"source\": \"INIT\", \"dest\": \"INIT\", \"condition\": \"pending_command == \\\"DHCPDISCOVER\\\"\", \"message\": {\"type\": \"DHCPOFFER\"}, \"channel\": \"server_to_client\", \"unchanged_variables\": [\"pending_command\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"trigger\": \"recv_DHCPOFFER_in_SELECTING_2\", \"entity_name\": \"Client\", \"source\": \"SELECTING\", \"dest\": \"SELECTING\", \"condition\": \"True\", \"channel\": \"server_to_client\", \"type\": \"DHCPOFFER\", \"unchanged_variables\": []}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"selected_offer\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"cached_lease\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"True\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"request_sent_without_selection\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"no_request_sent_without_selection\", \"condition\": \"not request_sent_without_selection\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"SELECTING\", \"dest\": \"SELECTING\", \"trigger\": \"recv_DHCPOFFER\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"selected_offer\": \"True\"}, \"new_unchanged_variables\": [\"cached_lease\", \"request_sent_without_selection\"], \"channel\": \"server_to_client\", \"new_type\": \"DHCPOFFER\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"SELECTING\", \"dest\": \"SELECTING\", \"trigger\": \"recv_DHCPOFFER_in_SELECTING\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"selected_offer\": \"True\"}, \"new_unchanged_variables\": [\"cached_lease\", \"request_sent_without_selection\"], \"channel\": \"server_to_client\", \"new_type\": \"DHCPOFFER\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"SELECTING\", \"dest\": \"SELECTING\", \"trigger\": \"recv_DHCPOFFER_in_SELECTING_2\", \"new_condition\": \"(True)\", \"new_variable_updates\": {\"selected_offer\": \"True\"}, \"new_unchanged_variables\": [\"cached_lease\", \"request_sent_without_selection\"], \"channel\": \"server_to_client\", \"new_type\": \"DHCPOFFER\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"INIT\", \"dest\": \"REQUESTING\", \"trigger\": \"send_DHCPREQUEST_cached_lease\", \"condition\": \"cached_lease\", \"variable_updates\": {\"request_sent_without_selection\": \"not selected_offer\"}, \"unchanged_variables\": [\"selected_offer\", \"cached_lease\"], \"channel\": \"client_to_server\", \"message\": {\"type\": \"DHCPREQUEST\", \"variables\": {}}}"
+    }
+  }
+]

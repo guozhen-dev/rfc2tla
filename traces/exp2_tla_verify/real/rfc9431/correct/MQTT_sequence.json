@@ -1,0 +1,906 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\": \"MQTT_TLS_ACE_Profile\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"Broker\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"AuthorizationServer\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\": \"ClientAuthorizationServer\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"client_to_broker\", \"from_entity\": \"Client\", \"to_entity\": \"Broker\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"broker_to_client\", \"from_entity\": \"Broker\", \"to_entity\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"client_to_as\", \"from_entity\": \"Client\", \"to_entity\": \"AuthorizationServer\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"as_to_client\", \"from_entity\": \"AuthorizationServer\", \"to_entity\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"broker_to_as\", \"from_entity\": \"Broker\", \"to_entity\": \"AuthorizationServer\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"as_to_broker\", \"from_entity\": \"AuthorizationServer\", \"to_entity\": \"Broker\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"client_to_cas\", \"from_entity\": \"Client\", \"to_entity\": \"ClientAuthorizationServer\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"cas_to_client\", \"from_entity\": \"ClientAuthorizationServer\", \"to_entity\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Start\", \"initial\": true, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"TokenAcquisition\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"TokenOnboardingViaCAS\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"TLSConnectionSetup\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"MQTTConnectionRequest\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"AwaitingCONNACK\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"AuthenticatedSession\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Reauthentication\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Disconnected\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Client\", \"state_name\": \"Final\", \"initial\": false, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Broker\", \"state_name\": \"Initial\", \"initial\": true, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Broker\", \"state_name\": \"AwaitingCONNECT\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Broker\", \"state_name\": \"TokenValidation\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Broker\", \"state_name\": \"SessionEstablished\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Broker\", \"state_name\": \"AuthorizingPUBLISH\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Broker\", \"state_name\": \"AuthorizingSUBSCRIBE\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Broker\", \"state_name\": \"HandlingRetainedMessages\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Broker\", \"state_name\": \"HandlingDisconnection\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"Broker\", \"state_name\": \"Final\", \"initial\": false, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"AuthorizationServer\", \"state_name\": \"Initial\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"AuthorizationServer\", \"state_name\": \"ProcessingTokenRequest\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"AuthorizationServer\", \"state_name\": \"ProcessingIntrospectionRequest\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ClientAuthorizationServer\", \"state_name\": \"Initial\", \"initial\": true, \"final\": true}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\": \"ClientAuthorizationServer\", \"state_name\": \"HandlingClientTokenOnboarding\", \"initial\": false, \"final\": false}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"client_to_cas\", \"from_entity\": \"Client\", \"to_entity\": \"ClientAuthorizationServer\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"cas_to_client\", \"from_entity\": \"ClientAuthorizationServer\", \"to_entity\": \"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"broker_to_as\", \"from_entity\": \"Broker\", \"to_entity\": \"AuthorizationServer\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\": \"as_to_broker\", \"from_entity\": \"AuthorizationServer\", \"to_entity\": \"Broker\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"pending_command\", \"var_type\": \"STRING\", \"initial_value\": \"\\\"NONE\\\"\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Broker\", \"name\": \"pending_command\", \"var_type\": \"STRING\", \"initial_value\": \"\\\"NONE\\\"\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"AuthorizationServer\", \"name\": \"pending_command\", \"var_type\": \"STRING\", \"initial_value\": \"\\\"NONE\\\"\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"ClientAuthorizationServer\", \"name\": \"pending_command\", \"var_type\": \"STRING\", \"initial_value\": \"\\\"NONE\\\"\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"token_acquired\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"authenticated\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Broker\", \"name\": \"token_valid\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Broker\", \"name\": \"authenticated\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"no_service_before_session\", \"condition\": \"(state_Client != \\\"AuthorizedToPublishSubscribe\\\") or (state_Broker = \\\"SessionStartedNew\\\" or state_Broker = \\\"SessionContinuedExisting\\\")\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"Broker\", \"name\": \"no_forward_without_authorizing\", \"condition\": \"state_Broker != \\\"ForwardingPublishToSubscribers\\\" or state_Broker = \\\"AuthorizingPublishFromClient\\\"\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"Broker\", \"name\": \"no_authorize_pub_without_session\", \"condition\": \"state_Broker != \\\"AuthorizingPublishFromClient\\\" or (state_Broker = \\\"SessionStartedNew\\\" or state_Broker = \\\"SessionContinuedExisting\\\")\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"Broker\", \"name\": \"no_authorize_sub_without_session\", \"condition\": \"state_Broker != \\\"AuthorizingSubscribeFromClient\\\" or (state_Broker = \\\"SessionStartedNew\\\" or state_Broker = \\\"SessionContinuedExisting\\\")\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Broker\", \"name\": \"pending_command\", \"initial_value\": \"\\\"NONE\\\"\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"condition\":\"\",\"dest\":\"OverviewofClient_RSAuthenticationMethodsoverTLSandMQTT\",\"entity_name\":\"Client\",\"source\":\"ClientConnectionRequest\",\"trigger\":\"begin_authentication_method_selection\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"broker_to_client\",\"condition\":\"\",\"dest\":\"AuthorizationSuccess\",\"entity_name\":\"Client\",\"source\":\"BrokerTokenValidation\",\"trigger\":\"send_connack_success\",\"type\":\"CONNACK_SUCCESS\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_broker\",\"condition\":\"\",\"dest\":\"BrokerTokenValidation\",\"entity_name\":\"Client\",\"message\":{\"type\":\"CONNECT_WITH_TOKEN\",\"variables\":{}},\"source\":\"ClientConnectionRequest\",\"trigger\":\"send_connect_with_token\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Broker\", \"name\": \"token_valid\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_invariant",
+      "arguments": "{\"entity_name\": \"Broker\", \"invariant_name\": \"1\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_entity_invariant",
+      "arguments": "{\"entity_name\": \"Broker\", \"invariant_name\": \"(((state[\\\"Broker\\\"] /= \\\"ProcessingConnect\\\")) \\\\/ ((((state[\\\"Client\\\"] = \\\"ConnectSent\\\")) \\\\/ ((state[\\\"Client\\\"] = \\\"Disconnected\\\")))))\", \"new_condition\": \"((state[\\\"Broker\\\"] != \\\"ProcessingConnect\\\") or ((state[\\\"Client\\\"] == \\\"ConnectSent\\\") or (state[\\\"Client\\\"] == \\\"Disconnected\\\") or (state[\\\"Client\\\"] == \\\"TLSConnected\\\")))\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Disconnected_AuthzInfo\", \"dest\": \"ReconnectingTLS\", \"trigger\": \"prepare_tls_reconnect\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"auth_method_tls\", \"auth_method_mqtt\", \"pending_response\", \"keep_alive_timer\", \"pending_command\", \"token\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_invariant",
+      "arguments": "{\"entity_name\":\"Broker\",\"invariant_name\":\"no_client_commands_before_awaitingconnect\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Start\", \"dest\": \"TokenAcquisition\", \"trigger\": \"START_TOKEN_ACQUISITION\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"authenticated\", \"pending_command\", \"token_acquired\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Start\", \"dest\": \"TokenOnboardingViaCAS\", \"trigger\": \"USE_CAS_FOR_TOKEN\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"authenticated\", \"pending_command\", \"token_acquired\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"Initial\", \"dest\": \"AwaitingCONNECT\", \"trigger\": \"broker_listen\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"authenticated\", \"pending_command\", \"token_valid\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"TokenAcquisition\", \"dest\": \"TokenAcquisition\", \"trigger\": \"TOKEN_REQUEST_TokenAcquisition_Initial_TOKEN_RESPONSE_request\", \"condition\": \"pending_command == \\\"NONE\\\" and (True)\", \"variable_updates\": {\"pending_command\": \"\\\"TOKEN_REQUEST\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"client_to_as\", \"message\": {\"type\": \"TOKEN_REQUEST\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"AuthorizationServer\", \"source\": \"Initial\", \"dest\": \"ProcessingTokenRequest\", \"trigger\": \"TOKEN_REQUEST_TokenAcquisition_Initial_TOKEN_RESPONSE_accept\", \"condition\": \"pending_command == \\\"NONE\\\" and (True)\", \"variable_updates\": {\"pending_command\": \"\\\"TOKEN_REQUEST\\\"\"}, \"unchanged_variables\": [], \"channel\": \"client_to_as\", \"type\": \"TOKEN_REQUEST\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"AuthorizationServer\", \"source\": \"ProcessingTokenRequest\", \"dest\": \"Initial\", \"trigger\": \"TOKEN_REQUEST_TokenAcquisition_Initial_TOKEN_RESPONSE_reply\", \"condition\": \"pending_command == \\\"TOKEN_REQUEST\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [], \"channel\": \"as_to_client\", \"message\": {\"type\": \"TOKEN_RESPONSE\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"TokenAcquisition\", \"dest\": \"TLSConnectionSetup\", \"trigger\": \"TOKEN_REQUEST_TokenAcquisition_Initial_TOKEN_RESPONSE_response\", \"condition\": \"pending_command == \\\"TOKEN_REQUEST\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\", \"token_acquired\": \"True\"}, \"unchanged_variables\": [\"authenticated\"], \"channel\": \"as_to_client\", \"type\": \"TOKEN_RESPONSE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"TokenOnboardingViaCAS\", \"dest\": \"TokenOnboardingViaCAS\", \"trigger\": \"ONBOARD_TOKEN_TokenOnboardingViaCAS_Initial_ONBOARDED_TOKEN_request\", \"condition\": \"pending_command == \\\"NONE\\\" and (True)\", \"variable_updates\": {\"pending_command\": \"\\\"ONBOARD_TOKEN\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"client_to_cas\", \"message\": {\"type\": \"ONBOARD_TOKEN\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"ClientAuthorizationServer\", \"source\": \"Initial\", \"dest\": \"HandlingClientTokenOnboarding\", \"trigger\": \"ONBOARD_TOKEN_TokenOnboardingViaCAS_Initial_ONBOARDED_TOKEN_accept\", \"condition\": \"pending_command == \\\"NONE\\\" and (True)\", \"variable_updates\": {\"pending_command\": \"\\\"ONBOARD_TOKEN\\\"\"}, \"unchanged_variables\": [], \"channel\": \"client_to_cas\", \"type\": \"ONBOARD_TOKEN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"ClientAuthorizationServer\", \"source\": \"HandlingClientTokenOnboarding\", \"dest\": \"Initial\", \"trigger\": \"ONBOARD_TOKEN_TokenOnboardingViaCAS_Initial_ONBOARDED_TOKEN_reply\", \"condition\": \"pending_command == \\\"ONBOARD_TOKEN\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [], \"channel\": \"cas_to_client\", \"message\": {\"type\": \"ONBOARDED_TOKEN\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"TokenOnboardingViaCAS\", \"dest\": \"TLSConnectionSetup\", \"trigger\": \"ONBOARD_TOKEN_TokenOnboardingViaCAS_Initial_ONBOARDED_TOKEN_response\", \"condition\": \"pending_command == \\\"ONBOARD_TOKEN\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\", \"token_acquired\": \"True\"}, \"unchanged_variables\": [\"authenticated\"], \"channel\": \"cas_to_client\", \"type\": \"ONBOARDED_TOKEN\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"TLSConnectionSetup\", \"dest\": \"TLSConnectionSetup\", \"trigger\": \"onboard_token\", \"condition\": \"token_acquired and pending_command == \\\"NONE\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"AUTHZ\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"client_to_broker\", \"message\": {\"type\": \"PUBLISH_AUTHZ_INFO\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"AwaitingCONNECT\", \"dest\": \"TokenValidation\", \"trigger\": \"accept_authz\", \"condition\": \"pending_command == \\\"NONE\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"INTROSPECT\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"client_to_broker\", \"type\": \"PUBLISH_AUTHZ_INFO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"TokenValidation\", \"dest\": \"TokenValidation\", \"trigger\": \"query_token\", \"condition\": \"pending_command == \\\"INTROSPECT\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"INTROSPECTION_WAIT\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"broker_to_as\", \"message\": {\"type\": \"INTROSPECTION_REQUEST\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"AuthorizationServer\", \"source\": \"Initial\", \"dest\": \"ProcessingIntrospectionRequest\", \"trigger\": \"accept_introspection\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"broker_to_as\", \"type\": \"INTROSPECTION_REQUEST\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"AuthorizationServer\", \"source\": \"ProcessingIntrospectionRequest\", \"dest\": \"Initial\", \"trigger\": \"return_token_claims\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"pending_command\"], \"channel\": \"as_to_broker\", \"message\": {\"type\": \"INTROSPECTION_RESPONSE\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"TokenValidation\", \"dest\": \"TokenValidation\", \"trigger\": \"validate_token_claims\", \"condition\": \"pending_command == \\\"INTROSPECTION_WAIT\\\"\", \"variable_updates\": {\"token_valid\": \"True\", \"pending_command\": \"\\\"AUTHZ_ACK\\\"\"}, \"unchanged_variables\": [\"authenticated\"], \"channel\": \"as_to_broker\", \"type\": \"INTROSPECTION_RESPONSE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"TokenValidation\", \"dest\": \"AwaitingCONNECT\", \"trigger\": \"ack_authz\", \"condition\": \"pending_command == \\\"AUTHZ_ACK\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"broker_to_client\", \"message\": {\"type\": \"PUBACK_AUTHZ_INFO\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"TLSConnectionSetup\", \"dest\": \"MQTTConnectionRequest\", \"trigger\": \"receive_authz_ack\", \"condition\": \"pending_command == \\\"AUTHZ\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"broker_to_client\", \"type\": \"PUBACK_AUTHZ_INFO\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"MQTTConnectionRequest\", \"dest\": \"AwaitingCONNACK\", \"trigger\": \"SEND_CONNECT\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"authenticated\", \"pending_command\", \"token_acquired\"], \"channel\": \"client_to_broker\", \"message\": {\"type\": \"CONNECT\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"AwaitingCONNECT\", \"dest\": \"TokenValidation\", \"trigger\": \"RECV_CONNECT\", \"condition\": \"token_valid\", \"variable_updates\": {\"pending_command\": \"\\\"CONNECT\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"client_to_broker\", \"type\": \"CONNECT\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"TokenValidation\", \"dest\": \"SessionEstablished\", \"trigger\": \"SEND_CONNACK\", \"condition\": \"pending_command == \\\"CONNECT\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\", \"authenticated\": \"True\"}, \"unchanged_variables\": [\"token_valid\"], \"channel\": \"broker_to_client\", \"message\": {\"type\": \"CONNACK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AwaitingCONNACK\", \"dest\": \"AuthenticatedSession\", \"trigger\": \"RECV_CONNACK\", \"condition\": \"True\", \"variable_updates\": {\"authenticated\": \"True\"}, \"unchanged_variables\": [\"pending_command\", \"token_acquired\"], \"channel\": \"broker_to_client\", \"type\": \"CONNACK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AuthenticatedSession\", \"dest\": \"AuthenticatedSession\", \"trigger\": \"PINGREQ_AuthenticatedSession_SessionEstablished_PINGRESP_request\", \"condition\": \"pending_command == \\\"NONE\\\" and (authenticated)\", \"variable_updates\": {\"pending_command\": \"\\\"PINGREQ\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"client_to_broker\", \"message\": {\"type\": \"PINGREQ\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"SessionEstablished\", \"dest\": \"SessionEstablished\", \"trigger\": \"PINGREQ_AuthenticatedSession_SessionEstablished_PINGRESP_accept\", \"condition\": \"pending_command == \\\"NONE\\\" and (authenticated and token_valid)\", \"variable_updates\": {\"pending_command\": \"\\\"PINGREQ\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"client_to_broker\", \"type\": \"PINGREQ\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"SessionEstablished\", \"dest\": \"SessionEstablished\", \"trigger\": \"PINGREQ_AuthenticatedSession_SessionEstablished_PINGRESP_reply\", \"condition\": \"pending_command == \\\"PINGREQ\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"broker_to_client\", \"message\": {\"type\": \"PINGRESP\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AuthenticatedSession\", \"dest\": \"AuthenticatedSession\", \"trigger\": \"PINGREQ_AuthenticatedSession_SessionEstablished_PINGRESP_response\", \"condition\": \"pending_command == \\\"PINGREQ\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"broker_to_client\", \"type\": \"PINGRESP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AuthenticatedSession\", \"dest\": \"AuthenticatedSession\", \"trigger\": \"PUBLISH_AuthenticatedSession_SessionEstablished_PUBACK_request\", \"condition\": \"pending_command == \\\"NONE\\\" and (authenticated)\", \"variable_updates\": {\"pending_command\": \"\\\"PUBLISH\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"client_to_broker\", \"message\": {\"type\": \"PUBLISH\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"SessionEstablished\", \"dest\": \"AuthorizingPUBLISH\", \"trigger\": \"PUBLISH_AuthenticatedSession_SessionEstablished_PUBACK_accept\", \"condition\": \"pending_command == \\\"NONE\\\" and (authenticated and token_valid)\", \"variable_updates\": {\"pending_command\": \"\\\"PUBLISH\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"client_to_broker\", \"type\": \"PUBLISH\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"AuthorizingPUBLISH\", \"dest\": \"SessionEstablished\", \"trigger\": \"PUBLISH_AuthenticatedSession_SessionEstablished_PUBACK_reply\", \"condition\": \"pending_command == \\\"PUBLISH\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"broker_to_client\", \"message\": {\"type\": \"PUBACK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AuthenticatedSession\", \"dest\": \"AuthenticatedSession\", \"trigger\": \"PUBLISH_AuthenticatedSession_SessionEstablished_PUBACK_response\", \"condition\": \"pending_command == \\\"PUBLISH\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"broker_to_client\", \"type\": \"PUBACK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AuthenticatedSession\", \"dest\": \"AuthenticatedSession\", \"trigger\": \"SUBSCRIBE_AuthenticatedSession_SessionEstablished_SUBACK_request\", \"condition\": \"pending_command == \\\"NONE\\\" and (authenticated)\", \"variable_updates\": {\"pending_command\": \"\\\"SUBSCRIBE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"client_to_broker\", \"message\": {\"type\": \"SUBSCRIBE\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"SessionEstablished\", \"dest\": \"AuthorizingSUBSCRIBE\", \"trigger\": \"SUBSCRIBE_AuthenticatedSession_SessionEstablished_SUBACK_accept\", \"condition\": \"pending_command == \\\"NONE\\\" and (authenticated and token_valid)\", \"variable_updates\": {\"pending_command\": \"\\\"SUBSCRIBE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"client_to_broker\", \"type\": \"SUBSCRIBE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"AuthorizingSUBSCRIBE\", \"dest\": \"SessionEstablished\", \"trigger\": \"SUBSCRIBE_AuthenticatedSession_SessionEstablished_SUBACK_reply\", \"condition\": \"pending_command == \\\"SUBSCRIBE\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"broker_to_client\", \"message\": {\"type\": \"SUBACK\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AuthenticatedSession\", \"dest\": \"AuthenticatedSession\", \"trigger\": \"SUBSCRIBE_AuthenticatedSession_SessionEstablished_SUBACK_response\", \"condition\": \"pending_command == \\\"SUBSCRIBE\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"broker_to_client\", \"type\": \"SUBACK\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AuthenticatedSession\", \"dest\": \"AuthenticatedSession\", \"trigger\": \"AUTH_REAUTH_AuthenticatedSession_SessionEstablished_AUTH_CHALLENGE_request\", \"condition\": \"pending_command == \\\"NONE\\\" and (True)\", \"variable_updates\": {\"pending_command\": \"\\\"AUTH_REAUTH\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"client_to_broker\", \"message\": {\"type\": \"AUTH_REAUTH\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"SessionEstablished\", \"dest\": \"SessionEstablished\", \"trigger\": \"AUTH_REAUTH_AuthenticatedSession_SessionEstablished_AUTH_CHALLENGE_accept\", \"condition\": \"pending_command == \\\"NONE\\\" and (True)\", \"variable_updates\": {\"pending_command\": \"\\\"AUTH_REAUTH\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"client_to_broker\", \"type\": \"AUTH_REAUTH\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"SessionEstablished\", \"dest\": \"TokenValidation\", \"trigger\": \"AUTH_REAUTH_AuthenticatedSession_SessionEstablished_AUTH_CHALLENGE_reply\", \"condition\": \"pending_command == \\\"AUTH_REAUTH\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"broker_to_client\", \"message\": {\"type\": \"AUTH_CHALLENGE\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AuthenticatedSession\", \"dest\": \"Reauthentication\", \"trigger\": \"AUTH_REAUTH_AuthenticatedSession_SessionEstablished_AUTH_CHALLENGE_response\", \"condition\": \"pending_command == \\\"AUTH_REAUTH\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"broker_to_client\", \"type\": \"AUTH_CHALLENGE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Reauthentication\", \"dest\": \"Reauthentication\", \"trigger\": \"AUTH_RESPONSE_Reauthentication_TokenValidation_AUTH_SUCCESS_request\", \"condition\": \"pending_command == \\\"NONE\\\" and (True)\", \"variable_updates\": {\"pending_command\": \"\\\"AUTH_RESPONSE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_acquired\"], \"channel\": \"client_to_broker\", \"message\": {\"type\": \"AUTH_RESPONSE\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"TokenValidation\", \"dest\": \"TokenValidation\", \"trigger\": \"AUTH_RESPONSE_Reauthentication_TokenValidation_AUTH_SUCCESS_accept\", \"condition\": \"pending_command == \\\"NONE\\\" and (True)\", \"variable_updates\": {\"pending_command\": \"\\\"AUTH_RESPONSE\\\"\"}, \"unchanged_variables\": [\"authenticated\", \"token_valid\"], \"channel\": \"client_to_broker\", \"type\": \"AUTH_RESPONSE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"TokenValidation\", \"dest\": \"SessionEstablished\", \"trigger\": \"AUTH_RESPONSE_Reauthentication_TokenValidation_AUTH_SUCCESS_reply\", \"condition\": \"pending_command == \\\"AUTH_RESPONSE\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\", \"authenticated\": \"True\"}, \"unchanged_variables\": [\"token_valid\"], \"channel\": \"broker_to_client\", \"message\": {\"type\": \"AUTH_SUCCESS\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Reauthentication\", \"dest\": \"AuthenticatedSession\", \"trigger\": \"AUTH_RESPONSE_Reauthentication_TokenValidation_AUTH_SUCCESS_response\", \"condition\": \"pending_command == \\\"AUTH_RESPONSE\\\"\", \"variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\", \"authenticated\": \"True\"}, \"unchanged_variables\": [\"token_acquired\"], \"channel\": \"broker_to_client\", \"type\": \"AUTH_SUCCESS\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"AuthenticatedSession\", \"dest\": \"Disconnected\", \"trigger\": \"SEND_DISCONNECT\", \"condition\": \"pending_command == \\\"NONE\\\"\", \"variable_updates\": {\"authenticated\": \"False\"}, \"unchanged_variables\": [\"pending_command\", \"token_acquired\"], \"channel\": \"client_to_broker\", \"message\": {\"type\": \"DISCONNECT\", \"variables\": {}}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"SessionEstablished\", \"dest\": \"HandlingDisconnection\", \"trigger\": \"RECV_DISCONNECT\", \"condition\": \"pending_command == \\\"NONE\\\"\", \"variable_updates\": {\"authenticated\": \"False\"}, \"unchanged_variables\": [\"pending_command\", \"token_valid\"], \"channel\": \"client_to_broker\", \"type\": \"DISCONNECT\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"HandlingDisconnection\", \"dest\": \"HandlingRetainedMessages\", \"trigger\": \"HANDLE_WILL_MESSAGE\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"authenticated\", \"pending_command\", \"token_valid\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Broker\", \"source\": \"HandlingRetainedMessages\", \"dest\": \"Final\", \"trigger\": \"BROKER_SHUTDOWN\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"authenticated\", \"pending_command\", \"token_valid\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"entity_name\": \"Client\", \"source\": \"Disconnected\", \"dest\": \"Final\", \"trigger\": \"SESSION_TERMINATED\", \"condition\": \"True\", \"variable_updates\": {}, \"unchanged_variables\": [\"authenticated\", \"pending_command\", \"token_acquired\"]}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"session_requires_token\", \"condition\": \"state_Client == \\\"Start\\\" or state_Client in [\\\"TokenAcquisition\\\",\\\"TokenOnboardingViaCAS\\\"] or token_acquired\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"Client\", \"name\": \"service_requires_authentication\", \"condition\": \"state_Client != \\\"AuthenticatedSession\\\" or authenticated\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"Broker\", \"name\": \"authorization_requires_valid_token\", \"condition\": \"state_Broker not in [\\\"SessionEstablished\\\",\\\"AuthorizingPUBLISH\\\",\\\"AuthorizingSUBSCRIBE\\\"] or (token_valid and authenticated)\"}"
+    }
+  }
+]

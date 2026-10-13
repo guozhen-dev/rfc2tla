@@ -1,0 +1,3562 @@
+[
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_protocol",
+      "arguments": "{\"protocol_name\":\"NNTPProtocol\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\":\"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "create_entity",
+      "arguments": "{\"entity_name\":\"Server\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\":\"client_to_server\",\"from_entity\":\"Client\",\"to_entity\":\"Server\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_channel",
+      "arguments": "{\"channel_name\":\"server_to_client\",\"from_entity\":\"Server\",\"to_entity\":\"Client\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\":\"Client\",\"final\":false,\"initial\":true,\"state_name\":\"Initial_Connection\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\":\"Client\",\"final\":false,\"initial\":false,\"state_name\":\"Transit_mode\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\":\"Client\",\"final\":false,\"initial\":false,\"state_name\":\"Reading_mode\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\":\"Client\",\"final\":true,\"initial\":false,\"state_name\":\"Connection_closing\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\":\"Server\",\"final\":false,\"initial\":true,\"state_name\":\"Initial_Connection\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\":\"Server\",\"final\":false,\"initial\":false,\"state_name\":\"Transit_mode\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\":\"Server\",\"final\":false,\"initial\":false,\"state_name\":\"Reading_mode\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_state",
+      "arguments": "{\"entity_name\":\"Server\",\"final\":true,\"initial\":false,\"state_name\":\"Connection_closing\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"initial_value\": \"\\\"NONE\\\"\", \"name\": \"pending_command\", \"var_type\": \"STRING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"MODE_READER\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_MODE_READER_from_initial\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"MODE_READER\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_MODE_READER_from_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"MODE_STREAM\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_MODE_STREAM_from_initial\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"MODE_STREAM\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_MODE_STREAM_from_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_MODE_READER_initial\",\"type\":\"MODE_READER\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"MODE_READER\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_MODE_READER_reading\",\"type\":\"MODE_READER\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"MODE_READER\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_MODE_STREAM_initial\",\"type\":\"MODE_STREAM\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"MODE_STREAM\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_MODE_STREAM_transit\",\"type\":\"MODE_STREAM\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"MODE_STREAM\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"MODE_READER\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"MODE_READER_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_MODE_READER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_MODE_READER_RESP\",\"type\":\"MODE_READER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"MODE_STREAM\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"MODE_STREAM_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_MODE_STREAM_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_MODE_STREAM_RESP\",\"type\":\"MODE_STREAM_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"CAPABILITIES\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_CAPABILITIES_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"CAPABILITIES\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_CAPABILITIES_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_CAPABILITIES_reading\",\"type\":\"CAPABILITIES\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"CAPABILITIES\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_CAPABILITIES_transit\",\"type\":\"CAPABILITIES\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"CAPABILITIES\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"CAPABILITIES\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"CAPABILITIES_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_CAPABILITIES_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"CAPABILITIES\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"CAPABILITIES_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_CAPABILITIES_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_CAPABILITIES_RESP_reading\",\"type\":\"CAPABILITIES_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_CAPABILITIES_RESP_transit\",\"type\":\"CAPABILITIES_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"message\":{\"type\":\"QUIT\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_QUIT_initial\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"message\":{\"type\":\"QUIT\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_QUIT_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"message\":{\"type\":\"QUIT\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_QUIT_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_QUIT_initial\",\"type\":\"QUIT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"QUIT\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_QUIT_reading\",\"type\":\"QUIT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"QUIT\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_QUIT_transit\",\"type\":\"QUIT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"QUIT\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"QUIT\\\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"message\":{\"type\":\"QUIT_RESP\",\"variables\":{}},\"source\":\"Connection_closing\",\"trigger\":\"send_QUIT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Connection_closing\",\"trigger\":\"recv_QUIT_RESP\",\"type\":\"QUIT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"GROUP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_GROUP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_GROUP\",\"type\":\"GROUP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"GROUP\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"GROUP\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"GROUP_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_GROUP_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_GROUP_RESP\",\"type\":\"GROUP_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LISTGROUP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LISTGROUP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LISTGROUP\",\"type\":\"LISTGROUP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LISTGROUP\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LISTGROUP\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LISTGROUP_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LISTGROUP_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LISTGROUP_RESP\",\"type\":\"LISTGROUP_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LAST\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LAST\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LAST\",\"type\":\"LAST\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LAST\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LAST\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LAST_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LAST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LAST_RESP\",\"type\":\"LAST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"NEXT\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_NEXT\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEXT\",\"type\":\"NEXT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NEXT\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEXT\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEXT_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_NEXT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEXT_RESP\",\"type\":\"NEXT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"ARTICLE\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_ARTICLE\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_ARTICLE\",\"type\":\"ARTICLE\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"ARTICLE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"ARTICLE\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"ARTICLE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_ARTICLE_RESP\",\"type\":\"ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"HEAD\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HEAD\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HEAD\",\"type\":\"HEAD\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"HEAD\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HEAD\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HEAD_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HEAD_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HEAD_RESP\",\"type\":\"HEAD_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"BODY\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_BODY\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_BODY\",\"type\":\"BODY\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"BODY\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"BODY\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"BODY_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_BODY_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_BODY_RESP\",\"type\":\"BODY_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"STAT\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_STAT\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_STAT\",\"type\":\"STAT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"STAT\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"STAT\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"STAT_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_STAT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_STAT_RESP\",\"type\":\"STAT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"POST\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_POST\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_POST\",\"type\":\"POST\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"POST\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"POST\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"POST_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_POST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_POST_RESP\",\"type\":\"POST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"IHAVE\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_IHAVE\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_IHAVE\",\"type\":\"IHAVE\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"IHAVE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"IHAVE\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"IHAVE_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_IHAVE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_IHAVE_RESP\",\"type\":\"IHAVE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"DATE\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_DATE_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"DATE\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_DATE_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_DATE_reading\",\"type\":\"DATE\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"DATE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_DATE_transit\",\"type\":\"DATE\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"DATE\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"DATE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_DATE_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"DATE\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"DATE_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_DATE_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_DATE_RESP_reading\",\"type\":\"DATE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_DATE_RESP_transit\",\"type\":\"DATE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"HELP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HELP_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"HELP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_HELP_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HELP_reading\",\"type\":\"HELP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"HELP\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_HELP_transit\",\"type\":\"HELP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"HELP\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HELP\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HELP_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HELP_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HELP\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HELP_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_HELP_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HELP_RESP_reading\",\"type\":\"HELP_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_HELP_RESP_transit\",\"type\":\"HELP_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"NEWGROUPS\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_NEWGROUPS_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"NEWGROUPS\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_NEWGROUPS_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEWGROUPS_reading\",\"type\":\"NEWGROUPS\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NEWGROUPS\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_NEWGROUPS_transit\",\"type\":\"NEWGROUPS\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NEWGROUPS\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEWGROUPS\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEWGROUPS_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_NEWGROUPS_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEWGROUPS\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEWGROUPS_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_NEWGROUPS_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEWGROUPS_RESP_reading\",\"type\":\"NEWGROUPS_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_NEWGROUPS_RESP_transit\",\"type\":\"NEWGROUPS_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"NEWNEWS\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_NEWNEWS_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"NEWNEWS\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_NEWNEWS_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEWNEWS_reading\",\"type\":\"NEWNEWS\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NEWNEWS\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_NEWNEWS_transit\",\"type\":\"NEWNEWS\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NEWNEWS\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEWNEWS\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEWNEWS_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_NEWNEWS_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEWNEWS\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEWNEWS_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_NEWNEWS_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEWNEWS_RESP_reading\",\"type\":\"NEWNEWS_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_NEWNEWS_RESP_transit\",\"type\":\"NEWNEWS_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_reading\",\"type\":\"LIST\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_transit\",\"type\":\"LIST\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_RESP_reading\",\"type\":\"LIST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_RESP_transit\",\"type\":\"LIST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_ACTIVE\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_ACTIVE_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_ACTIVE\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_ACTIVE_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_ACTIVE_reading\",\"type\":\"LIST_ACTIVE\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_ACTIVE_transit\",\"type\":\"LIST_ACTIVE\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_ACTIVE\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_ACTIVE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_ACTIVE_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_ACTIVE\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_ACTIVE_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_ACTIVE_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_ACTIVE_RESP_reading\",\"type\":\"LIST_ACTIVE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_ACTIVE_RESP_transit\",\"type\":\"LIST_ACTIVE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_ACTIVE_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_ACTIVE_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_ACTIVE_reading\",\"type\":\"LIST_ACTIVE\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_ACTIVE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_ACTIVE_transit\",\"type\":\"LIST_ACTIVE\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_ACTIVE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_ACTIVE_TIMES\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_ACTIVE_TIMES_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_ACTIVE_TIMES\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_ACTIVE_TIMES_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_ACTIVE_TIMES_reading\",\"type\":\"LIST_ACTIVE_TIMES\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_ACTIVE_TIMES\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_ACTIVE_TIMES_transit\",\"type\":\"LIST_ACTIVE_TIMES\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_ACTIVE_TIMES\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_ACTIVE_TIMES\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_ACTIVE_TIMES_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_ACTIVE_TIMES_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_ACTIVE_TIMES\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_ACTIVE_TIMES_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_ACTIVE_TIMES_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_ACTIVE_TIMES_RESP_reading\",\"type\":\"LIST_ACTIVE_TIMES_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_ACTIVE_TIMES_RESP_transit\",\"type\":\"LIST_ACTIVE_TIMES_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_DISTRIB_PATS\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_DISTRIB_PATS_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_DISTRIB_PATS\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_DISTRIB_PATS_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_DISTRIB_PATS_reading\",\"type\":\"LIST_DISTRIB_PATS\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_DISTRIB_PATS\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_DISTRIB_PATS_transit\",\"type\":\"LIST_DISTRIB_PATS\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_DISTRIB_PATS\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_DISTRIB_PATS\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_DISTRIB_PATS_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_DISTRIB_PATS_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_DISTRIB_PATS\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_DISTRIB_PATS_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_DISTRIB_PATS_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_DISTRIB_PATS_RESP_reading\",\"type\":\"LIST_DISTRIB_PATS_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_DISTRIB_PATS_RESP_transit\",\"type\":\"LIST_DISTRIB_PATS_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_NEWSGROUPS\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_NEWSGROUPS_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_NEWSGROUPS\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_NEWSGROUPS_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_NEWSGROUPS_reading\",\"type\":\"LIST_NEWSGROUPS\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_NEWSGROUPS\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_NEWSGROUPS_transit\",\"type\":\"LIST_NEWSGROUPS\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_NEWSGROUPS\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_NEWSGROUPS\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_NEWSGROUPS_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_NEWSGROUPS_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_NEWSGROUPS\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_NEWSGROUPS_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_NEWSGROUPS_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_NEWSGROUPS_RESP_reading\",\"type\":\"LIST_NEWSGROUPS_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_NEWSGROUPS_RESP_transit\",\"type\":\"LIST_NEWSGROUPS_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"OVER\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_OVER\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER\",\"type\":\"OVER\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"OVER\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"OVER\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"OVER_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_OVER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER_RESP\",\"type\":\"OVER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_OVERVIEW_FMT\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_OVERVIEW_FMT\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_OVERVIEW_FMT\",\"type\":\"LIST_OVERVIEW_FMT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_OVERVIEW_FMT\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_OVERVIEW_FMT\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_OVERVIEW_FMT_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_OVERVIEW_FMT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_OVERVIEW_FMT_RESP\",\"type\":\"LIST_OVERVIEW_FMT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"HDR\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HDR\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HDR\",\"type\":\"HDR\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"HDR\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HDR\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HDR_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HDR_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HDR_RESP\",\"type\":\"HDR_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_HEADERS\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_HEADERS\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_HEADERS\",\"type\":\"LIST_HEADERS\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_HEADERS\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_HEADERS\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_HEADERS_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_HEADERS_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_HEADERS_RESP\",\"type\":\"LIST_HEADERS_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Server\",\"message\":{\"type\":\"GREETING\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_GREETING\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_GREETING\",\"type\":\"GREETING\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"autologout_timeout_initial\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"autologout_timeout_reading\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"autologout_timeout_transit\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Client\",\"message\":{\"type\":\"INVALID_COMMAND\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_INVALID_COMMAND_initial\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_INVALID_COMMAND_initial\",\"type\":\"INVALID_COMMAND\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"INVALID_COMMAND\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"INVALID_COMMAND\\\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Server\",\"message\":{\"type\":\"INVALID_COMMAND_RESP\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_INVALID_COMMAND_RESP_initial\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_INVALID_COMMAND_RESP_initial\",\"type\":\"INVALID_COMMAND_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"INVALID_COMMAND\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_INVALID_COMMAND_reading\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_INVALID_COMMAND_reading\",\"type\":\"INVALID_COMMAND\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"INVALID_COMMAND\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"INVALID_COMMAND\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"INVALID_COMMAND_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_INVALID_COMMAND_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_INVALID_COMMAND_RESP_reading\",\"type\":\"INVALID_COMMAND_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"INVALID_COMMAND\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_INVALID_COMMAND_transit\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_INVALID_COMMAND_transit\",\"type\":\"INVALID_COMMAND\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"INVALID_COMMAND\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"INVALID_COMMAND\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"INVALID_COMMAND_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_INVALID_COMMAND_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_INVALID_COMMAND_RESP_transit\",\"type\":\"INVALID_COMMAND_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"GROUP\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"AUTH_REQUIRED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_AUTH_REQUIRED_for_GROUP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_AUTH_REQUIRED_for_GROUP\",\"type\":\"AUTH_REQUIRED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"GROUP\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"PRIVACY_REQUIRED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_PRIVACY_REQUIRED_for_GROUP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_PRIVACY_REQUIRED_for_GROUP\",\"type\":\"PRIVACY_REQUIRED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"GROUP\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"MODE_CHANGE_REQUIRED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_MODE_CHANGE_REQUIRED_for_GROUP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_MODE_CHANGE_REQUIRED_for_GROUP\",\"type\":\"MODE_CHANGE_REQUIRED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"GROUP\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"TEMPORARY_FAILURE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_TEMPORARY_FAILURE_for_GROUP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_TEMPORARY_FAILURE_for_GROUP\",\"type\":\"TEMPORARY_FAILURE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"ARTICLE\\\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"message\":{\"type\":\"SERVER_SHUTDOWN_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_SERVER_SHUTDOWN_for_ARTICLE\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_SERVER_SHUTDOWN_for_ARTICLE\",\"type\":\"SERVER_SHUTDOWN_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"INVALID_COMMAND\\\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Server\",\"message\":{\"type\":\"UNKNOWN_COMMAND_RESP\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_UNKNOWN_COMMAND_initial\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_UNKNOWN_COMMAND_initial\",\"type\":\"UNKNOWN_COMMAND_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"INVALID_COMMAND\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"UNKNOWN_COMMAND_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_UNKNOWN_COMMAND_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_UNKNOWN_COMMAND_reading\",\"type\":\"UNKNOWN_COMMAND_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"INVALID_COMMAND\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"UNKNOWN_COMMAND_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_UNKNOWN_COMMAND_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_UNKNOWN_COMMAND_transit\",\"type\":\"UNKNOWN_COMMAND_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Initial_Connection\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"send_GREETING\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"GREETING_POSTING_ALLOWED\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_GREETING_POSTING_ALLOWED\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_GREETING_POSTING_ALLOWED\",\"type\":\"GREETING_POSTING_ALLOWED\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"GREETING_POSTING_PROHIBITED\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_GREETING_POSTING_PROHIBITED\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_GREETING_POSTING_PROHIBITED\",\"type\":\"GREETING_POSTING_PROHIBITED\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"message\":{\"type\":\"GREETING_TEMP_UNAVAILABLE\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_GREETING_TEMP_UNAVAILABLE\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_GREETING_TEMP_UNAVAILABLE\",\"type\":\"GREETING_TEMP_UNAVAILABLE\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"message\":{\"type\":\"GREETING_PERM_UNAVAILABLE\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_GREETING_PERM_UNAVAILABLE\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_GREETING_PERM_UNAVAILABLE\",\"type\":\"GREETING_PERM_UNAVAILABLE\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Client\",\"message\":{\"type\":\"CAPABILITIES\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_CAPABILITIES_initial\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_CAPABILITIES_initial\",\"type\":\"CAPABILITIES\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"CAPABILITIES\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"CAPABILITIES\\\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Server\",\"message\":{\"type\":\"CAPABILITIES_RESP\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_CAPABILITIES_RESP_initial\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_CAPABILITIES_RESP_initial\",\"type\":\"CAPABILITIES_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"send_MODE_READER_from_initial\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_MODE_READER_initial\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"send_MODE_READER_RESP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_MODE_READER_RESP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Client\",\"message\":{\"type\":\"MODE_READER\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_MODE_READER_initial_corrected\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_MODE_READER_initial_corrected\",\"type\":\"MODE_READER\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"MODE_READER\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"MODE_READER\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"MODE_READER_RESP_POSTING_ALLOWED\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_MODE_READER_RESP_POSTING_ALLOWED\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_MODE_READER_RESP_POSTING_ALLOWED\",\"type\":\"MODE_READER_RESP_POSTING_ALLOWED\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"MODE_READER\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"MODE_READER_RESP_POSTING_PROHIBITED\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_MODE_READER_RESP_POSTING_PROHIBITED\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_MODE_READER_RESP_POSTING_PROHIBITED\",\"type\":\"MODE_READER_RESP_POSTING_PROHIBITED\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"MODE_READER\\\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"message\":{\"type\":\"MODE_READER_RESP_UNAVAILABLE\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_MODE_READER_RESP_UNAVAILABLE\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_MODE_READER_RESP_UNAVAILABLE\",\"type\":\"MODE_READER_RESP_UNAVAILABLE\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"send_QUIT_initial\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"send_QUIT_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"send_QUIT_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_QUIT_initial\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_QUIT_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_QUIT_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"source\":\"Connection_closing\",\"trigger\":\"send_QUIT_RESP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Connection_closing\",\"trigger\":\"recv_QUIT_RESP\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Client\",\"message\":{\"type\":\"QUIT\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_QUIT_initial_corrected\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"QUIT\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_QUIT_reading_corrected\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"QUIT\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_QUIT_transit_corrected\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Initial_Connection\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_QUIT_initial_corrected\",\"type\":\"QUIT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"QUIT\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_QUIT_reading_corrected\",\"type\":\"QUIT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"QUIT\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_QUIT_transit_corrected\",\"type\":\"QUIT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"QUIT\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"QUIT\\\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"message\":{\"type\":\"QUIT_RESP\",\"variables\":{}},\"source\":\"Initial_Connection\",\"trigger\":\"send_QUIT_RESP_initial\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"QUIT\\\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"message\":{\"type\":\"QUIT_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_QUIT_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"QUIT\\\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Server\",\"message\":{\"type\":\"QUIT_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_QUIT_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_QUIT_RESP_initial\",\"type\":\"QUIT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_QUIT_RESP_reading\",\"type\":\"QUIT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_QUIT_RESP_transit\",\"type\":\"QUIT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"GROUP\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"GROUP_NO_SUCH_GROUP_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_GROUP_NO_SUCH_GROUP_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_GROUP_NO_SUCH_GROUP_RESP\",\"type\":\"GROUP_NO_SUCH_GROUP_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LISTGROUP\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LISTGROUP_NO_SUCH_GROUP_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LISTGROUP_NO_SUCH_GROUP_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LISTGROUP_NO_SUCH_GROUP_RESP\",\"type\":\"LISTGROUP_NO_SUCH_GROUP_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LISTGROUP\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LISTGROUP_NO_GROUP_SELECTED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LISTGROUP_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LISTGROUP_NO_GROUP_SELECTED_RESP\",\"type\":\"LISTGROUP_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LAST\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LAST_NO_GROUP_SELECTED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LAST_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LAST_NO_GROUP_SELECTED_RESP\",\"type\":\"LAST_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LAST\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LAST_INVALID_CURRENT_ARTICLE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LAST_INVALID_CURRENT_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LAST_INVALID_CURRENT_ARTICLE_RESP\",\"type\":\"LAST_INVALID_CURRENT_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LAST\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LAST_NO_PREVIOUS_ARTICLE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LAST_NO_PREVIOUS_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LAST_NO_PREVIOUS_ARTICLE_RESP\",\"type\":\"LAST_NO_PREVIOUS_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LAST_INVALID_CURRENT_ARTICLE_RESP\",\"type\":\"LAST_INVALID_CURRENT_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEXT\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEXT_NO_GROUP_SELECTED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_NEXT_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEXT_NO_GROUP_SELECTED_RESP\",\"type\":\"NEXT_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEXT\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEXT_INVALID_CURRENT_ARTICLE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_NEXT_INVALID_CURRENT_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEXT_INVALID_CURRENT_ARTICLE_RESP\",\"type\":\"NEXT_INVALID_CURRENT_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEXT\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEXT_NO_NEXT_ARTICLE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_NEXT_NO_NEXT_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEXT_NO_NEXT_ARTICLE_RESP\",\"type\":\"NEXT_NO_NEXT_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"ARTICLE\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"ARTICLE_NO_MESSAGE_ID_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_ARTICLE_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_ARTICLE_NO_MESSAGE_ID_RESP\",\"type\":\"ARTICLE_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"ARTICLE\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"ARTICLE_NO_GROUP_SELECTED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_ARTICLE_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_ARTICLE_NO_GROUP_SELECTED_RESP\",\"type\":\"ARTICLE_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"ARTICLE\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"ARTICLE_NO_NUMBER_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_ARTICLE_NO_NUMBER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_ARTICLE_NO_NUMBER_RESP\",\"type\":\"ARTICLE_NO_NUMBER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"ARTICLE\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"ARTICLE_INVALID_CURRENT_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_ARTICLE_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_ARTICLE_INVALID_CURRENT_RESP\",\"type\":\"ARTICLE_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HEAD\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HEAD_NO_MESSAGE_ID_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HEAD_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HEAD_NO_MESSAGE_ID_RESP\",\"type\":\"HEAD_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HEAD\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HEAD_NO_GROUP_SELECTED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HEAD_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HEAD_NO_GROUP_SELECTED_RESP\",\"type\":\"HEAD_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HEAD\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HEAD_NO_NUMBER_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HEAD_NO_NUMBER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HEAD_NO_NUMBER_RESP\",\"type\":\"HEAD_NO_NUMBER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HEAD\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HEAD_INVALID_CURRENT_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HEAD_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HEAD_INVALID_CURRENT_RESP\",\"type\":\"HEAD_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"BODY\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"BODY_NO_MESSAGE_ID_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_BODY_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_BODY_NO_MESSAGE_ID_RESP\",\"type\":\"BODY_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"BODY\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"BODY_NO_GROUP_SELECTED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_BODY_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_BODY_NO_GROUP_SELECTED_RESP\",\"type\":\"BODY_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"BODY\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"BODY_NO_NUMBER_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_BODY_NO_NUMBER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_BODY_NO_NUMBER_RESP\",\"type\":\"BODY_NO_NUMBER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"BODY\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"BODY_INVALID_CURRENT_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_BODY_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_BODY_INVALID_CURRENT_RESP\",\"type\":\"BODY_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"STAT\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"STAT_NO_MESSAGE_ID_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_STAT_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_STAT_NO_MESSAGE_ID_RESP\",\"type\":\"STAT_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"STAT\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"STAT_NO_GROUP_SELECTED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_STAT_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_STAT_NO_GROUP_SELECTED_RESP\",\"type\":\"STAT_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"STAT\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"STAT_NO_NUMBER_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_STAT_NO_NUMBER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_STAT_NO_NUMBER_RESP\",\"type\":\"STAT_NO_NUMBER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"STAT\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"STAT_INVALID_CURRENT_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_STAT_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_STAT_INVALID_CURRENT_RESP\",\"type\":\"STAT_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"POST\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"POST_READY_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_POST_READY_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_POST_READY_RESP\",\"type\":\"POST_READY_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"POST\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"POST_NOT_PERMITTED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_POST_NOT_PERMITTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_POST_NOT_PERMITTED_RESP\",\"type\":\"POST_NOT_PERMITTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"POST_DATA\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_POST_DATA\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_POST_DATA\",\"type\":\"POST_DATA\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"POST_DATA_OK_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_POST_DATA_OK_RESP\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_POST_DATA_OK_RESP\",\"type\":\"POST_DATA_OK_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"POST_DATA_FAIL_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_POST_DATA_FAIL_RESP\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_POST_DATA_FAIL_RESP\",\"type\":\"POST_DATA_FAIL_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"IHAVE\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"IHAVE_SEND_ARTICLE_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_IHAVE_SEND_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_IHAVE_SEND_ARTICLE_RESP\",\"type\":\"IHAVE_SEND_ARTICLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"IHAVE\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"IHAVE_NOT_WANTED_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_IHAVE_NOT_WANTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_IHAVE_NOT_WANTED_RESP\",\"type\":\"IHAVE_NOT_WANTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"IHAVE\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"IHAVE_RETRY_LATER_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_IHAVE_RETRY_LATER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_IHAVE_RETRY_LATER_RESP\",\"type\":\"IHAVE_RETRY_LATER_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"IHAVE_DATA\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_IHAVE_DATA\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_IHAVE_DATA\",\"type\":\"IHAVE_DATA\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"IHAVE_OK_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_IHAVE_OK_RESP\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_IHAVE_OK_RESP\",\"type\":\"IHAVE_OK_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"IHAVE_TRANSFER_FAIL_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_IHAVE_TRANSFER_FAIL_RESP\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_IHAVE_TRANSFER_FAIL_RESP\",\"type\":\"IHAVE_TRANSFER_FAIL_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"IHAVE_REJECTED_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_IHAVE_REJECTED_RESP\",\"unchanged_variables\":[\"pending_command\"],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_IHAVE_REJECTED_RESP\",\"type\":\"IHAVE_REJECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"DATE\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"DATE_RESP_READING\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_DATE_RESP_READING_EXPLICIT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_DATE_RESP_READING_EXPLICIT\",\"type\":\"DATE_RESP_READING\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"DATE\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"DATE_RESP_TRANSIT\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_DATE_RESP_TRANSIT_EXPLICIT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_DATE_RESP_TRANSIT_EXPLICIT\",\"type\":\"DATE_RESP_TRANSIT\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"send_HELP_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"send_HELP_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HELP_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_HELP_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"send_NEWGROUPS_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"send_NEWGROUPS_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEWGROUPS_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_NEWGROUPS_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HELP\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HELP_TEXT_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HELP_TEXT_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HELP\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HELP_TEXT_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_HELP_TEXT_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HELP_TEXT_RESP_reading\",\"type\":\"HELP_TEXT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_HELP_TEXT_RESP_transit\",\"type\":\"HELP_TEXT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEWGROUPS\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEWGROUPS_LIST_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_NEWGROUPS_LIST_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEWGROUPS\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEWGROUPS_LIST_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_NEWGROUPS_LIST_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEWGROUPS_LIST_RESP_reading\",\"type\":\"NEWGROUPS_LIST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_NEWGROUPS_LIST_RESP_transit\",\"type\":\"NEWGROUPS_LIST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"send_DATE_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"send_DATE_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_DATE_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_DATE_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"send_INVALID_COMMAND_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"send_INVALID_COMMAND_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Initial_Connection\",\"entity_name\":\"Server\",\"source\":\"Initial_Connection\",\"trigger\":\"send_INVALID_COMMAND_RESP_initial\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_INVALID_COMMAND_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_INVALID_COMMAND_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Initial_Connection\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"recv_INVALID_COMMAND_RESP_initial\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"send_NEWNEWS_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"send_NEWNEWS_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEWNEWS_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_NEWNEWS_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEWNEWS\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEWNEWS_LIST_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_NEWNEWS_LIST_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"NEWNEWS\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"NEWNEWS_LIST_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_NEWNEWS_LIST_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_NEWNEWS_LIST_RESP_reading\",\"type\":\"NEWNEWS_LIST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_NEWNEWS_LIST_RESP_transit\",\"type\":\"NEWNEWS_LIST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_RESP_reading\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_RESP_transit\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_INFO_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_INFO_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_INFO_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_INFO_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_INFO_RESP_reading\",\"type\":\"LIST_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_INFO_RESP_transit\",\"type\":\"LIST_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_SYNTAX_ERROR_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_SYNTAX_ERROR_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_SYNTAX_ERROR_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_SYNTAX_ERROR_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_SYNTAX_ERROR_RESP_reading\",\"type\":\"LIST_SYNTAX_ERROR_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_SYNTAX_ERROR_RESP_transit\",\"type\":\"LIST_SYNTAX_ERROR_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_INFO_UNAVAILABLE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_INFO_UNAVAILABLE_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_INFO_UNAVAILABLE_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_INFO_UNAVAILABLE_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_INFO_UNAVAILABLE_RESP_reading\",\"type\":\"LIST_INFO_UNAVAILABLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_INFO_UNAVAILABLE_RESP_transit\",\"type\":\"LIST_INFO_UNAVAILABLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_ACTIVE\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_ACTIVE_INFO_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_ACTIVE_INFO_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_ACTIVE\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_ACTIVE_INFO_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_ACTIVE_INFO_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_ACTIVE_INFO_RESP_reading\",\"type\":\"LIST_ACTIVE_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_ACTIVE_INFO_RESP_transit\",\"type\":\"LIST_ACTIVE_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_ACTIVE_TIMES\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_ACTIVE_TIMES_INFO_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_ACTIVE_TIMES_INFO_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_ACTIVE_TIMES\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_ACTIVE_TIMES_INFO_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_ACTIVE_TIMES_INFO_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_ACTIVE_TIMES_INFO_RESP_reading\",\"type\":\"LIST_ACTIVE_TIMES_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_ACTIVE_TIMES_INFO_RESP_transit\",\"type\":\"LIST_ACTIVE_TIMES_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_DISTRIB_PATS\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_DISTRIB_PATS_INFO_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_DISTRIB_PATS_INFO_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_DISTRIB_PATS\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_DISTRIB_PATS_INFO_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_DISTRIB_PATS_INFO_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_DISTRIB_PATS_INFO_RESP_reading\",\"type\":\"LIST_DISTRIB_PATS_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_DISTRIB_PATS_INFO_RESP_transit\",\"type\":\"LIST_DISTRIB_PATS_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_NEWSGROUPS\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_NEWSGROUPS_INFO_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_NEWSGROUPS_INFO_RESP_reading\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_NEWSGROUPS\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_NEWSGROUPS_INFO_RESP\",\"variables\":{}},\"source\":\"Transit_mode\",\"trigger\":\"send_LIST_NEWSGROUPS_INFO_RESP_transit\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_NEWSGROUPS_INFO_RESP_reading\",\"type\":\"LIST_NEWSGROUPS_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"recv_LIST_NEWSGROUPS_INFO_RESP_transit\",\"type\":\"LIST_NEWSGROUPS_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"OVER\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_OVER_additional\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER_additional\",\"type\":\"OVER\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"OVER\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"OVER\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"OVER_NO_MESSAGE_ID_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_OVER_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER_NO_MESSAGE_ID_RESP\",\"type\":\"OVER_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"OVER\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"OVER_NO_GROUP_SELECTED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_OVER_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER_NO_GROUP_SELECTED_RESP\",\"type\":\"OVER_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"OVER\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"OVER_NO_ARTICLES_IN_RANGE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_OVER_NO_ARTICLES_IN_RANGE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER_NO_ARTICLES_IN_RANGE_RESP\",\"type\":\"OVER_NO_ARTICLES_IN_RANGE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"OVER\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"OVER_INVALID_CURRENT_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_OVER_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER_INVALID_CURRENT_RESP\",\"type\":\"OVER_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"OVER\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"OVER_MSGID_UNSUPPORTED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_OVER_MSGID_UNSUPPORTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER_MSGID_UNSUPPORTED_RESP\",\"type\":\"OVER_MSGID_UNSUPPORTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER_additional\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER\",\"type\":\"OVER\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"OVER\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_OVER_INVALID_CURRENT_RESP\",\"type\":\"OVER_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_OVERVIEW_FMT\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_OVERVIEW_FMT_additional\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_OVERVIEW_FMT_additional\",\"type\":\"LIST_OVERVIEW_FMT\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_OVERVIEW_FMT\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_OVERVIEW_FMT\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_OVERVIEW_FMT_INFO_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_OVERVIEW_FMT_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_OVERVIEW_FMT_INFO_RESP\",\"type\":\"LIST_OVERVIEW_FMT_INFO_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"HDR\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HDR_additional\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HDR_additional\",\"type\":\"HDR\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"HDR\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HDR\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HDR_NO_MESSAGE_ID_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HDR_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HDR_NO_MESSAGE_ID_RESP\",\"type\":\"HDR_NO_MESSAGE_ID_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HDR\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HDR_NO_GROUP_SELECTED_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HDR_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HDR_NO_GROUP_SELECTED_RESP\",\"type\":\"HDR_NO_GROUP_SELECTED_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HDR\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HDR_NO_ARTICLES_IN_RANGE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HDR_NO_ARTICLES_IN_RANGE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HDR_NO_ARTICLES_IN_RANGE_RESP\",\"type\":\"HDR_NO_ARTICLES_IN_RANGE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HDR\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HDR_INVALID_CURRENT_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HDR_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HDR_INVALID_CURRENT_RESP\",\"type\":\"HDR_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HDR_additional\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "remove_transition",
+      "arguments": "{\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_OVERVIEW_FMT_additional\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HDR_INVALID_CURRENT_RESP\",\"type\":\"HDR_INVALID_CURRENT_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"HDR\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"HDR_FIELD_UNAVAILABLE_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_HDR_FIELD_UNAVAILABLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_HDR_FIELD_UNAVAILABLE_RESP\",\"type\":\"HDR_FIELD_UNAVAILABLE_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"message\":{\"type\":\"LIST_HEADERS\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_HEADERS_additional\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_HEADERS_additional\",\"type\":\"LIST_HEADERS\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"LIST_HEADERS\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_send_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"pending_command == \\\"LIST_HEADERS\\\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Server\",\"message\":{\"type\":\"LIST_HEADERS_FIELD_LIST_RESP\",\"variables\":{}},\"source\":\"Reading_mode\",\"trigger\":\"send_LIST_HEADERS_FIELD_LIST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"NONE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"server_to_client\",\"condition\":\"\",\"dest\":\"Reading_mode\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"recv_LIST_HEADERS_FIELD_LIST_RESP\",\"type\":\"LIST_HEADERS_FIELD_LIST_RESP\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_receive_transition",
+      "arguments": "{\"channel\":\"client_to_server\",\"condition\":\"client_to_server_msg.type == \\\"DATE\\\"\",\"dest\":\"Transit_mode\",\"entity_name\":\"Server\",\"source\":\"Transit_mode\",\"trigger\":\"recv_DATE_transit\",\"type\":\"DATE\",\"unchanged_variables\":[],\"variable_updates\":{\"pending_command\":\"\\\"DATE\\\"\"}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"condition\":\"True\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Initial_Connection\",\"trigger\":\"connection_closed\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"condition\":\"True\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Reading_mode\",\"trigger\":\"connection_closed\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_internal_transition",
+      "arguments": "{\"condition\":\"True\",\"dest\":\"Connection_closing\",\"entity_name\":\"Client\",\"source\":\"Transit_mode\",\"trigger\":\"connection_closed\",\"unchanged_variables\":[],\"variable_updates\":{}}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"authenticated\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_variable",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"article_disclosed_before_authentication\", \"var_type\": \"BOOLEAN\", \"initial_value\": \"False\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "add_entity_invariant",
+      "arguments": "{\"entity_name\": \"Server\", \"name\": \"no_article_disclosed_before_authentication\", \"condition\": \"not article_disclosed_before_authentication\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_receive_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Reading_mode\", \"dest\": \"Reading_mode\", \"trigger\": \"recv_ARTICLE\", \"new_condition\": \"\", \"new_variable_updates\": {\"pending_command\": \"\\\"ARTICLE\\\"\"}, \"new_unchanged_variables\": [\"authenticated\", \"article_disclosed_before_authentication\"], \"channel\": \"client_to_server\", \"new_type\": \"ARTICLE\"}"
+    }
+  },
+  {
+    "id": "call_REDACTED",
+    "type": "function",
+    "function": {
+      "name": "replace_send_transition",
+      "arguments": "{\"entity_name\": \"Server\", \"source\": \"Reading_mode\", \"dest\": \"Reading_mode\", \"trigger\": \"send_ARTICLE_RESP\", \"new_condition\": \"pending_command == \\\"ARTICLE\\\"\", \"new_variable_updates\": {\"pending_command\": \"\\\"NONE\\\"\", \"article_disclosed_before_authentication\": \"not authenticated\"}, \"new_unchanged_variables\": [\"authenticated\"], \"channel\": \"server_to_client\", \"new_message\": {\"type\": \"ARTICLE_RESP\", \"variables\": {}, \"constants\": {}}}"
+    }
+  }
+]
